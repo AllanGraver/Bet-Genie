@@ -1,11 +1,70 @@
 [
-  {"slug":"superliga","displayName":"3F Superliga","apiLeagueId":119,"season":2026,"filePatterns":["superliga","danish-superliga"]},
-  {"slug":"allsvenskan","displayName":"Allsvenskan","apiLeagueId":113,"season":2026,"filePatterns":["allsvenskan"]},
-  {"slug":"eliteserien","displayName":"Eliteserien","apiLeagueId":103,"season":2026,"filePatterns":["eliteserien"]},
-  {"slug":"eredivisie","displayName":"Eredivisie","apiLeagueId":88,"season":2026,"filePatterns":["eredivisie"]},
-  {"slug":"belgian-pro-league","displayName":"Belgian Pro League","apiLeagueId":144,"season":2026,"filePatterns":["belgian-pro-league","jupiler"]},
-  {"slug":"swiss-super-league","displayName":"Swiss Super League","apiLeagueId":207,"season":2026,"filePatterns":["swiss-super-league"]},
-  {"slug":"bundesliga","displayName":"Bundesliga","apiLeagueId":78,"season":2026,"filePatterns":["bundesliga"]},
-  {"slug":"premier-league","displayName":"Premier League","apiLeagueId":39,"season":2026,"filePatterns":["premier-league"]},
-  {"slug":"championship","displayName":"Championship","apiLeagueId":40,"season":2026,"filePatterns":["championship"]}
+  {
+    "slug": "superliga",
+    "displayName": "3F Superliga",
+    "apiLeagueId": 119,
+    "season": 2026,
+    "filePatterns": ["superliga", "danish superliga", "danish-superliga"]
+  },
+  {
+    "slug": "allsvenskan",
+    "displayName": "Allsvenskan",
+    "apiLeagueId": 113,
+    "season": 2026,
+    "filePatterns": ["allsvenskan"]
+  },
+  {
+    "slug": "eliteserien",
+    "displayName": "Eliteserien",
+    "apiLeagueId": 103,
+    "season": 2026,
+    "filePatterns": ["eliteserien"]
+  },
+  {
+    "slug": "eredivisie",
+    "displayName": "Eredivisie",
+    "apiLeagueId": 88,
+    "season": 2026,
+    "filePatterns": ["eredivisie"]
+  },
+  {
+    "slug": "belgian-pro-league",
+    "displayName": "Belgian Pro League",
+    "apiLeagueId": 144,
+    "season": 2026,
+    "filePatterns": [
+      "belgian pro league",
+      "belgian-pro-league",
+      "jupiler pro league",
+      "jupiler-pro-league"
+    ]
+  },
+  {
+    "slug": "swiss-super-league",
+    "displayName": "Swiss Super League",
+    "apiLeagueId": 207,
+    "season": 2026,
+    "filePatterns": ["swiss super league", "swiss-super-league"]
+  },
+  {
+    "slug": "bundesliga",
+    "displayName": "Bundesliga",
+    "apiLeagueId": 78,
+    "season": 2026,
+    "filePatterns": ["bundesliga"]
+  },
+  {
+    "slug": "premier-league",
+    "displayName": "Premier League",
+    "apiLeagueId": 39,
+    "season": 2026,
+    "filePatterns": ["premier league", "premier-league"]
+  },
+  {
+    "slug": "championship",
+    "displayName": "Championship",
+    "apiLeagueId": 40,
+    "season": 2026,
+    "filePatterns": ["championship"]
+  }
 ]
