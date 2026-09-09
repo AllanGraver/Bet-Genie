@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-09T10:44:32.786Z",
+  "generatedAt": "2026-09-09T18:41:37.925Z",
   "used": 5,
   "remaining": null,
   "hardLimit": 85,
   "calls": [
     {
-      "timestamp": "2026-09-09T10:44:31.898Z",
+      "timestamp": "2026-09-09T18:41:37.226Z",
       "endpoint": "/fixtures",
       "params": {
         "from": "2026-09-09",
@@ -13,10 +13,10 @@
         "timezone": "Europe/Copenhagen"
       },
       "status": 200,
-      "remaining": 93
+      "remaining": 92
     },
     {
-      "timestamp": "2026-09-09T10:44:32.070Z",
+      "timestamp": "2026-09-09T18:41:37.338Z",
       "endpoint": "/fixtures",
       "params": {
         "league": 144,
@@ -29,7 +29,7 @@
       "remaining": null
     },
     {
-      "timestamp": "2026-09-09T10:44:32.237Z",
+      "timestamp": "2026-09-09T18:41:37.451Z",
       "endpoint": "/fixtures",
       "params": {
         "league": 78,
@@ -42,7 +42,7 @@
       "remaining": null
     },
     {
-      "timestamp": "2026-09-09T10:44:32.406Z",
+      "timestamp": "2026-09-09T18:41:37.602Z",
       "endpoint": "/fixtures",
       "params": {
         "league": 119,
@@ -55,7 +55,7 @@
       "remaining": null
     },
     {
-      "timestamp": "2026-09-09T10:44:32.570Z",
+      "timestamp": "2026-09-09T18:41:37.720Z",
       "endpoint": "/fixtures",
       "params": {
         "league": 39,
