@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-09T19:27:19.935Z",
+  "generatedAt": "2026-09-09T19:29:29.830Z",
   "used": 8,
   "remaining": null,
   "hardLimit": 85,
   "calls": [
     {
-      "timestamp": "2026-09-09T19:27:18.220Z",
+      "timestamp": "2026-09-09T19:29:28.164Z",
       "endpoint": "/fixtures",
       "params": {
         "from": "2026-09-09",
@@ -13,10 +13,10 @@
         "timezone": "Europe/Copenhagen"
       },
       "status": 200,
-      "remaining": 90
+      "remaining": 89
     },
     {
-      "timestamp": "2026-09-09T19:27:18.389Z",
+      "timestamp": "2026-09-09T19:29:28.319Z",
       "endpoint": "/fixtures",
       "params": {
         "league": 113,
@@ -29,7 +29,7 @@
       "remaining": null
     },
     {
-      "timestamp": "2026-09-09T19:27:18.555Z",
+      "timestamp": "2026-09-09T19:29:28.473Z",
       "endpoint": "/fixtures",
       "params": {
         "league": 103,
@@ -42,7 +42,7 @@
       "remaining": null
     },
     {
-      "timestamp": "2026-09-09T19:27:18.720Z",
+      "timestamp": "2026-09-09T19:29:28.627Z",
       "endpoint": "/fixtures",
       "params": {
         "league": 144,
@@ -55,7 +55,7 @@
       "remaining": null
     },
     {
-      "timestamp": "2026-09-09T19:27:18.879Z",
+      "timestamp": "2026-09-09T19:29:28.786Z",
       "endpoint": "/fixtures",
       "params": {
         "league": 78,
@@ -68,7 +68,7 @@
       "remaining": null
     },
     {
-      "timestamp": "2026-09-09T19:27:19.040Z",
+      "timestamp": "2026-09-09T19:29:28.934Z",
       "endpoint": "/fixtures",
       "params": {
         "league": 119,
@@ -81,7 +81,7 @@
       "remaining": null
     },
     {
-      "timestamp": "2026-09-09T19:27:19.200Z",
+      "timestamp": "2026-09-09T19:29:29.121Z",
       "endpoint": "/fixtures",
       "params": {
         "league": 88,
@@ -94,7 +94,7 @@
       "remaining": null
     },
     {
-      "timestamp": "2026-09-09T19:27:19.364Z",
+      "timestamp": "2026-09-09T19:29:29.277Z",
       "endpoint": "/fixtures",
       "params": {
         "league": 39,
