@@ -1,263 +1,144 @@
 name: Opdater BetScope CSV-dashboard
 
 on:
-  # Manuel kørsel fra fanen Actions
   workflow_dispatch:
     inputs:
       analysis_date:
-        description: "Valgfri analysedato i formatet YYYY-MM-DD"
+        description: "Valgfri startdato i formatet YYYY-MM-DD"
         required: false
         type: string
-
-  # Automatisk daglig kørsel kl. 06.15 UTC
   schedule:
     - cron: "15 6 * * *"
 
-# Workflowet skal kunne:
-# 1. Skrive CSV- og JSON-data tilbage til repositoryet
-# 2. Publicere GitHub Pages
 permissions:
   contents: write
   pages: write
   id-token: write
 
-# Forhindrer to samtidige analyser i at bruge requests
-# og opdatere CSV-filerne på samme tid
 concurrency:
   group: betscope-daily
   cancel-in-progress: true
 
 jobs:
   build-and-deploy:
-    name: Byg analyse og publicér dashboard
-
+    name: Byg ugeanalyse og publicér dashboard
     runs-on: ubuntu-latest
-
     timeout-minutes: 30
-
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      # ---------------------------------------------------------
-      # 1. HENT REPOSITORY
-      # ---------------------------------------------------------
       - name: Hent repository
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
-          ref: ${{ github.ref_name }}
 
-      # ---------------------------------------------------------
-      # 2. OPSÆT NODE.JS
-      # ---------------------------------------------------------
       - name: Installér Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      # ---------------------------------------------------------
-      # 3. INSTALLÉR EVENTUELLE AFHÆNGIGHEDER
-      # ---------------------------------------------------------
       - name: Installér npm-afhængigheder
         shell: bash
         run: |
-          if [ -f package-lock.json ]; then
+          set -e
+          if [ -f "package-lock.json" ]; then
             npm ci
           else
             npm install
           fi
 
-      # ---------------------------------------------------------
-      # 4. KONTROLLÉR API-FOOTBALL SECRET
-      # ---------------------------------------------------------
-      - name: Kontrollér API-Football-nøgle
+      - name: Kontrollér valgfrit API-Football-supplement
         shell: bash
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: |
           if [ -z "$API_FOOTBALL_KEY" ]; then
-            echo "::error::Repository secret API_FOOTBALL_KEY mangler eller er tom."
-            echo "::error::Opret den under Settings > Secrets and variables > Actions > Secrets."
-            exit 1
+            echo "::warning::API_FOOTBALL_KEY er ikke konfigureret. CSV-workflowet fortsætter uden API-Football."
+          else
+            echo "API_FOOTBALL_KEY er fundet. API-Football bruges som valgfrit supplement."
           fi
 
-          echo "API_FOOTBALL_KEY er fundet og tilgængelig for workflowet."
-
-      # ---------------------------------------------------------
-      # 5. KØR AUTOMATISKE TESTS
-      # ---------------------------------------------------------
       - name: Kør automatiske tests
         run: npm test
 
-      # ---------------------------------------------------------
-      # 6. FASTLÆG ANALYSEDATO
-      # ---------------------------------------------------------
-      - name: Fastlæg analysedato
+      - name: Fastlæg startdato
         id: analysis
         shell: bash
         env:
           INPUT_DATE: ${{ github.event.inputs.analysis_date || '' }}
         run: |
+          set -e
           if [ -n "$INPUT_DATE" ]; then
-
             if ! [[ "$INPUT_DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
-              echo "::error::Analysedatoen skal skrives som YYYY-MM-DD."
-              echo "::error::Eksempel: 2026-09-09"
+              echo "::error::Startdatoen skal skrives som YYYY-MM-DD."
               exit 1
             fi
-
             ANALYSIS_DATE="$INPUT_DATE"
-
           else
-
             ANALYSIS_DATE=$(TZ=Europe/Copenhagen date +%F)
-
           fi
-
           echo "date=$ANALYSIS_DATE" >> "$GITHUB_OUTPUT"
-          echo "BetScope analyserer datoen: $ANALYSIS_DATE"
+          echo "BetScope analyserer syv dage fra: $ANALYSIS_DATE"
 
-      # ---------------------------------------------------------
-      # 7. BYG DAGENS ANALYSE
-      # ---------------------------------------------------------
-      - name: Hent fixtures, opdater CSV-hukommelse og byg dashboard
+      - name: Opret nødvendige datamapper
+        shell: bash
+        run: |
+          mkdir -p "data/leagues"
+          mkdir -p "data/cache"
+          mkdir -p "docs/data"
+
+      - name: Byg ugeoversigt og opdater CSV-hukommelse
+        shell: bash
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
           ANALYSIS_DATE: ${{ steps.analysis.outputs.date }}
         run: npm run build:data
 
-      # ---------------------------------------------------------
-      # 8. KONTROLLÉR AT RESULT.JSON ER GYLDIG
-      # ---------------------------------------------------------
       - name: Kontrollér genereret dashboarddata
         shell: bash
         run: |
-          if [ ! -f docs/data/results.json ]; then
-            echo "::error::docs/data/results.json blev ikke genereret."
-            exit 1
-          fi
-
+          set -e
+          test -f "docs/data/results.json"
           node <<'NODE'
-          const fs = require("fs");
-
-          const file = "docs/data/results.json";
-          const raw = fs.readFileSync(file, "utf8");
-          const data = JSON.parse(raw);
-
-          const requiredArrays = [
-            "results",
-            "nearMisses",
-            "foundLeagues"
-          ];
-
-          for (const field of requiredArrays) {
-            if (!Array.isArray(data[field])) {
-              throw new Error(
-                `${field} mangler eller er ikke en liste i results.json`
-              );
-            }
+          const fs = require('fs');
+          const data = JSON.parse(fs.readFileSync('docs/data/results.json', 'utf8'));
+          for (const field of ['results', 'nearMisses', 'foundLeagues', 'matchesByDate']) {
+            if (!Array.isArray(data[field])) throw new Error(`${field} mangler eller er ikke en liste`);
           }
-
-          if (
-            data.totalMatches !== undefined &&
-            !Number.isFinite(Number(data.totalMatches))
-          ) {
-            throw new Error(
-              "totalMatches er ikke et gyldigt tal"
-            );
-          }
-
-          console.log("Dashboarddata er valideret:");
           console.log({
-            date: data.date,
-            totalMatches: Number(data.totalMatches || 0),
+            period: data.period,
+            totalMatches: data.totalMatches,
             approved: data.results.length,
             nearMisses: data.nearMisses.length,
-            foundLeagues: data.foundLeagues.length,
-            requestsUsed: data.requestUsage?.used ?? "ukendt",
-            requestsRemaining:
-              data.requestUsage?.remaining ?? "ukendt"
+            leagues: data.foundLeagues.length,
+            requestsUsed: data.requestUsage?.used,
+            apiEnabled: data.requestUsage?.enabled
           });
           NODE
 
-      # ---------------------------------------------------------
-      # 9. VIS API-FORBRUG I ACTIONS-LOGGEN
-      # ---------------------------------------------------------
-      - name: Vis requestforbrug
-        shell: bash
-        run: |
-          node <<'NODE'
-          const fs = require("fs");
-
-          const data = JSON.parse(
-            fs.readFileSync(
-              "docs/data/results.json",
-              "utf8"
-            )
-          );
-
-          const usage = data.requestUsage || {};
-
-          console.log(
-            `API-requests brugt: ${usage.used ?? "ukendt"}`
-          );
-
-          console.log(
-            `API-requests tilbage: ${usage.remaining ?? "ukendt"}`
-          );
-
-          console.log(
-            `Internt hard limit: ${usage.hardLimit ?? "ukendt"}`
-          );
-
-          if (
-            Number.isFinite(Number(usage.used)) &&
-            Number.isFinite(Number(usage.hardLimit)) &&
-            Number(usage.used) >= Number(usage.hardLimit)
-          ) {
-            throw new Error(
-              "Det interne requestloft er nået."
-            );
-          }
-          NODE
-
-      # ---------------------------------------------------------
-      # 10. GEM CSV-HUKOMMELSE OG DASHBOARDDATA I GITHUB
-      # ---------------------------------------------------------
       - name: Gem opdaterede CSV-filer og dashboarddata
         shell: bash
         env:
           BRANCH_NAME: ${{ github.ref_name }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
           ANALYSIS_DATE: ${{ steps.analysis.outputs.date }}
         run: |
           set -e
-
+          TARGET_BRANCH="${BRANCH_NAME:-$DEFAULT_BRANCH}"
+          TARGET_BRANCH="${TARGET_BRANCH:-main}"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          if [ -d "data/leagues" ]; then
-            git add data/leagues
-          fi
-
-          if [ -d "data/cache" ]; then
-            git add data/cache
-          fi
-
-          if [ -f "docs/data/results.json" ]; then
-            git add docs/data/results.json
-          else
-            echo "::error::docs/data/results.json findes ikke."
-            exit 1
-          fi
-
+          [ -d "data/leagues" ] && git add "data/leagues"
+          [ -d "data/cache" ] && git add "data/cache"
+          git add "docs/data/results.json"
           if git diff --cached --quiet; then
             echo "Ingen dataændringer at gemme."
           else
             git commit -m "Opdater BetScope-data ${ANALYSIS_DATE}"
-            git pull --rebase origin "${BRANCH_NAME}"
-            git push origin "HEAD:${BRANCH_NAME}"
+            git pull --rebase origin "$TARGET_BRANCH"
+            git push origin "HEAD:$TARGET_BRANCH"
           fi
 
       - name: Konfigurér GitHub Pages
