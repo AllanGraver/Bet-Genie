@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-09",
-  "updatedAt": "2026-09-09T08:50:53.917Z",
+  "date": "2026-09-11",
+  "updatedAt": "2026-09-09T08:53:09.512Z",
   "totalMatches": 0,
   "foundLeagues": [
     {
@@ -20,6 +20,7 @@
     "hardLimit": 85
   },
   "errors": [
+    "API-Football: {\"plan\":\"Free plans do not have access to this date, try from 2026-09-08 to 2026-09-10.\"}",
     "3F Superliga: API-Football: {\"plan\":\"Free plans do not have access to this season, try from 2022 to 2024.\"}"
   ]
 }
