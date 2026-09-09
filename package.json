@@ -1,12 +1,13 @@
 {
-  "name": "betscope-csv-api-football",
-  "version": "1.0.0",
+  "name": "betscope-fbref-csv",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node src/run.js",
-    "build:sample": "SAMPLE_MODE=true node src/run.js",
+    "build:data": "node src/run.js",
     "test": "node --test"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=24"
+  }
 }
