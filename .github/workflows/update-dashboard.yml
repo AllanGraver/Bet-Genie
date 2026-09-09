@@ -232,38 +232,42 @@ jobs:
           BRANCH_NAME: ${{ github.ref_name }}
           ANALYSIS_DATE: ${{ steps.analysis.outputs.date }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email \
-            "41898282+github-actions[bot]@users.noreply.github.com"
+          set -e
 
-          # Tilføj kun mapper som faktisk findes
-          if [ -d data/leagues ]; then
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if [ -d "data/leagues" ]; then
             git add data/leagues
           fi
 
-          if [ -d data/cache ]; then
+          if [ -d "data/cache" ]; then
             git add data/cache
           fi
 
-          git add docs/data/results.json
+          if [ -f "docs/data/results.json" ]; then
+            git add docs/data/results.json
+          else
+            echo "::error::docs/data/results.json findes ikke."
+            exit 1
+          fi
 
           if git diff --cached --quiet; then
-
             echo "Ingen dataændringer at gemme."
-
           else
+            git commit -m "Opdater BetScope-data ${ANALYSIS_DATE}"
+            git pull --rebase origin "${BRANCH_NAME}"
+            git push origin "HEAD:${BRANCH_NAME}"
+          fi
 
-            git commit \
-              -m "Opdater BetScope-data ${ANALYSIS_DATE}"
+      - name: Konfigurér GitHub Pages
+        uses: actions/configure-pages@v5
 
-            # Hent eventuelle ændringer, som er kommet siden checkout
-            git pull \
-              --rebase \
-              origin \
-              "$BRANCH_NAME"
+      - name: Upload GitHub Pages-artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: docs
 
-            git push \
-              origin \
-              "HEAD:$BRANCH_NAME"
-
-            echo "CSV
+      - name: Publicér GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
