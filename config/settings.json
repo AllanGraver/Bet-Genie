@@ -1,31 +1,37 @@
 {
   "timezone": "Europe/Copenhagen",
   "apiBaseUrl": "https://v3.football.api-sports.io",
+  "analysisPeriodDays": 7,
   "dailyHardLimit": 85,
   "h2hCandidateLimit": 15,
+  "h2hCandidatesPerDay": 3,
   "h2hMinimumMatches": 5,
   "h2hCacheDays": 30,
   "historyMatches": 10,
   "recentMatches": 5,
   "criteria": {
-    "minimumGoalsAverage": 1.0,
-    "minimumH2HOver15Rate": 0.80,
+    "minimumGoalsAverage": 1,
+    "minimumH2HOver15Rate": 0.8,
     "minimumScoredInLastFive": 4,
-    "minimumTeamOver15Rate": 0.80,
-    "minimumBttsRate": 0.60
+    "minimumTeamOver15Rate": 0.8,
+    "minimumBttsRate": 0.6
   },
   "preScoreWeights": {
-    "goalsAverage": 0.30,
+    "goalsAverage": 0.3,
     "scoringForm": 0.25,
     "teamOver15": 0.25,
-    "btts": 0.20
+    "btts": 0.2
   },
   "finalScoreWeights": {
     "goalsAverage": 0.25,
-    "h2hOver15": 0.20,
-    "scoringForm": 0.20,
-    "teamOver15": 0.20,
+    "h2hOver15": 0.2,
+    "scoringForm": 0.2,
+    "teamOver15": 0.2,
     "btts": 0.15
   },
-  "levels": { "elite": 90, "strong": 80, "interesting": 70 }
+  "levels": {
+    "elite": 90,
+    "strong": 80,
+    "interesting": 70
+  }
 }
