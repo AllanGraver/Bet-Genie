@@ -1,8 +1,50 @@
 {
-  "date": "2026-09-11",
-  "updatedAt": "2026-09-09T08:53:09.512Z",
+  "date": "2026-09-09",
+  "updatedAt": "2026-09-09T09:07:50.746Z",
   "totalMatches": 0,
   "foundLeagues": [
+    {
+      "slug": "bundesliga",
+      "name": "Bundesliga",
+      "file": "2024-2025 Bundesliga Scores & Fixtures.csv",
+      "csvRows": 308,
+      "today": 0
+    },
+    {
+      "slug": "superliga",
+      "name": "3F Superliga",
+      "file": "2024-2025 Danish Superliga Scores & Fixtures.csv",
+      "csvRows": 193,
+      "today": 0
+    },
+    {
+      "slug": "bundesliga",
+      "name": "Bundesliga",
+      "file": "2025-2026 Bundesliga Scores & Fixtures.csv",
+      "csvRows": 308,
+      "today": 0
+    },
+    {
+      "slug": "superliga",
+      "name": "3F Superliga",
+      "file": "2025-2026 Danish Superliga Scores & Fixtures.csv",
+      "csvRows": 193,
+      "today": 0
+    },
+    {
+      "slug": "bundesliga",
+      "name": "Bundesliga",
+      "file": "2026-2027 Bundesliga Scores & Fixtures.csv",
+      "csvRows": 306,
+      "today": 0
+    },
+    {
+      "slug": "superliga",
+      "name": "3F Superliga",
+      "file": "2026-2027 Danish Superliga Scores & Fixtures.csv",
+      "csvRows": 132,
+      "today": 0
+    },
     {
       "slug": "superliga",
       "name": "3F Superliga",
@@ -11,16 +53,28 @@
       "today": 0
     }
   ],
-  "unknownCsvFiles": [],
+  "unknownCsvFiles": [
+    "2024-2025 Belgian Pro League Scores & Fixtures.csv",
+    "2024-2025 Premier League Scores & Fixtures.csv",
+    "2025-2026 Belgian Pro League Scores & Fixtures.csv",
+    "2025-2026 Premier League Scores & Fixtures.csv",
+    "2026-2027 Belgian Pro League Scores & Fixtures.csv",
+    "2026-2027 Premier League Scores & Fixtures.csv"
+  ],
   "results": [],
   "nearMisses": [],
   "requestUsage": {
-    "used": 2,
+    "used": 8,
     "remaining": null,
     "hardLimit": 85
   },
   "errors": [
-    "API-Football: {\"plan\":\"Free plans do not have access to this date, try from 2026-09-08 to 2026-09-10.\"}",
+    "Bundesliga: API-Football: {\"plan\":\"Free plans do not have access to this season, try from 2022 to 2024.\"}",
+    "3F Superliga: API-Football: {\"plan\":\"Free plans do not have access to this season, try from 2022 to 2024.\"}",
+    "Bundesliga: API-Football: {\"plan\":\"Free plans do not have access to this season, try from 2022 to 2024.\"}",
+    "3F Superliga: API-Football: {\"plan\":\"Free plans do not have access to this season, try from 2022 to 2024.\"}",
+    "Bundesliga: API-Football: {\"plan\":\"Free plans do not have access to this season, try from 2022 to 2024.\"}",
+    "3F Superliga: API-Football: {\"plan\":\"Free plans do not have access to this season, try from 2022 to 2024.\"}",
     "3F Superliga: API-Football: {\"plan\":\"Free plans do not have access to this season, try from 2022 to 2024.\"}"
   ]
 }
