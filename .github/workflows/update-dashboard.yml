@@ -1,4 +1,4 @@
-name: Opdater BetScope CSV-dashboard
+name: Opdater Bet-Genie CSV-dashboard
 
 on:
   workflow_dispatch:
