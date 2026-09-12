@@ -1,106 +1,106 @@
 {
-  "generatedAt": "2026-09-11T11:26:39.243Z",
+  "generatedAt": "2026-09-12T10:51:35.454Z",
   "used": 8,
   "remaining": null,
   "hardLimit": 85,
   "calls": [
     {
-      "timestamp": "2026-09-11T11:26:37.925Z",
+      "timestamp": "2026-09-12T10:51:33.960Z",
       "endpoint": "/fixtures",
       "params": {
-        "from": "2026-09-11",
-        "to": "2026-09-17",
+        "from": "2026-09-12",
+        "to": "2026-09-18",
         "timezone": "Europe/Copenhagen"
       },
       "status": 200,
       "remaining": 99
     },
     {
-      "timestamp": "2026-09-11T11:26:38.059Z",
+      "timestamp": "2026-09-12T10:51:34.100Z",
       "endpoint": "/fixtures",
       "params": {
         "league": 113,
         "season": 2026,
-        "from": "2026-09-10",
-        "to": "2026-09-11",
+        "from": "2026-09-11",
+        "to": "2026-09-12",
         "status": "FT-AET-PEN"
       },
       "status": 200,
       "remaining": null
     },
     {
-      "timestamp": "2026-09-11T11:26:38.188Z",
+      "timestamp": "2026-09-12T10:51:34.260Z",
       "endpoint": "/fixtures",
       "params": {
         "league": 103,
         "season": 2026,
-        "from": "2026-09-10",
-        "to": "2026-09-11",
+        "from": "2026-09-11",
+        "to": "2026-09-12",
         "status": "FT-AET-PEN"
       },
       "status": 200,
       "remaining": null
     },
     {
-      "timestamp": "2026-09-11T11:26:38.335Z",
+      "timestamp": "2026-09-12T10:51:34.368Z",
       "endpoint": "/fixtures",
       "params": {
         "league": 144,
         "season": 2026,
-        "from": "2026-09-10",
-        "to": "2026-09-11",
+        "from": "2026-09-11",
+        "to": "2026-09-12",
         "status": "FT-AET-PEN"
       },
       "status": 200,
       "remaining": null
     },
     {
-      "timestamp": "2026-09-11T11:26:38.464Z",
+      "timestamp": "2026-09-12T10:51:34.480Z",
       "endpoint": "/fixtures",
       "params": {
         "league": 78,
         "season": 2026,
-        "from": "2026-09-10",
-        "to": "2026-09-11",
+        "from": "2026-09-11",
+        "to": "2026-09-12",
         "status": "FT-AET-PEN"
       },
       "status": 200,
       "remaining": null
     },
     {
-      "timestamp": "2026-09-11T11:26:38.597Z",
+      "timestamp": "2026-09-12T10:51:34.587Z",
       "endpoint": "/fixtures",
       "params": {
         "league": 119,
         "season": 2026,
-        "from": "2026-09-10",
-        "to": "2026-09-11",
+        "from": "2026-09-11",
+        "to": "2026-09-12",
         "status": "FT-AET-PEN"
       },
       "status": 200,
       "remaining": null
     },
     {
-      "timestamp": "2026-09-11T11:26:38.723Z",
+      "timestamp": "2026-09-12T10:51:34.761Z",
       "endpoint": "/fixtures",
       "params": {
         "league": 88,
         "season": 2026,
-        "from": "2026-09-10",
-        "to": "2026-09-11",
+        "from": "2026-09-11",
+        "to": "2026-09-12",
         "status": "FT-AET-PEN"
       },
       "status": 200,
       "remaining": null
     },
     {
-      "timestamp": "2026-09-11T11:26:38.849Z",
+      "timestamp": "2026-09-12T10:51:34.961Z",
       "endpoint": "/fixtures",
       "params": {
         "league": 39,
         "season": 2026,
-        "from": "2026-09-10",
-        "to": "2026-09-11",
+        "from": "2026-09-11",
+        "to": "2026-09-12",
         "status": "FT-AET-PEN"
       },
       "status": 200,
