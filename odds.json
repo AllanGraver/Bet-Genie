@@ -1,0 +1,8 @@
+{
+  "enabled": true,
+  "minimumScore": 80,
+  "market": "Over 1,5 mål",
+  "cacheHours": 6,
+  "kickoffToleranceHours": 12,
+  "bookmakers": ["Unibet"]
+}
