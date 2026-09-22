@@ -5,7 +5,7 @@
     "to": "2026-09-28",
     "days": 7
   },
-  "updatedAt": "2026-09-22T12:32:26.102Z",
+  "updatedAt": "2026-09-22T13:06:05.160Z",
   "totalMatches": 0,
   "foundLeagues": [
     {
@@ -65,7 +65,7 @@
   "matchesByDate": [],
   "requestUsage": {
     "enabled": true,
-    "used": 8,
+    "used": 14,
     "remaining": null,
     "hardLimit": 85
   },
@@ -80,13 +80,19 @@
       "enabled": true,
       "available": false,
       "keyConfigured": true,
-      "requestsUsed": 8,
+      "requestsUsed": 14,
       "requestsRemaining": null,
-      "error": "API-Football: {\"from\":\"The From field need another parameter.\",\"to\":\"The To field need another parameter.\",\"timezone\":\"The Timezone field need another parameter.\"}"
+      "error": "Ingen ligakald efter ugefixtures lykkedes."
     }
   },
   "warnings": [
-    "Ugens fixtures kunne ikke hentes fra API-Football. CSV-data bruges: API-Football: {\"from\":\"The From field need another parameter.\",\"to\":\"The To field need another parameter.\",\"timezone\":\"The Timezone field need another parameter.\"}",
+    "Allsvenskan: ugefixtures kunne ikke hentes fra API-Football. CSV-data bruges: API-Football: {\"plan\":\"Free plans do not have access to this season, try from 2022 to 2024.\"}",
+    "Eliteserien: ugefixtures kunne ikke hentes fra API-Football. CSV-data bruges: API-Football: {\"plan\":\"Free plans do not have access to this season, try from 2022 to 2024.\"}",
+    "Belgian Pro League: ugefixtures kunne ikke hentes fra API-Football. CSV-data bruges: API-Football: {\"plan\":\"Free plans do not have access to this season, try from 2022 to 2024.\"}",
+    "Bundesliga: ugefixtures kunne ikke hentes fra API-Football. CSV-data bruges: API-Football: {\"plan\":\"Free plans do not have access to this season, try from 2022 to 2024.\"}",
+    "3F Superliga: ugefixtures kunne ikke hentes fra API-Football. CSV-data bruges: API-Football: {\"plan\":\"Free plans do not have access to this season, try from 2022 to 2024.\"}",
+    "Eredivisie: ugefixtures kunne ikke hentes fra API-Football. CSV-data bruges: API-Football: {\"plan\":\"Free plans do not have access to this season, try from 2022 to 2024.\"}",
+    "Premier League: ugefixtures kunne ikke hentes fra API-Football. CSV-data bruges: API-Football: {\"plan\":\"Free plans do not have access to this season, try from 2022 to 2024.\"}",
     "Allsvenskan: API catch-up blev sprunget over: API-Football: {\"plan\":\"Free plans do not have access to this season, try from 2022 to 2024.\"}",
     "Eliteserien: API catch-up blev sprunget over: API-Football: {\"plan\":\"Free plans do not have access to this season, try from 2022 to 2024.\"}",
     "Belgian Pro League: API catch-up blev sprunget over: API-Football: {\"plan\":\"Free plans do not have access to this season, try from 2022 to 2024.\"}",
