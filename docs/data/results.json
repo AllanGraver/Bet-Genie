@@ -5,7 +5,7 @@
     "to": "2026-09-28",
     "days": 7
   },
-  "updatedAt": "2026-09-22T11:44:05.384Z",
+  "updatedAt": "2026-09-22T12:32:26.102Z",
   "totalMatches": 0,
   "foundLeagues": [
     {
@@ -93,7 +93,16 @@
     "Bundesliga: API catch-up blev sprunget over: API-Football: {\"plan\":\"Free plans do not have access to this season, try from 2022 to 2024.\"}",
     "3F Superliga: API catch-up blev sprunget over: API-Football: {\"plan\":\"Free plans do not have access to this season, try from 2022 to 2024.\"}",
     "Eredivisie: API catch-up blev sprunget over: API-Football: {\"plan\":\"Free plans do not have access to this season, try from 2022 to 2024.\"}",
-    "Premier League: API catch-up blev sprunget over: API-Football: {\"plan\":\"Free plans do not have access to this season, try from 2022 to 2024.\"}"
+    "Premier League: API catch-up blev sprunget over: API-Football: {\"plan\":\"Free plans do not have access to this season, try from 2022 to 2024.\"}",
+    "ODDS_API_KEY mangler. Analysen er publiceret uden Unibet-odds."
   ],
-  "errors": []
+  "errors": [],
+  "oddsSummary": {
+    "provider": "Odds-API.io",
+    "bookmaker": "Unibet",
+    "market": "Over 1,5 mål",
+    "threshold": 80,
+    "candidates": 0,
+    "available": 0
+  }
 }
