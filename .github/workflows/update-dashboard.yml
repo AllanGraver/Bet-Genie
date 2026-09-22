@@ -1,5 +1,4 @@
-name: Opdater Bet-Genie CSV-dashboard
-
+name: Opdater BetScope CSV-dashboard
 on:
   workflow_dispatch:
     inputs:
@@ -9,146 +8,66 @@ on:
         type: string
   schedule:
     - cron: "15 6 * * *"
-
 permissions:
   contents: write
   pages: write
   id-token: write
-
 concurrency:
   group: betscope-daily
   cancel-in-progress: true
-
 jobs:
   build-and-deploy:
-    name: Byg ugeanalyse og publicér dashboard
     runs-on: ubuntu-latest
     timeout-minutes: 30
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
-      - name: Hent repository
-        uses: actions/checkout@v6
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-
-      - name: Installér Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
-          node-version: 20
-
+          node-version: 24
       - name: Installér npm-afhængigheder
-        shell: bash
-        run: |
-          set -e
-          if [ -f "package-lock.json" ]; then
-            npm ci
-          else
-            npm install
-          fi
-
-      - name: Kontrollér valgfrit API-Football-supplement
-        shell: bash
-        env:
-          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
-        run: |
-          if [ -z "$API_FOOTBALL_KEY" ]; then
-            echo "::warning::API_FOOTBALL_KEY er ikke konfigureret. CSV-workflowet fortsætter uden API-Football."
-          else
-            echo "API_FOOTBALL_KEY er fundet. API-Football bruges som valgfrit supplement."
-          fi
-
-      - name: Kør automatiske tests
+        run: if [ -f package-lock.json ]; then npm ci; else npm install; fi
+      - name: Kør tests
         run: npm test
-
       - name: Fastlæg startdato
         id: analysis
         shell: bash
         env:
           INPUT_DATE: ${{ github.event.inputs.analysis_date || '' }}
         run: |
-          set -e
-          if [ -n "$INPUT_DATE" ]; then
-            if ! [[ "$INPUT_DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
-              echo "::error::Startdatoen skal skrives som YYYY-MM-DD."
-              exit 1
-            fi
-            ANALYSIS_DATE="$INPUT_DATE"
-          else
-            ANALYSIS_DATE=$(TZ=Europe/Copenhagen date +%F)
-          fi
-          echo "date=$ANALYSIS_DATE" >> "$GITHUB_OUTPUT"
-          echo "BetScope analyserer syv dage fra: $ANALYSIS_DATE"
-
-      - name: Opret nødvendige datamapper
-        shell: bash
-        run: |
-          mkdir -p "data/leagues"
-          mkdir -p "data/cache"
-          mkdir -p "docs/data"
-
-      - name: Byg ugeoversigt og opdater CSV-hukommelse
-        shell: bash
+          if [ -n "$INPUT_DATE" ]; then D="$INPUT_DATE"; else D=$(TZ=Europe/Copenhagen date +%F); fi
+          echo "date=$D" >> "$GITHUB_OUTPUT"
+      - name: Opret datamapper
+        run: mkdir -p data/leagues data/cache/odds docs/data
+      - name: Byg den eksisterende BetScope-analyse
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
           ANALYSIS_DATE: ${{ steps.analysis.outputs.date }}
         run: npm run build:data
-
-      - name: Kontrollér genereret dashboarddata
-        shell: bash
-        run: |
-          set -e
-          test -f "docs/data/results.json"
-          node <<'NODE'
-          const fs = require('fs');
-          const data = JSON.parse(fs.readFileSync('docs/data/results.json', 'utf8'));
-          for (const field of ['results', 'nearMisses', 'foundLeagues', 'matchesByDate']) {
-            if (!Array.isArray(data[field])) throw new Error(`${field} mangler eller er ikke en liste`);
-          }
-          console.log({
-            period: data.period,
-            totalMatches: data.totalMatches,
-            approved: data.results.length,
-            nearMisses: data.nearMisses.length,
-            leagues: data.foundLeagues.length,
-            requestsUsed: data.requestUsage?.used,
-            apiEnabled: data.requestUsage?.enabled
-          });
-          NODE
-
-      - name: Gem opdaterede CSV-filer og dashboarddata
+      - name: Tilføj Unibet-odds fra Odds-API.io
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: node src/enrich-odds.js
+      - name: Gem data og odds-cache
         shell: bash
         env:
-          BRANCH_NAME: ${{ github.ref_name }}
-          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
-          ANALYSIS_DATE: ${{ steps.analysis.outputs.date }}
+          BRANCH_NAME: ${{ github.event.repository.default_branch }}
         run: |
-          set -e
-          TARGET_BRANCH="${BRANCH_NAME:-$DEFAULT_BRANCH}"
-          TARGET_BRANCH="${TARGET_BRANCH:-main}"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          [ -d "data/leagues" ] && git add "data/leagues"
-          [ -d "data/cache" ] && git add "data/cache"
-          git add "docs/data/results.json"
-          if git diff --cached --quiet; then
-            echo "Ingen dataændringer at gemme."
-          else
-            git commit -m "Opdater BetScope-data ${ANALYSIS_DATE}"
-            git pull --rebase origin "$TARGET_BRANCH"
-            git push origin "HEAD:$TARGET_BRANCH"
+          git add data/leagues data/cache docs/data/results.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Opdater BetScope-data og Unibet-odds"
+            git pull --rebase origin "$BRANCH_NAME"
+            git push origin "HEAD:$BRANCH_NAME"
           fi
-
-      - name: Konfigurér GitHub Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload GitHub Pages-artifact
-        uses: actions/upload-pages-artifact@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: docs
-
-      - name: Publicér GitHub Pages
-        id: deployment
+      - id: deployment
         uses: actions/deploy-pages@v4
