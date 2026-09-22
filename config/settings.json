@@ -17,16 +17,16 @@
     "minimumBttsRate": 0.6
   },
   "preScoreWeights": {
-    "goalsAverage": 0.3,
+    "goalsAverage": 0.30,
     "scoringForm": 0.25,
     "teamOver15": 0.25,
-    "btts": 0.2
+    "btts": 0.20
   },
   "finalScoreWeights": {
     "goalsAverage": 0.25,
-    "h2hOver15": 0.2,
-    "scoringForm": 0.2,
-    "teamOver15": 0.2,
+    "h2hOver15": 0.20,
+    "scoringForm": 0.20,
+    "teamOver15": 0.20,
     "btts": 0.15
   },
   "levels": {
