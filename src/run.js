@@ -2,13 +2,20 @@
  * BetScope
  *
  * CSV-filer er den primære datakilde.
+ *
  * API-Football er et valgfrit supplement til:
  * - kommende fixtures
  * - catch-up af afsluttede kampe
  * - manglende H2H-data
  *
- * Unibet-odds fra Odds-API.io tilføjes bagefter af:
- *   node src/enrich-odds.js
+ * config/leagues.json er masterfil for:
+ * - CSV-filgenkendelse
+ * - ligaens visningsnavn
+ * - API-Football league ID og season
+ * - TheRundown sport ID
+ * - fallback-link til Unibet
+ *
+ * Odds tilføjes efterfølgende af et separat enrichment-trin.
  *
  * Vigtigt:
  * API-Football-kald med from/to udføres pr. liga og inkluderer både
@@ -83,24 +90,137 @@ const requestLogFile = path.join(
   'request-log.json'
 );
 
-await fs.mkdir(leagueDataDirectory, {
-  recursive: true
-});
+const defaultFootballOddsUrl =
+  'https://www.unibet.dk/betting/sports/filter/football';
 
-await fs.mkdir(cacheDirectory, {
-  recursive: true
-});
+const rundownProviderName = 'TheRundown';
+const rundownBookmakerName = 'Unibet';
+const rundownBookmakerId = 21;
 
-await fs.mkdir(dashboardDataDirectory, {
-  recursive: true
-});
+await fs.mkdir(
+  leagueDataDirectory,
+  {
+    recursive: true
+  }
+);
+
+await fs.mkdir(
+  cacheDirectory,
+  {
+    recursive: true
+  }
+);
+
+await fs.mkdir(
+  dashboardDataDirectory,
+  {
+    recursive: true
+  }
+);
 
 const settings = JSON.parse(
-  await fs.readFile(settingsFile, 'utf8')
+  await fs.readFile(
+    settingsFile,
+    'utf8'
+  )
 );
 
 const leagueConfiguration = JSON.parse(
-  await fs.readFile(leaguesFile, 'utf8')
+  await fs.readFile(
+    leaguesFile,
+    'utf8'
+  )
+);
+
+if (!Array.isArray(leagueConfiguration)) {
+  throw new Error(
+    'config/leagues.json skal indeholde et JSON-array.'
+  );
+}
+
+/*
+ * ------------------------------------------------------------
+ * VALIDÉR LEAGUES.JSON
+ * ------------------------------------------------------------
+ */
+
+const missingLeagueSlugs = leagueConfiguration
+  .filter(league =>
+    !String(league?.slug || '').trim()
+  );
+
+if (missingLeagueSlugs.length > 0) {
+  throw new Error(
+    'En eller flere ligaer i config/leagues.json mangler slug.'
+  );
+}
+
+const configuredLeagueSlugs = leagueConfiguration
+  .map(league =>
+    String(league.slug).trim()
+  );
+
+const duplicateLeagueSlugs = configuredLeagueSlugs
+  .filter(
+    (slug, index, slugs) =>
+      slugs.indexOf(slug) !== index
+  );
+
+if (duplicateLeagueSlugs.length > 0) {
+  throw new Error(
+    'Dublerede liga-slugs i config/leagues.json: ' +
+    [...new Set(duplicateLeagueSlugs)].join(', ')
+  );
+}
+
+for (const league of leagueConfiguration) {
+  if (
+    league.filePatterns !== undefined &&
+    !Array.isArray(league.filePatterns)
+  ) {
+    throw new Error(
+      `${league.slug}: filePatterns skal være et array.`
+    );
+  }
+
+  if (
+    league.rundownSportId !== null &&
+    league.rundownSportId !== undefined &&
+    (
+      !Number.isFinite(Number(league.rundownSportId)) ||
+      Number(league.rundownSportId) <= 0
+    )
+  ) {
+    throw new Error(
+      `${league.slug}: rundownSportId skal være et positivt tal ` +
+      'eller null.'
+    );
+  }
+
+  if (
+    league.fallbackOddsUrl !== undefined &&
+    league.fallbackOddsUrl !== null
+  ) {
+    const fallbackUrl = String(
+      league.fallbackOddsUrl
+    ).trim();
+
+    if (
+      fallbackUrl &&
+      !fallbackUrl.startsWith('https://')
+    ) {
+      throw new Error(
+        `${league.slug}: fallbackOddsUrl skal bruge HTTPS.`
+      );
+    }
+  }
+}
+
+const leagueConfigurationBySlug = new Map(
+  leagueConfiguration.map(league => [
+    String(league.slug).trim(),
+    league
+  ])
 );
 
 /*
@@ -118,17 +238,24 @@ function isIsoDate(value) {
 function addDays(dateText, days) {
   if (!isIsoDate(dateText)) {
     throw new Error(
-      `Ugyldig dato: ${dateText}. Forventet format er YYYY-MM-DD.`
+      `Ugyldig dato: ${dateText}. ` +
+      'Forventet format er YYYY-MM-DD.'
     );
   }
 
-  const date = new Date(`${dateText}T12:00:00Z`);
+  const date = new Date(
+    `${dateText}T12:00:00Z`
+  );
 
   if (Number.isNaN(date.getTime())) {
-    throw new Error(`Datoen kunne ikke fortolkes: ${dateText}`);
+    throw new Error(
+      `Datoen kunne ikke fortolkes: ${dateText}`
+    );
   }
 
-  date.setUTCDate(date.getUTCDate() + days);
+  date.setUTCDate(
+    date.getUTCDate() + days
+  );
 
   return date
     .toISOString()
@@ -155,7 +282,8 @@ const environmentAnalysisDate = String(
   process.env.ANALYSIS_DATE || ''
 ).trim();
 
-const analysisDate = environmentAnalysisDate ||
+const analysisDate =
+  environmentAnalysisDate ||
   getCurrentDateInTimezone(timezone);
 
 if (!isIsoDate(analysisDate)) {
@@ -199,12 +327,27 @@ const sourceStatus = {
     requestsUsed: 0,
     requestsRemaining: null,
     error: null
+  },
+
+  odds: {
+    provider: rundownProviderName,
+    bookmaker: rundownBookmakerName,
+    bookmakerId: rundownBookmakerId,
+    keyConfigured: Boolean(
+      String(
+        process.env.THERUNDOWN_API_KEY || ''
+      ).trim()
+    ),
+    configuredLeagues: 0,
+    supportedLeagues: 0,
+    fallbackLeagues: 0,
+    enrichmentPending: true
   }
 };
 
 /*
  * ------------------------------------------------------------
- * HJÆLPEFUNKTIONER
+ * GENERELLE HJÆLPEFUNKTIONER
  * ------------------------------------------------------------
  */
 
@@ -216,6 +359,200 @@ function normalizeText(value) {
     .replace(/[\u0300-\u036f]/g, '')
     .replace(/[^a-z0-9æøå]+/g, '-')
     .replace(/^-+|-+$/g, '');
+}
+
+function uniqueNormalizedValues(values) {
+  return [
+    ...new Set(
+      values
+        .filter(Boolean)
+        .map(normalizeText)
+        .filter(Boolean)
+    )
+  ];
+}
+
+function findLeagueConfiguration(leagueOrMatch) {
+  if (!leagueOrMatch) {
+    return null;
+  }
+
+  const slug = String(
+    leagueOrMatch.slug ||
+    leagueOrMatch.leagueSlug ||
+    ''
+  ).trim();
+
+  if (
+    slug &&
+    leagueConfigurationBySlug.has(slug)
+  ) {
+    return leagueConfigurationBySlug.get(slug);
+  }
+
+  const inputCandidates = uniqueNormalizedValues([
+    leagueOrMatch.slug,
+    leagueOrMatch.leagueSlug,
+    leagueOrMatch.displayName,
+    leagueOrMatch.name,
+    leagueOrMatch.leagueName
+  ]);
+
+  if (inputCandidates.length === 0) {
+    return null;
+  }
+
+  for (const configuredLeague of leagueConfiguration) {
+    const configuredCandidates =
+      uniqueNormalizedValues([
+        configuredLeague.slug,
+        configuredLeague.displayName,
+        ...(
+          Array.isArray(
+            configuredLeague.filePatterns
+          )
+            ? configuredLeague.filePatterns
+            : []
+        )
+      ]);
+
+    const matches = inputCandidates.some(
+      candidate =>
+        configuredCandidates.includes(candidate)
+    );
+
+    if (matches) {
+      return configuredLeague;
+    }
+  }
+
+  return null;
+}
+
+function getFallbackOddsUrl(leagueOrMatch) {
+  const league =
+    findLeagueConfiguration(leagueOrMatch);
+
+  const configuredUrl = String(
+    league?.fallbackOddsUrl || ''
+  ).trim();
+
+  return (
+    configuredUrl ||
+    defaultFootballOddsUrl
+  );
+}
+
+function getRundownSportId(leagueOrMatch) {
+  const league =
+    findLeagueConfiguration(leagueOrMatch);
+
+  if (!league) {
+    return null;
+  }
+
+  /*
+   * Vigtigt:
+   * Number(null) bliver 0 i JavaScript.
+   * Derfor kontrolleres null og undefined eksplicit.
+   */
+  if (
+    league.rundownSportId === null ||
+    league.rundownSportId === undefined ||
+    String(league.rundownSportId).trim() === ''
+  ) {
+    return null;
+  }
+
+  const sportId = Number(
+    league.rundownSportId
+  );
+
+  if (
+    !Number.isFinite(sportId) ||
+    sportId <= 0
+  ) {
+    return null;
+  }
+
+  return sportId;
+}
+
+function hasRundownCoverage(leagueOrMatch) {
+  return getRundownSportId(
+    leagueOrMatch
+  ) !== null;
+}
+
+function getLeagueOddsConfiguration(
+  leagueOrMatch
+) {
+  const rundownSportId =
+    getRundownSportId(leagueOrMatch);
+
+  const rundownSupported =
+    rundownSportId !== null;
+
+  return {
+    source: rundownSupported
+      ? 'therundown'
+      : 'external-link',
+
+    provider: rundownProviderName,
+
+    bookmaker: rundownBookmakerName,
+
+    bookmakerId: rundownBookmakerId,
+
+    rundownSupported,
+
+    rundownSportId,
+
+    fallbackUrl:
+      getFallbackOddsUrl(leagueOrMatch),
+
+    fallbackLabel:
+      'Find odds hos Unibet'
+  };
+}
+
+function enrichMatchWithOddsConfiguration(
+  match
+) {
+  const oddsConfiguration =
+    getLeagueOddsConfiguration(match);
+
+  return {
+    ...match,
+
+    oddsConfiguration,
+
+    /*
+     * pending betyder, at enrich-odds.js skal forsøge
+     * at hente odds for denne kamp.
+     *
+     * external-link betyder, at ligaen ikke har et
+     * verificeret TheRundown sport ID.
+     */
+    oddsStatus:
+      oddsConfiguration.rundownSupported
+        ? 'pending'
+        : 'external-link',
+
+    oddsSource:
+      oddsConfiguration.rundownSupported
+        ? rundownProviderName
+        : null,
+
+    bookmaker:
+      rundownBookmakerName,
+
+    fallbackOddsUrl:
+      oddsConfiguration.fallbackUrl,
+
+    fallbackOddsLabel:
+      oddsConfiguration.fallbackLabel
+  };
 }
 
 function matchKey(match) {
@@ -236,8 +573,12 @@ function hasFinishedScore(match) {
     match.homeScore !== undefined &&
     match.awayScore !== null &&
     match.awayScore !== undefined &&
-    Number.isFinite(Number(match.homeScore)) &&
-    Number.isFinite(Number(match.awayScore))
+    Number.isFinite(
+      Number(match.homeScore)
+    ) &&
+    Number.isFinite(
+      Number(match.awayScore)
+    )
   );
 }
 
@@ -262,10 +603,16 @@ function mergeMatches(...collections) {
         continue;
       }
 
-      const existingFinished = hasFinishedScore(existing);
-      const incomingFinished = hasFinishedScore(match);
+      const existingFinished =
+        hasFinishedScore(existing);
 
-      if (incomingFinished && !existingFinished) {
+      const incomingFinished =
+        hasFinishedScore(match);
+
+      if (
+        incomingFinished &&
+        !existingFinished
+      ) {
         matchMap.set(key, match);
         continue;
       }
@@ -274,32 +621,49 @@ function mergeMatches(...collections) {
         key,
         {
           ...existing,
+
           fixtureId:
             existing.fixtureId ||
             match.fixtureId ||
             null,
+
           homeId:
             existing.homeId ||
             match.homeId ||
             null,
+
           awayId:
             existing.awayId ||
             match.awayId ||
             null,
+
           kickoff:
             existing.kickoff ||
             match.kickoff ||
             null,
+
           time:
             existing.time ||
             match.time ||
-            ''
+            '',
+
+          leagueSlug:
+            existing.leagueSlug ||
+            match.leagueSlug ||
+            null,
+
+          leagueName:
+            existing.leagueName ||
+            match.leagueName ||
+            null
         }
       );
     }
   }
 
-  return Array.from(matchMap.values());
+  return Array.from(
+    matchMap.values()
+  );
 }
 
 function periodFixturesFromCsv(
@@ -326,7 +690,10 @@ async function readH2HCache(
 ) {
   try {
     const cached = JSON.parse(
-      await fs.readFile(file, 'utf8')
+      await fs.readFile(
+        file,
+        'utf8'
+      )
     );
 
     if (
@@ -336,9 +703,17 @@ async function readH2HCache(
       return null;
     }
 
+    const fetchedAtTime = new Date(
+      cached.fetchedAt
+    ).getTime();
+
+    if (!Number.isFinite(fetchedAtTime)) {
+      return null;
+    }
+
     const ageInDays = (
       Date.now() -
-      new Date(cached.fetchedAt).getTime()
+      fetchedAtTime
     ) / 86400000;
 
     if (ageInDays > maximumAgeInDays) {
@@ -351,7 +726,10 @@ async function readH2HCache(
   }
 }
 
-async function writeH2HCache(file, matches) {
+async function writeH2HCache(
+  file,
+  matches
+) {
   await fs.mkdir(
     path.dirname(file),
     {
@@ -363,7 +741,8 @@ async function writeH2HCache(file, matches) {
     file,
     JSON.stringify(
       {
-        fetchedAt: new Date().toISOString(),
+        fetchedAt:
+          new Date().toISOString(),
         matches
       },
       null,
@@ -382,7 +761,10 @@ function h2hCandidateKeys(
 
   for (const match of preAnalyses) {
     if (!matchesByDate.has(match.date)) {
-      matchesByDate.set(match.date, []);
+      matchesByDate.set(
+        match.date,
+        []
+      );
     }
 
     matchesByDate
@@ -392,7 +774,9 @@ function h2hCandidateKeys(
 
   const selected = [];
 
-  for (const matches of matchesByDate.values()) {
+  for (
+    const matches of matchesByDate.values()
+  ) {
     matches.sort(
       (matchA, matchB) =>
         Number(matchB.preScore || 0) -
@@ -400,7 +784,10 @@ function h2hCandidateKeys(
     );
 
     selected.push(
-      ...matches.slice(0, maximumPerDay)
+      ...matches.slice(
+        0,
+        maximumPerDay
+      )
     );
   }
 
@@ -411,16 +798,50 @@ function h2hCandidateKeys(
           Number(matchB.preScore || 0) -
           Number(matchA.preScore || 0)
       )
-      .slice(0, totalMaximum)
+      .slice(
+        0,
+        totalMaximum
+      )
       .map(matchKey)
   );
 }
 
-function validateLeagueForApi(league) {
-  return Boolean(
-    league &&
-    Number.isFinite(Number(league.apiLeagueId)) &&
-    Number.isFinite(Number(league.season))
+function validateLeagueForApiFootball(
+  league
+) {
+  if (!league) {
+    return false;
+  }
+
+  if (
+    league.apiLeagueId === null ||
+    league.apiLeagueId === undefined ||
+    String(league.apiLeagueId).trim() === ''
+  ) {
+    return false;
+  }
+
+  if (
+    league.season === null ||
+    league.season === undefined ||
+    String(league.season).trim() === ''
+  ) {
+    return false;
+  }
+
+  const leagueId = Number(
+    league.apiLeagueId
+  );
+
+  const season = Number(
+    league.season
+  );
+
+  return (
+    Number.isFinite(leagueId) &&
+    leagueId > 0 &&
+    Number.isFinite(season) &&
+    season > 0
   );
 }
 
@@ -447,36 +868,65 @@ const unknownCsvFiles = Array.isArray(
   ? discovery.unknown
   : [];
 
-sourceStatus.csv.filesFound = foundLeagueFiles.length;
-sourceStatus.csv.available = foundLeagueFiles.length > 0;
+sourceStatus.csv.filesFound =
+  foundLeagueFiles.length;
 
-const activeLeagueMap = new Map();
+sourceStatus.csv.available =
+  foundLeagueFiles.length > 0;
+
+/*
+ * Denne map bruges kun til API-Football.
+ * Den må ikke bruges som mål for alle aktive CSV-ligaer.
+ */
+const apiFootballLeagueMap = new Map();
 
 for (const leagueFile of foundLeagueFiles) {
-  const league = leagueFile.league;
+  const discoveredLeague =
+    leagueFile.league;
 
-  if (!validateLeagueForApi(league)) {
-    if (league) {
-      warnings.push(
-        `${league.displayName || league.slug}: ` +
-        'API league ID eller season mangler. ' +
-        'Ligaen bruger kun CSV-data.'
-      );
-    }
+  const league =
+    findLeagueConfiguration(
+      discoveredLeague
+    ) ||
+    discoveredLeague;
+
+  if (!league) {
+    continue;
+  }
+
+  if (
+    !validateLeagueForApiFootball(league)
+  ) {
+    warnings.push(
+      `${league.displayName || league.slug}: ` +
+      'API-Football league ID eller season mangler. ' +
+      'Ligaen bruger kun CSV-data.'
+    );
 
     continue;
   }
 
-  const apiLeagueId = Number(league.apiLeagueId);
+  const apiLeagueId = Number(
+    league.apiLeagueId
+  );
 
-  if (!activeLeagueMap.has(apiLeagueId)) {
-    activeLeagueMap.set(apiLeagueId, league);
+  if (
+    !apiFootballLeagueMap.has(
+      apiLeagueId
+    )
+  ) {
+    apiFootballLeagueMap.set(
+      apiLeagueId,
+      league
+    );
   }
 }
 
 sourceStatus.csv.leaguesFound = new Set(
   foundLeagueFiles
-    .map(file => file.league?.slug)
+    .map(file =>
+      file.league?.slug
+    )
     .filter(Boolean)
 ).size;
 
@@ -488,13 +938,16 @@ let allHistory = mergeMatches(
   )
 );
 
-const csvPeriodFixtures = periodFixturesFromCsv(
-  allHistory,
-  analysisDate,
-  analysisEndDate
-);
+const csvPeriodFixtures =
+  periodFixturesFromCsv(
+    allHistory,
+    analysisDate,
+    analysisEndDate
+  );
 
-let periodFixtures = [...csvPeriodFixtures];
+let periodFixtures = [
+  ...csvPeriodFixtures
+];
 
 /*
  * ------------------------------------------------------------
@@ -509,7 +962,8 @@ const apiKey = String(
 let apiFootball = null;
 
 if (apiKey) {
-  sourceStatus.apiFootball.keyConfigured = true;
+  sourceStatus.apiFootball.keyConfigured =
+    true;
 
   try {
     apiFootball = new ApiFootball(
@@ -518,14 +972,20 @@ if (apiKey) {
       settings.dailyHardLimit
     );
 
-    sourceStatus.apiFootball.enabled = true;
-    sourceStatus.apiFootball.available = true;
+    sourceStatus.apiFootball.enabled =
+      true;
+
+    sourceStatus.apiFootball.available =
+      true;
   } catch (error) {
     apiFootball = null;
-    sourceStatus.apiFootball.error = error.message;
+
+    sourceStatus.apiFootball.error =
+      error.message;
 
     warnings.push(
-      `API-Football kunne ikke aktiveres: ${error.message}`
+      'API-Football kunne ikke aktiveres: ' +
+      error.message
     );
   }
 } else {
@@ -542,6 +1002,7 @@ if (apiKey) {
  *
  * API-Football kræver ledsageparametre ved brug af from/to.
  * Derfor foretages kaldet pr. aktiv liga med:
+ *
  * - league
  * - season
  * - from
@@ -549,23 +1010,41 @@ if (apiKey) {
  * - timezone
  */
 
-if (apiFootball && activeLeagueMap.size > 0) {
+if (
+  apiFootball &&
+  apiFootballLeagueMap.size > 0
+) {
   const apiPeriodFixtures = [];
   let successfulLeagueRequests = 0;
 
-  console.log('API-Football fixtureperiode:', {
-    from: analysisDate,
-    to: analysisEndDate,
-    timezone,
-    activeLeagues: activeLeagueMap.size
-  });
-
-  for (const league of activeLeagueMap.values()) {
-    const fixtureParameters = {
-      league: Number(league.apiLeagueId),
-      season: Number(league.season),
+  console.log(
+    'API-Football fixtureperiode:',
+    {
       from: analysisDate,
       to: analysisEndDate,
+      timezone,
+      activeLeagues:
+        apiFootballLeagueMap.size
+    }
+  );
+
+  for (
+    const league of
+      apiFootballLeagueMap.values()
+  ) {
+    const fixtureParameters = {
+      league:
+        Number(league.apiLeagueId),
+
+      season:
+        Number(league.season),
+
+      from:
+        analysisDate,
+
+      to:
+        analysisEndDate,
+
       timezone
     };
 
@@ -575,22 +1054,28 @@ if (apiFootball && activeLeagueMap.size > 0) {
     );
 
     try {
-      const response = await apiFootball.get(
-        '/fixtures',
-        fixtureParameters
-      );
+      const response =
+        await apiFootball.get(
+          '/fixtures',
+          fixtureParameters
+        );
 
       apiPeriodFixtures.push(
         ...response.map(item =>
-          apiFixtureToMatch(item, league)
+          apiFixtureToMatch(
+            item,
+            league
+          )
         )
       );
 
       successfulLeagueRequests += 1;
     } catch (error) {
       warnings.push(
-        `${league.displayName}: ugefixtures kunne ikke hentes ` +
-        `fra API-Football. CSV-data bruges: ${error.message}`
+        `${league.displayName}: ` +
+        'ugefixtures kunne ikke hentes ' +
+        'fra API-Football. CSV-data bruges: ' +
+        error.message
       );
     }
   }
@@ -615,40 +1100,70 @@ if (apiFootball && activeLeagueMap.size > 0) {
  * ------------------------------------------------------------
  */
 
-if (apiFootball && activeLeagueMap.size > 0) {
-  const previousDate = addDays(analysisDate, -1);
+if (
+  apiFootball &&
+  apiFootballLeagueMap.size > 0
+) {
+  const previousDate = addDays(
+    analysisDate,
+    -1
+  );
 
-  for (const league of activeLeagueMap.values()) {
+  for (
+    const league of
+      apiFootballLeagueMap.values()
+  ) {
     try {
-      const response = await apiFootball.get(
-        '/fixtures',
-        {
-          league: Number(league.apiLeagueId),
-          season: Number(league.season),
-          from: previousDate,
-          to: analysisDate,
-          status: 'FT-AET-PEN',
-          timezone
-        }
+      const response =
+        await apiFootball.get(
+          '/fixtures',
+          {
+            league:
+              Number(league.apiLeagueId),
+
+            season:
+              Number(league.season),
+
+            from:
+              previousDate,
+
+            to:
+              analysisDate,
+
+            status:
+              'FT-AET-PEN',
+
+            timezone
+          }
+        );
+
+      const apiMatches = response.map(
+        item =>
+          apiFixtureToMatch(
+            item,
+            league
+          )
       );
 
-      const apiMatches = response.map(item =>
-        apiFixtureToMatch(item, league)
-      );
-
-      const existingLeagueHistory = allHistory.filter(
-        match =>
-          match.leagueSlug === league.slug
-      );
-
-      const updatedLeagueHistory = mergeMatches(
-        existingLeagueHistory,
-        apiMatches,
-        periodFixtures.filter(
+      const existingLeagueHistory =
+        allHistory.filter(
           match =>
-            match.leagueSlug === league.slug
-        )
-      );
+            match.leagueSlug ===
+            league.slug
+        );
+
+      const updatedLeagueHistory =
+        mergeMatches(
+          existingLeagueHistory,
+
+          apiMatches,
+
+          periodFixtures.filter(
+            match =>
+              match.leagueSlug ===
+              league.slug
+          )
+        );
 
       await writeLeagueMemory(
         leagueDataDirectory,
@@ -659,13 +1174,15 @@ if (apiFootball && activeLeagueMap.size > 0) {
       allHistory = mergeMatches(
         allHistory.filter(
           match =>
-            match.leagueSlug !== league.slug
+            match.leagueSlug !==
+            league.slug
         ),
         updatedLeagueHistory
       );
     } catch (error) {
       warnings.push(
-        `${league.displayName}: API catch-up blev sprunget over: ` +
+        `${league.displayName}: ` +
+        'API catch-up blev sprunget over: ' +
         error.message
       );
     }
@@ -678,14 +1195,17 @@ if (apiFootball && activeLeagueMap.size > 0) {
  * ------------------------------------------------------------
  */
 
-let preAnalyses = periodFixtures
+const preAnalyses = periodFixtures
   .map(fixture =>
     preAnalyse(
       fixture,
+
       allHistory.filter(
         match =>
-          match.leagueSlug === fixture.leagueSlug
+          match.leagueSlug ===
+          fixture.leagueSlug
       ),
+
       settings
     )
   )
@@ -697,8 +1217,12 @@ let preAnalyses = periodFixtures
 
 const candidateKeys = h2hCandidateKeys(
   preAnalyses,
-  Number(settings.h2hCandidatesPerDay || 3),
-  Number(settings.h2hCandidateLimit || 15)
+  Number(
+    settings.h2hCandidatesPerDay || 3
+  ),
+  Number(
+    settings.h2hCandidateLimit || 15
+  )
 );
 
 /*
@@ -721,9 +1245,13 @@ for (const candidate of preAnalyses) {
 
   const shouldRequestH2H = (
     Boolean(apiFootball) &&
-    candidateKeys.has(matchKey(candidate)) &&
+    candidateKeys.has(
+      matchKey(candidate)
+    ) &&
     h2hMatches.length <
-      Number(settings.h2hMinimumMatches || 5) &&
+      Number(
+        settings.h2hMinimumMatches || 5
+      ) &&
     candidate.homeId &&
     candidate.awayId
   );
@@ -746,34 +1274,47 @@ for (const candidate of preAnalyses) {
 
     const cached = await readH2HCache(
       cacheFile,
-      Number(settings.h2hCacheDays || 30)
+      Number(
+        settings.h2hCacheDays || 30
+      )
     );
 
     if (cached) {
       h2hMatches = cached.matches;
-      h2hSource = 'API-Football cache';
+      h2hSource =
+        'API-Football cache';
     } else {
       try {
-        const response = await apiFootball.get(
-          '/fixtures/headtohead',
-          {
-            h2h:
-              `${candidate.homeId}-${candidate.awayId}`,
-            last: 10
-          }
-        );
+        const response =
+          await apiFootball.get(
+            '/fixtures/headtohead',
+            {
+              h2h:
+                `${candidate.homeId}-` +
+                `${candidate.awayId}`,
+
+              last: 10
+            }
+          );
 
         h2hMatches = response.map(item => {
-          const responseLeague = activeLeagueMap.get(
-            Number(item.league?.id)
-          ) || {
-            slug: candidate.leagueSlug,
-            displayName:
-              item.league?.name ||
-              candidate.leagueName,
-            apiLeagueId: item.league?.id,
-            season: item.league?.season
-          };
+          const responseLeague =
+            apiFootballLeagueMap.get(
+              Number(item.league?.id)
+            ) || {
+              slug:
+                candidate.leagueSlug,
+
+              displayName:
+                item.league?.name ||
+                candidate.leagueName,
+
+              apiLeagueId:
+                item.league?.id,
+
+              season:
+                item.league?.season
+            };
 
           return apiFixtureToMatch(
             item,
@@ -786,11 +1327,14 @@ for (const candidate of preAnalyses) {
           h2hMatches
         );
 
-        h2hSource = 'API-Football';
+        h2hSource =
+          'API-Football';
       } catch (error) {
         warnings.push(
-          `${candidate.home} - ${candidate.away}: ` +
-          `H2H-supplement fejlede: ${error.message}`
+          `${candidate.home} - ` +
+          `${candidate.away}: ` +
+          'H2H-supplement fejlede: ' +
+          error.message
         );
       }
     }
@@ -808,11 +1352,22 @@ for (const candidate of preAnalyses) {
 
 /*
  * ------------------------------------------------------------
+ * TILFØJ ODDSKONFIGURATION TIL KAMPENE
+ * ------------------------------------------------------------
+ */
+
+const enrichedFinalResults =
+  finalResults.map(
+    enrichMatchWithOddsConfiguration
+  );
+
+/*
+ * ------------------------------------------------------------
  * SORTERING OG OPDELING
  * ------------------------------------------------------------
  */
 
-finalResults.sort(
+enrichedFinalResults.sort(
   (matchA, matchB) =>
     Number(matchB.passed) -
       Number(matchA.passed) ||
@@ -820,13 +1375,15 @@ finalResults.sort(
       Number(matchA.score || 0)
 );
 
-const approvedResults = finalResults.filter(
-  match => match.passed
-);
+const approvedResults =
+  enrichedFinalResults.filter(
+    match => match.passed
+  );
 
-const nearMisses = finalResults.filter(
-  match => !match.passed
-);
+const nearMisses =
+  enrichedFinalResults.filter(
+    match => !match.passed
+  );
 
 /*
  * ------------------------------------------------------------
@@ -837,24 +1394,105 @@ const nearMisses = finalResults.filter(
 const leagueSummaryMap = new Map();
 
 for (const leagueFile of foundLeagueFiles) {
-  const league = leagueFile.league;
+  const discoveredLeague =
+    leagueFile.league;
 
-  if (!league) {
+  if (!discoveredLeague) {
     continue;
   }
 
-  const key = league.slug ||
-    normalizeText(league.displayName);
+  const configuredLeague =
+    findLeagueConfiguration(
+      discoveredLeague
+    ) ||
+    discoveredLeague;
+
+  const key =
+    configuredLeague.slug ||
+    normalizeText(
+      configuredLeague.displayName
+    );
+
+  if (!key) {
+    continue;
+  }
 
   if (!leagueSummaryMap.has(key)) {
+    const oddsConfiguration =
+      getLeagueOddsConfiguration(
+        configuredLeague
+      );
+
     leagueSummaryMap.set(
       key,
       {
-        slug: league.slug || key,
+        slug:
+          configuredLeague.slug ||
+          key,
+
         name:
-          league.displayName ||
-          league.slug ||
+          configuredLeague.displayName ||
+          configuredLeague.slug ||
           'Ukendt liga',
+
+        apiFootball: {
+          configured:
+            validateLeagueForApiFootball(
+              configuredLeague
+            ),
+
+          leagueId:
+            validateLeagueForApiFootball(
+              configuredLeague
+            )
+              ? Number(
+                  configuredLeague.apiLeagueId
+                )
+              : null,
+
+          season:
+            validateLeagueForApiFootball(
+              configuredLeague
+            )
+              ? Number(
+                  configuredLeague.season
+                )
+              : null
+        },
+
+        odds: {
+          provider:
+            oddsConfiguration.provider,
+
+          bookmaker:
+            oddsConfiguration.bookmaker,
+
+          bookmakerId:
+            oddsConfiguration.bookmakerId,
+
+          rundownSupported:
+            oddsConfiguration
+              .rundownSupported,
+
+          rundownSportId:
+            oddsConfiguration
+              .rundownSportId,
+
+          status:
+            oddsConfiguration
+              .rundownSupported
+              ? 'pending'
+              : 'external-link',
+
+          fallbackUrl:
+            oddsConfiguration
+              .fallbackUrl,
+
+          fallbackLabel:
+            oddsConfiguration
+              .fallbackLabel
+        },
+
         csvRows: 0,
         csvFiles: 0,
         periodMatches: 0
@@ -862,20 +1500,42 @@ for (const leagueFile of foundLeagueFiles) {
     );
   }
 
-  const summary = leagueSummaryMap.get(key);
+  const summary =
+    leagueSummaryMap.get(key);
 
   summary.csvRows += Number(
-    leagueFile.rowCount || 0
+    leagueFile.rowCount ||
+    (
+      Array.isArray(
+        leagueFile.matches
+      )
+        ? leagueFile.matches.length
+        : 0
+    )
   );
 
   summary.csvFiles += 1;
 }
 
+/*
+ * Optæl periodekampe pr. liga.
+ *
+ * Der bruges både direkte slug-opslag og konfigurationsopslag,
+ * så forskelle i CSV-navne ikke forhindrer optælling.
+ */
 for (const fixture of periodFixtures) {
-  const key = fixture.leagueSlug ||
-    normalizeText(fixture.leagueName);
+  const configuredLeague =
+    findLeagueConfiguration(fixture);
 
-  const summary = leagueSummaryMap.get(key);
+  const key =
+    configuredLeague?.slug ||
+    fixture.leagueSlug ||
+    normalizeText(
+      fixture.leagueName
+    );
+
+  const summary =
+    leagueSummaryMap.get(key);
 
   if (summary) {
     summary.periodMatches += 1;
@@ -892,6 +1552,21 @@ const foundLeagues = Array.from(
     )
 );
 
+sourceStatus.odds.configuredLeagues =
+  foundLeagues.length;
+
+sourceStatus.odds.supportedLeagues =
+  foundLeagues.filter(
+    league =>
+      league.odds?.rundownSupported
+  ).length;
+
+sourceStatus.odds.fallbackLeagues =
+  foundLeagues.filter(
+    league =>
+      !league.odds?.rundownSupported
+  ).length;
+
 /*
  * ------------------------------------------------------------
  * GRUPPÉR KAMPE PR. DATO
@@ -900,34 +1575,54 @@ const foundLeagues = Array.from(
 
 const matchesByDate = Array.from(
   new Set(
-    finalResults
+    enrichedFinalResults
       .map(match => match.date)
       .filter(Boolean)
   )
 )
   .sort()
   .map(date => {
-    const dateMatches = finalResults.filter(
-      match => match.date === date
-    );
+    const dateMatches =
+      enrichedFinalResults.filter(
+        match =>
+          match.date === date
+      );
 
     return {
       date,
-      totalMatches: dateMatches.length,
-      approved: dateMatches
-        .filter(match => match.passed)
-        .sort(
-          (matchA, matchB) =>
-            Number(matchB.score || 0) -
-            Number(matchA.score || 0)
-        ),
-      nearMisses: dateMatches
-        .filter(match => !match.passed)
-        .sort(
-          (matchA, matchB) =>
-            Number(matchB.score || 0) -
-            Number(matchA.score || 0)
-        )
+
+      totalMatches:
+        dateMatches.length,
+
+      approved:
+        dateMatches
+          .filter(
+            match => match.passed
+          )
+          .sort(
+            (matchA, matchB) =>
+              Number(
+                matchB.score || 0
+              ) -
+              Number(
+                matchA.score || 0
+              )
+          ),
+
+      nearMisses:
+        dateMatches
+          .filter(
+            match => !match.passed
+          )
+          .sort(
+            (matchA, matchB) =>
+              Number(
+                matchB.score || 0
+              ) -
+              Number(
+                matchA.score || 0
+              )
+          )
     };
   });
 
@@ -950,7 +1645,8 @@ if (apiFootball) {
     );
   } catch (error) {
     warnings.push(
-      `Requestloggen kunne ikke gemmes: ${error.message}`
+      'Requestloggen kunne ikke gemmes: ' +
+      error.message
     );
   }
 }
@@ -960,7 +1656,15 @@ if (apiFootball) {
  * GEM DASHBOARDDATA
  * ------------------------------------------------------------
  *
- * Odds tilføjes efterfølgende af src/enrich-odds.js.
+ * Odds kan tilføjes efterfølgende af et separat enrichment-trin.
+ *
+ * Kampene har nu:
+ * - oddsStatus
+ * - oddsSource
+ * - bookmaker
+ * - oddsConfiguration
+ * - fallbackOddsUrl
+ * - fallbackOddsLabel
  */
 
 const output = {
@@ -972,36 +1676,71 @@ const output = {
     days: analysisPeriodDays
   },
 
-  updatedAt: new Date().toISOString(),
+  updatedAt:
+    new Date().toISOString(),
 
-  totalMatches: periodFixtures.length,
+  oddsConfiguration: {
+    provider:
+      rundownProviderName,
+
+    bookmaker:
+      rundownBookmakerName,
+
+    bookmakerId:
+      rundownBookmakerId,
+
+    keyConfigured:
+      sourceStatus.odds.keyConfigured,
+
+    enrichmentPending:
+      true,
+
+    fallbackEnabled:
+      true,
+
+    defaultFallbackUrl:
+      defaultFootballOddsUrl
+  },
+
+  totalMatches:
+    periodFixtures.length,
 
   foundLeagues,
 
-  uniqueLeagueCount: foundLeagues.length,
+  uniqueLeagueCount:
+    foundLeagues.length,
 
   unknownCsvFiles,
 
-  results: approvedResults,
+  results:
+    approvedResults,
 
   nearMisses,
 
   matchesByDate,
 
   requestUsage: {
-    enabled: Boolean(apiFootball),
-    used: apiFootball
-      ? apiFootball.used
-      : 0,
-    remaining: apiFootball
-      ? apiFootball.remaining
-      : null,
-    hardLimit: Number(
-      settings.dailyHardLimit || 85
-    )
+    enabled:
+      Boolean(apiFootball),
+
+    used:
+      apiFootball
+        ? apiFootball.used
+        : 0,
+
+    remaining:
+      apiFootball
+        ? apiFootball.remaining
+        : null,
+
+    hardLimit:
+      Number(
+        settings.dailyHardLimit || 85
+      )
   },
 
-  dataSources: sourceStatus,
+  dataSources:
+    sourceStatus,
 
   warnings,
 
@@ -1010,23 +1749,54 @@ const output = {
 
 await fs.writeFile(
   dashboardResultFile,
-  JSON.stringify(output, null, 2),
+  JSON.stringify(
+    output,
+    null,
+    2
+  ),
   'utf8'
 );
 
 console.log(
   JSON.stringify(
     {
-      period: output.period,
-      apiFootballEnabled: Boolean(apiFootball),
-      csvFilesFound: foundLeagueFiles.length,
-      uniqueLeaguesFound: foundLeagues.length,
-      periodFixtures: periodFixtures.length,
-      approved: approvedResults.length,
-      notApproved: nearMisses.length,
-      requestsUsed: output.requestUsage.used,
-      warnings: warnings.length,
-      errors: errors.length
+      period:
+        output.period,
+
+      apiFootballEnabled:
+        Boolean(apiFootball),
+
+      csvFilesFound:
+        foundLeagueFiles.length,
+
+      uniqueLeaguesFound:
+        foundLeagues.length,
+
+      periodFixtures:
+        periodFixtures.length,
+
+      approved:
+        approvedResults.length,
+
+      notApproved:
+        nearMisses.length,
+
+      rundownSupportedLeagues:
+        sourceStatus.odds
+          .supportedLeagues,
+
+      fallbackLeagues:
+        sourceStatus.odds
+          .fallbackLeagues,
+
+      requestsUsed:
+        output.requestUsage.used,
+
+      warnings:
+        warnings.length,
+
+      errors:
+        errors.length
     },
     null,
     2
