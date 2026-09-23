@@ -1,30 +1,30 @@
 /* BetScope uge-dashboard med scoregraduering */
 
 const $ = selector =>
-  documen*.querySelector(selector);
+  document.querySelector(selector);
 
-const n*mber = value =>
-  Number.isFinite(*umber(value))
+const number = value =>
+  Number.isFinite(Number(value))
     ? Number(value)
-*   : 0;
+    : 0;
 
-const fixed = (value, dig*ts = 2) =>
-  number(value).toFixed*digits);
+const fixed = (value, digits = 2) =>
+  number(value).toFixed(digits);
 
 const pct = value =>
-  `*{Math.round(number(value) * 100)}%*;
+  `${Math.round(number(value) * 100)}%`;
 
 const esc = value =>
-  String(v*lue ?? '').replace(
-    /[&<>"']/g*
+  String(value ?? '').replace(
+    /[&<>"']/g,
     character => ({
-      '&': '&*mp;',
+      '&': '&amp;',
       '<': '&lt;',
-      '>'* '&gt;',
+      '>': '&gt;',
       '"': '&quot;',
-    * "'": '&#039;'
+      "'": '&#039;'
     })[character]
- *);
+  );
 
 let data = {
   results: [],
@@ -49,26 +49,24 @@ const criteriaTitles = [
  * ------------------------------------------------------------
  */
 
-function getScoreGrade(scoreVal*e) {
-  const score = number(scoreV*lue);
+function getScoreGrade(scoreValue) {
+  const score = number(scoreValue);
 
   if (score >= 90) {
-    re*urn {
+    return {
       key: 'elite',
-      la*el: 'Elite',
+      label: 'Elite',
       range: '90+',
- *    description:
-        'Meget st*rk statistisk profil'
+      description: 'Meget stærk statistisk profil'
     };
   }
 
-* if (score >= 80) {
+  if (score >= 80) {
     return {
- *    key: 'strong',
-      label: 'S*ærk',
+      key: 'strong',
+      label: 'Stærk',
       range: '80-89',
-      description:
-        'Stærk statistisk profil'
+      description: 'Stærk statistisk profil'
     };
   }
 
@@ -77,8 +75,7 @@ function getScoreGrade(scoreVal*e) {
       key: 'interesting',
       label: 'Interessant',
       range: '70-79',
-      description:
-        'Interessant statistisk profil'
+      description: 'Interessant statistisk profil'
     };
   }
 
@@ -86,8 +83,7 @@ function getScoreGrade(scoreVal*e) {
     key: 'low',
     label: 'Under 70',
     range: '0-69',
-    description:
-      'Lavere samlet statistisk vurdering'
+    description: 'Lavere samlet statistisk vurdering'
   };
 }
 
@@ -97,66 +93,65 @@ function getScoreGrade(scoreVal*e) {
  * ------------------------------------------------------------
  */
 
-const leagueName = match =>*  match.leagueName ||
-  match.leag*e ||
+const leagueName = match =>
+  match.leagueName ||
+  match.league ||
   'Liga ukendt';
 
-function ki*koff(match) {
+function kickoff(match) {
   if (match.time) {
-*   return match.time;
+    return match.time;
   }
 
-  const*date = match.kickoff
-    ? new Dat*(match.kickoff)
+  const kickoffDate = match.kickoff
+    ? new Date(match.kickoff)
     : null;
 
-  if *
-    date &&
-    !Number.isNaN(dat*.getTime())
+  if (
+    kickoffDate &&
+    !Number.isNaN(kickoffDate.getTime())
   ) {
-    return date.*oLocaleTimeString(
+    return kickoffDate.toLocaleTimeString(
       'da-DK',
-*     {
+      {
         hour: '2-digit',
-  *     minute: '2-digit'
+        minute: '2-digit'
       }
-   *);
+    );
   }
 
-  return (
-    match.kicko*f ||
-    'Tid ukendt'
-  );
+  return match.kickoff || 'Tid ukendt';
 }
 
-func*ion passedCriterion(match, index) *
-  const criterion =
-    Array.isA*ray(match.criteria)
-      ? match.*riteria[index]
-      : false;
-
-  r*turn (
-    criterion &&
-    typeof*criterion === 'object'
-  )
-    ? B*olean(criterion.passed)
-    : Bool*an(criterion);
-}
-
-function require*ent(match, index) {
-  const criter*on =
-    Array.isArray(match.crite*ia)
-      ? match.criteria[index]
-*     : null;
+function passedCriterion(match, index) {
+  const criterion = Array.isArray(match.criteria)
+    ? match.criteria[index]
+    : false;
 
   if (
-    criterion*&&
-    typeof criterion === 'objec*' &&
+    criterion &&
+    typeof criterion === 'object'
+  ) {
+    return Boolean(criterion.passed);
+  }
+
+  return Boolean(criterion);
+}
+
+function requirement(match, index) {
+  const criterion = Array.isArray(match.criteria)
+    ? match.criteria[index]
+    : null;
+
+  if (
+    criterion &&
+    typeof criterion === 'object' &&
     criterion.required
   ) {
-*   return criterion.required;
+    return criterion.required;
   }
-*  return [
+
+  return [
     'Begge > 1,00',
     'Mere end 80%',
     'Begge mindst 4/5',
@@ -191,15 +186,16 @@ function actual(match, index) {
  * ------------------------------------------------------------
  */
 
-function historyRows(matche* = []) {
+function historyRows(matches = []) {
   if (
-    !Array.isArray*matches) ||
-    !matches.length
-  * {
+    !Array.isArray(matches) ||
+    matches.length === 0
+  ) {
     return `
-      <li class="h*story-empty">
-        Ingen histor*ske kampe tilgængelige
-      </li>*    `;
+      <li class="history-empty">
+        Ingen historiske kampe tilgængelige
+      </li>
+    `;
   }
 
   return matches
@@ -211,9 +207,13 @@ function historyRows(matche* = []) {
 
         <span>
           ${esc(match.home || '')}
+
           <b>
-            ${esc(match.homeScore ?? '-')}-${esc(match.awayScore ?? '-')}
+            ${esc(match.homeScore ?? '-')}
+            -
+            ${esc(match.awayScore ?? '-')}
           </b>
+
           ${esc(match.away || '')}
         </span>
 
@@ -237,14 +237,14 @@ function gradeBadge(
   grade,
   includeRange = false
 ) {
+  const range = includeRange
+    ? ` ${esc(grade.range)}`
+    : '';
+
   return `
     <span class="score-grade score-grade-${esc(grade.key)}">
       <i aria-hidden="true">●</i>
-      ${esc(grade.label)}${
-        includeRange
-          ? ` ${esc(grade.range)}`
-          : ''
-      }
+      ${esc(grade.label)}${range}
     </span>
   `;
 }
@@ -256,7 +256,7 @@ function gradeBadge(
  */
 
 function safeHttpsUrl(value) {
-* try {
+  try {
     const url = new URL(
       String(value || '').trim()
     );
@@ -291,41 +291,41 @@ function renderOddsPanel(match) {
   );
 
   /*
-   * Odds fundet gennem TheRundown.
+   * Et odds er fundet gennem TheRundown.
    */
   if (
-    oddsStatus === '*vailable' &&
-    odds.available ==* true &&
-    Number.isFinite(decim*lOdds) &&
+    oddsStatus === 'available' &&
+    odds.available === true &&
+    Number.isFinite(decimalOdds) &&
     decimalOdds > 1
-  ) *
-    const formattedOdds = decimal*dds
+  ) {
+    const formattedOdds = decimalOdds
       .toFixed(2)
-      .repla*e('.', ',');
+      .replace('.', ',');
 
-    const checkedAt * odds.checkedAt
-      ? new Date(o*ds.checkedAt)
+    const checkedAt = odds.checkedAt
+      ? new Date(odds.checkedAt)
       : null;
 
-    c*nst checkedAtText = (
-      checke*At &&
-      !Number.isNaN(checkedA*.getTime())
+    const checkedAtText = (
+      checkedAt &&
+      !Number.isNaN(checkedAt.getTime())
     )
-      ? checkedA*.toLocaleString(
-          'da-DK'*
+      ? checkedAt.toLocaleString(
+          'da-DK',
           {
-            dateStyle* 'short',
-            timeStyle: '*hort'
+            dateStyle: 'short',
+            timeStyle: 'short'
           }
         )
-      * null;
+      : null;
 
     return `
-      <sectio*
-        class="odds-panel odds-av*ilable"
-        aria-label="Unibet*odds"
+      <section
+        class="odds-panel odds-available"
+        aria-label="Unibet odds"
       >
-        <div class="*dds-panel-copy">
+        <div class="odds-panel-copy">
           <small class="odds-eyebrow">
             UNIBET ODDS
           </small>
@@ -357,7 +357,8 @@ function renderOddsPanel(match) {
   }
 
   /*
-   * Odds mangler, men et fallback-link findes.
+   * Et API-odds blev ikke fundet.
+   * Find et rent HTTPS-fallback-link fra kampdataene.
    */
   const fallbackUrl = safeHttpsUrl(
     match?.fallbackOddsUrl ||
@@ -366,6 +367,8 @@ function renderOddsPanel(match) {
   );
 
   if (fallbackUrl) {
+    const safeUrl = esc(fallbackUrl);
+
     return `
       <section
         class="odds-panel odds-fallback"
@@ -382,7 +385,7 @@ function renderOddsPanel(match) {
 
           <p class="odds-fallback-text">
             (find odds på:
-            ${esc(fallbackUrl)}${esc(fallbackUrl)}</a>)
+            ${safeUrl}${safeUrl}</a>)
           </p>
         </div>
       </section>
@@ -390,7 +393,7 @@ function renderOddsPanel(match) {
   }
 
   /*
-   * Ingen odds og intet gyldigt fallback-link.
+   * Hverken API-odds eller et gyldigt fallback-link findes.
    */
   return `
     <section
@@ -529,11 +532,10 @@ function matchCard(match, index) {
                 title,
                 criterionIndex
               ) => {
-                const ok =
-                  passedCriterion(
-                    match,
-                    criterionIndex
-                  );
+                const ok = passedCriterion(
+                  match,
+                  criterionIndex
+                );
 
                 return `
                   <article
@@ -705,6 +707,8 @@ function uniqueLeagues() {
 
           csvRows: 0,
 
+          csvFiles: 0,
+
           odds:
             item.odds || null
         }
@@ -721,8 +725,14 @@ function uniqueLeagues() {
       )
     );
 
-    league.csvRows += number(
-      item.csvRows
+    league.csvRows = Math.max(
+      league.csvRows,
+      number(item.csvRows)
+    );
+
+    league.csvFiles = Math.max(
+      league.csvFiles,
+      number(item.csvFiles)
     );
 
     if (item.odds) {
@@ -764,9 +774,7 @@ function leagueOddsStatus(league) {
     `;
   }
 
-  if (
-    odds.rundownSupported === true
-  ) {
+  if (odds.rundownSupported === true) {
     return `
       <span
         class="
@@ -885,6 +893,9 @@ function populateDateFilter() {
     return;
   }
 
+  const previousValue =
+    filter.value || 'all';
+
   const dates = [
     ...new Set(
       [
@@ -918,6 +929,13 @@ function populateDateFilter() {
       </option>
     `)
     .join('');
+
+  if (
+    previousValue === 'all' ||
+    dates.includes(previousValue)
+  ) {
+    filter.value = previousValue;
+  }
 }
 
 function populateGradeFilter() {
@@ -926,6 +944,9 @@ function populateGradeFilter() {
   if (!filter) {
     return;
   }
+
+  const previousValue =
+    filter.value || 'all';
 
   filter.innerHTML = `
     <option value="all">
@@ -948,6 +969,18 @@ function populateGradeFilter() {
       Under 70
     </option>
   `;
+
+  if (
+    [
+      'all',
+      'elite',
+      'strong',
+      'interesting',
+      'low'
+    ].includes(previousValue)
+  ) {
+    filter.value = previousValue;
+  }
 }
 
 /*
@@ -1000,8 +1033,8 @@ function renderMatches() {
   ]
     .filter(match =>
       (
-        `${match.home} ` +
-        `${match.away} ` +
+        `${match.home || ''} ` +
+        `${match.away || ''} ` +
         `${leagueName(match)}`
       )
         .toLowerCase()
@@ -1070,6 +1103,53 @@ function renderMessages() {
 
 /*
  * ------------------------------------------------------------
+ * OPDATER KPI-FELTER
+ * ------------------------------------------------------------
+ */
+
+function setText(selector, value) {
+  const element = $(selector);
+
+  if (element) {
+    element.textContent =
+      String(value ?? '');
+  }
+}
+
+function updateKpis(payload) {
+  setText(
+    '#total',
+    number(payload.totalMatches)
+  );
+
+  setText(
+    '#approved',
+    data.results.length
+  );
+
+  setText(
+    '#rejected',
+    data.nearMisses.length
+  );
+
+  /*
+   * Brug samlet requestforbrug, hvis det findes.
+   * Ellers bruges API-Football-forbruget.
+   */
+  const totalRequests =
+    number(payload.requestUsage?.used) +
+    number(
+      payload.dataSources?.odds?.requestsUsed
+    );
+
+  setText(
+    '#requests',
+    totalRequests
+  );
+}
+
+/*
+ * ------------------------------------------------------------
  * INDLÆS DATA
  * ------------------------------------------------------------
  */
@@ -1134,32 +1214,7 @@ async function load() {
           : []
     };
 
-    const totalElement = $('#total');
-    const approvedElement = $('#approved');
-    const rejectedElement = $('#rejected');
-    const requestsElement = $('#requests');
-
-    if (totalElement) {
-      totalElement.textContent =
-        number(payload.totalMatches);
-    }
-
-    if (approvedElement) {
-      approvedElement.textContent =
-        data.results.length;
-    }
-
-    if (rejectedElement) {
-      rejectedElement.textContent =
-        data.nearMisses.length;
-    }
-
-    if (requestsElement) {
-      requestsElement.textContent =
-        number(
-          payload.requestUsage?.used
-        );
-    }
+    updateKpis(payload);
 
     const from =
       payload.period?.from ||
@@ -1199,6 +1254,11 @@ async function load() {
     renderMatches();
     renderMessages();
   } catch (error) {
+    console.error(
+      'BetScope kunne ikke indlæse dashboarddata:',
+      error
+    );
+
     if (metaElement) {
       metaElement.textContent =
         `Data kunne ikke hentes: ${error.message}`;
@@ -1208,6 +1268,16 @@ async function load() {
       listElement.innerHTML = `
         <div class="empty">
           Kontrollér docs/data/results.json.
+        </div>
+      `;
+    }
+
+    const leaguesElement = $('#leagues');
+
+    if (leaguesElement) {
+      leaguesElement.innerHTML = `
+        <div class="empty">
+          Ligaoversigten kunne ikke indlæses.
         </div>
       `;
     }
@@ -1226,28 +1296,45 @@ async function load() {
  * ------------------------------------------------------------
  */
 
-if ($('#refresh')) {
-  $('#refresh').onclick = load;
+const refreshButton = $('#refresh');
+const searchInput = $('#search');
+const statusFilter = $('#filter');
+const dateFilter = $('#date-filter');
+const gradeFilter = $('#grade-filter');
+
+if (refreshButton) {
+  refreshButton.addEventListener(
+    'click',
+    load
+  );
 }
 
-if ($('#search')) {
-  $('#search').oninput =
-    renderMatches;
+if (searchInput) {
+  searchInput.addEventListener(
+    'input',
+    renderMatches
+  );
 }
 
-if ($('#filter')) {
-  $('#filter').onchange =
-    renderMatches;
+if (statusFilter) {
+  statusFilter.addEventListener(
+    'change',
+    renderMatches
+  );
 }
 
-if ($('#date-filter')) {
-  $('#date-filter').onchange =
-    renderMatches;
+if (dateFilter) {
+  dateFilter.addEventListener(
+    'change',
+    renderMatches
+  );
 }
 
-if ($('#grade-filter')) {
-  $('#grade-filter').onchange =
-    renderMatches;
+if (gradeFilter) {
+  gradeFilter.addEventListener(
+    'change',
+    renderMatches
+  );
 }
 
 load();
