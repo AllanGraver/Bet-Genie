@@ -453,23 +453,24 @@ function renderOddsPanel(match) {
           <small class="odds-eyebrow">
             UNIBET ODDS
           </small>
-
+ 
           <h4>
             Odds ikke tilgængelige via API
           </h4>
-
-          <p>
-            ${esc(reason)}
+ 
+          <p class="odds-fallback-text">
+            (
+            find odds på:
+            "
+              target="_blank"
+              rel="noopener noreferrer"
+            >${esc(fallbackUrl)}</a>
+            )
           </p>
         </div>
-
-        ${esc(fallbackUrl)}
-          ${esc(fallbackLabel)}
-          <span aria-hidden="true">↗</span>
-        </a>
       </section>
-    `;
-  }
+  `;
+}
 
   /*
    * Ingen odds og intet gyldigt fallback-link.
