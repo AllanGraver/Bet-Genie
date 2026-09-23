@@ -4,34 +4,56 @@
     "displayName": "3F Superliga",
     "apiLeagueId": 119,
     "season": 2026,
-    "filePatterns": ["superliga", "danish superliga", "danish-superliga"]
+    "rundownSportId": null,
+    "fallbackOddsUrl": "https://www.unibet.dk/betting/sports/filter/football/denmark/superligaen",
+    "filePatterns": [
+      "superliga",
+      "superligaen",
+      "3f superliga",
+      "danish superliga",
+      "danish-superliga"
+    ]
   },
   {
     "slug": "allsvenskan",
     "displayName": "Allsvenskan",
     "apiLeagueId": 113,
     "season": 2026,
-    "filePatterns": ["allsvenskan"]
+    "rundownSportId": null,
+    "fallbackOddsUrl": "https://www.unibet.dk/betting/sports/filter/football",
+    "filePatterns": [
+      "allsvenskan"
+    ]
   },
   {
     "slug": "eliteserien",
     "displayName": "Eliteserien",
     "apiLeagueId": 103,
     "season": 2026,
-    "filePatterns": ["eliteserien"]
+    "rundownSportId": null,
+    "fallbackOddsUrl": "https://www.unibet.dk/betting/sports/filter/football",
+    "filePatterns": [
+      "eliteserien"
+    ]
   },
   {
     "slug": "eredivisie",
     "displayName": "Eredivisie",
     "apiLeagueId": 88,
     "season": 2026,
-    "filePatterns": ["eredivisie"]
+    "rundownSportId": null,
+    "fallbackOddsUrl": "https://www.unibet.dk/betting/sports/filter/football",
+    "filePatterns": [
+      "eredivisie"
+    ]
   },
   {
     "slug": "belgian-pro-league",
     "displayName": "Belgian Pro League",
     "apiLeagueId": 144,
     "season": 2026,
+    "rundownSportId": null,
+    "fallbackOddsUrl": "https://www.unibet.dk/betting/sports/filter/football",
     "filePatterns": [
       "belgian pro league",
       "belgian-pro-league",
@@ -44,27 +66,130 @@
     "displayName": "Swiss Super League",
     "apiLeagueId": 207,
     "season": 2026,
-    "filePatterns": ["swiss super league", "swiss-super-league"]
+    "rundownSportId": null,
+    "fallbackOddsUrl": "https://www.unibet.dk/betting/sports/filter/football",
+    "filePatterns": [
+      "swiss super league",
+      "swiss-super-league"
+    ]
   },
   {
     "slug": "bundesliga",
     "displayName": "Bundesliga",
     "apiLeagueId": 78,
     "season": 2026,
-    "filePatterns": ["bundesliga"]
+    "rundownSportId": 13,
+    "fallbackOddsUrl": "https://www.unibet.dk/betting/sports/filter/football",
+    "filePatterns": [
+      "bundesliga",
+      "german bundesliga",
+      "german-bundesliga",
+      "ger1"
+    ]
   },
   {
     "slug": "premier-league",
     "displayName": "Premier League",
     "apiLeagueId": 39,
     "season": 2026,
-    "filePatterns": ["premier league", "premier-league"]
+    "rundownSportId": 11,
+    "fallbackOddsUrl": "https://www.unibet.dk/betting/sports/filter/football",
+    "filePatterns": [
+      "premier league",
+      "premier-league",
+      "english premier league",
+      "english-premier-league",
+      "epl"
+    ]
   },
   {
     "slug": "championship",
     "displayName": "Championship",
     "apiLeagueId": 40,
     "season": 2026,
-    "filePatterns": ["championship"]
+    "rundownSportId": null,
+    "fallbackOddsUrl": "https://www.unibet.dk/betting/sports/filter/football",
+    "filePatterns": [
+      "championship",
+      "english championship",
+      "english-championship",
+      "efl championship",
+      "efl-championship"
+    ]
+  },
+  {
+    "slug": "ligue-1",
+    "displayName": "Ligue 1",
+    "apiLeagueId": 61,
+    "season": 2026,
+    "rundownSportId": 12,
+    "fallbackOddsUrl": "https://www.unibet.dk/betting/sports/filter/football",
+    "filePatterns": [
+      "ligue 1",
+      "ligue-1",
+      "french ligue 1",
+      "french-ligue-1",
+      "fra1"
+    ]
+  },
+  {
+    "slug": "la-liga",
+    "displayName": "La Liga",
+    "apiLeagueId": 140,
+    "season": 2026,
+    "rundownSportId": 14,
+    "fallbackOddsUrl": "https://www.unibet.dk/betting/sports/filter/football",
+    "filePatterns": [
+      "la liga",
+      "la-liga",
+      "laliga",
+      "primera division",
+      "primera-division",
+      "esp1"
+    ]
+  },
+  {
+    "slug": "serie-a",
+    "displayName": "Serie A",
+    "apiLeagueId": 135,
+    "season": 2026,
+    "rundownSportId": 15,
+    "fallbackOddsUrl": "https://www.unibet.dk/betting/sports/filter/football",
+    "filePatterns": [
+      "serie a",
+      "serie-a",
+      "italian serie a",
+      "italian-serie-a",
+      "ita1"
+    ]
+  },
+  {
+    "slug": "champions-league",
+    "displayName": "UEFA Champions League",
+    "apiLeagueId": 2,
+    "season": 2026,
+    "rundownSportId": 16,
+    "fallbackOddsUrl": "https://www.unibet.dk/betting/sports/filter/football",
+    "filePatterns": [
+      "champions league",
+      "champions-league",
+      "uefa champions league",
+      "uefa-champions-league",
+      "uefachamp"
+    ]
+  },
+  {
+    "slug": "europa-league",
+    "displayName": "UEFA Europa League",
+    "apiLeagueId": 3,
+    "season": 2026,
+    "rundownSportId": 33,
+    "fallbackOddsUrl": "https://www.unibet.dk/betting/sports/filter/football",
+    "filePatterns": [
+      "europa league",
+      "europa-league",
+      "uefa europa league",
+      "uefa-europa-league"
+    ]
   }
 ]
