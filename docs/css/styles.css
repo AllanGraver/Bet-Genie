@@ -668,3 +668,29 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+.odds-fallback-text {
+  margin: 4px 0 0;
+  color: #8eb2d2;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.odds-text-link {
+  color: #20dfaa;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+.odds-text-link:hover {
+  color: #7ff4d3;
+}
+
+.odds-text-link:focus-visible {
+  border-radius: 3px;
+  outline: 3px solid rgba(32, 223, 170, 0.35);
+  outline-offset: 3px;
+}
