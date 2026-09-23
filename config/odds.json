@@ -9,9 +9,7 @@
   "requestTimeoutMs": 15000,
   "market": "over-1.5",
   "marketIds": [
-    1,
-    3,
-    563
+    3
   ],
   "mainLineOnly": false
 }
