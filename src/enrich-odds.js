@@ -76,9 +76,25 @@ const defaultConfiguration = {
   kickoffToleranceHours: 12,
   requestTimeoutMs: 15000,
   market: 'over-1.5',
-  marketIds: [1, 3, 563],
+
+  /*
+   * Market ID 3 er Total, altså Over/Under.
+   * Over 1,5 identificeres efterfølgende via line.value = 1.5.
+   */
+  marketIds: [3],
+
+  /*
+   * Skal være false, da Over/Under 1,5 ikke nødvendigvis
+   * er bookmakerens hovedlinje.
+   */
   mainLineOnly: false
 };
+
+/*
+ * ------------------------------------------------------------
+ * INDLÆS KONFIGURATION
+ * ------------------------------------------------------------
+ */
 
 async function readOptionalJsonFile(
   file,
@@ -90,13 +106,27 @@ async function readOptionalJsonFile(
       'utf8'
     );
 
+    const parsed = JSON.parse(contents);
+
+    if (
+      parsed === null ||
+      typeof parsed !== 'object' ||
+      Array.isArray(parsed)
+    ) {
+      throw new Error(
+        'Konfigurationsfilen skal indeholde et JSON-objekt.'
+      );
+    }
+
     return {
       ...fallbackValue,
-      ...JSON.parse(contents)
+      ...parsed
     };
   } catch (error) {
     if (error.code === 'ENOENT') {
-      return { ...fallbackValue };
+      return {
+        ...fallbackValue
+      };
     }
 
     throw new Error(
@@ -127,11 +157,14 @@ await fs.mkdir(
 
 /*
  * ------------------------------------------------------------
- * STATUS
+ * STATUS OG KONSTANTER
  * ------------------------------------------------------------
  */
 
-const warnings = Array.isArray(
+const executionTime =
+  new Date().toISOString();
+
+const previousWarnings = Array.isArray(
   dashboard.warnings
 )
   ? dashboard.warnings
@@ -143,6 +176,26 @@ const errors = Array.isArray(
   ? dashboard.errors
   : [];
 
+/*
+ * Fjern advarsler fra tidligere oddsberigelser.
+ * Dermed vokser advarselslisten ikke ved hver ny kørsel.
+ */
+const warnings = previousWarnings.filter(
+  warning => {
+    const text = String(warning || '');
+
+    return (
+      !text.includes('THERUNDOWN_API_KEY') &&
+      !text.includes('Odds-integrationen er deaktiveret') &&
+      !text.includes('TheRundown kunne ikke hente') &&
+      !text.includes('TheRundown-cache kunne ikke') &&
+      !text.includes('kunne ikke matches med et TheRundown-event') &&
+      !text.includes('event-matching fejlede') &&
+      !text.includes('oddsdata kunne ikke fortolkes')
+    );
+  }
+);
+
 const apiKey = String(
   process.env.THERUNDOWN_API_KEY || ''
 ).trim();
@@ -150,12 +203,12 @@ const apiKey = String(
 const provider = String(
   configuration.provider ||
   'TheRundown'
-);
+).trim();
 
 const bookmaker = String(
   configuration.bookmaker ||
   'Unibet'
-);
+).trim();
 
 const bookmakerId = Number(
   configuration.bookmakerId ?? 21
@@ -167,7 +220,9 @@ const threshold = Number(
 
 const cacheHours = Math.max(
   0,
-  Number(configuration.cacheHours ?? 6)
+  Number(
+    configuration.cacheHours ?? 6
+  )
 );
 
 const kickoffToleranceHours = Math.max(
@@ -184,13 +239,33 @@ const requestTimeoutMs = Math.max(
   )
 );
 
-const marketIds = Array.isArray(
+const configuredMarketIds = Array.isArray(
   configuration.marketIds
 )
   ? configuration.marketIds
+  : [3];
+
+const marketIds = [
+  ...new Set(
+    configuredMarketIds
       .map(Number)
-      .filter(Number.isFinite)
-  : [1, 3, 563];
+      .filter(
+        marketId =>
+          Number.isFinite(marketId) &&
+          marketId > 0
+      )
+  )
+];
+
+if (marketIds.length === 0) {
+  marketIds.push(3);
+}
+
+if (marketIds.length > 12) {
+  throw new Error(
+    'Der må højst konfigureres 12 TheRundown market IDs.'
+  );
+}
 
 const mainLineOnly = Boolean(
   configuration.mainLineOnly
@@ -199,11 +274,13 @@ const mainLineOnly = Boolean(
 const statistics = {
   totalMatches: 0,
   candidates: 0,
+  belowThreshold: 0,
   apiEligible: 0,
   fallbackOnly: 0,
   available: 0,
   cached: 0,
   notMatched: 0,
+  noEvents: 0,
   noMarket: 0,
   apiErrors: 0,
   requests: 0,
@@ -226,16 +303,38 @@ function normalizeText(value) {
     .replace(/^-+|-+$/g, '');
 }
 
+function isValidHttpsUrl(value) {
+  try {
+    const url = new URL(
+      String(value || '').trim()
+    );
+
+    return (
+      url.protocol === 'https:' &&
+      Boolean(url.hostname)
+    );
+  } catch {
+    return false;
+  }
+}
+
 function matchIdentity(match) {
-  if (match.fixtureId) {
-    return `fixture:${match.fixtureId}`;
+  if (
+    match?.fixtureId !== null &&
+    match?.fixtureId !== undefined &&
+    String(match.fixtureId).trim() !== ''
+  ) {
+    return `fixture:${String(match.fixtureId).trim()}`;
   }
 
   return [
-    match.date || '',
-    normalizeText(match.home),
-    normalizeText(match.away),
-    normalizeText(match.leagueSlug)
+    match?.date || '',
+    normalizeText(match?.home),
+    normalizeText(match?.away),
+    normalizeText(
+      match?.leagueSlug ||
+      match?.leagueName
+    )
   ].join('|');
 }
 
@@ -263,27 +362,40 @@ function getRundownSportId(match) {
 }
 
 function getFallbackUrl(match) {
-  return String(
-    match.fallbackOddsUrl ||
-    match.oddsConfiguration?.fallbackUrl ||
-    dashboard.oddsConfiguration
-      ?.defaultFallbackUrl ||
-    ''
-  ).trim();
+  const candidates = [
+    match?.fallbackOddsUrl,
+    match?.oddsConfiguration?.fallbackUrl,
+    match?.odds?.fallbackUrl,
+    dashboard?.oddsConfiguration
+      ?.defaultFallbackUrl
+  ];
+
+  for (const candidate of candidates) {
+    const url = String(
+      candidate || ''
+    ).trim();
+
+    if (isValidHttpsUrl(url)) {
+      return url;
+    }
+  }
+
+  return '';
 }
 
 function getFallbackLabel(match) {
   return String(
-    match.fallbackOddsLabel ||
-    match.oddsConfiguration
+    match?.fallbackOddsLabel ||
+    match?.oddsConfiguration
       ?.fallbackLabel ||
+    match?.odds?.fallbackLabel ||
     'Find odds hos Unibet'
   ).trim();
 }
 
 function candidateDate(match) {
   const date = String(
-    match.date || ''
+    match?.date || ''
   ).trim();
 
   if (
@@ -293,25 +405,29 @@ function candidateDate(match) {
   }
 
   const kickoff = String(
-    match.kickoff || ''
+    match?.kickoff || ''
   ).trim();
 
-  if (kickoff) {
-    const parsed = new Date(kickoff);
-
-    if (!Number.isNaN(parsed.getTime())) {
-      return parsed
-        .toISOString()
-        .slice(0, 10);
-    }
+  if (!kickoff) {
+    return null;
   }
 
-  return null;
+  const parsed = new Date(kickoff);
+
+  if (Number.isNaN(parsed.getTime())) {
+    return null;
+  }
+
+  return parsed
+    .toISOString()
+    .slice(0, 10);
 }
 
 function isCandidate(match) {
   return (
-    Number.isFinite(Number(match.score)) &&
+    Number.isFinite(
+      Number(match?.score)
+    ) &&
     Number(match.score) >= threshold
   );
 }
@@ -329,9 +445,12 @@ function createUnavailableOdds(
     bookmaker,
     bookmakerId,
     market: 'Over 1,5 mål',
-    fallbackUrl: getFallbackUrl(match),
-    fallbackLabel: getFallbackLabel(match),
-    checkedAt: new Date().toISOString()
+    fallbackUrl:
+      getFallbackUrl(match),
+    fallbackLabel:
+      getFallbackLabel(match),
+    checkedAt:
+      executionTime
   };
 }
 
@@ -340,56 +459,85 @@ function setFallbackStatus(
   status,
   reason
 ) {
-  match.odds = createUnavailableOdds(
-    match,
-    status,
-    reason
-  );
-
-  match.oddsStatus = 'external-link';
-  match.oddsSource = null;
-
-  match.fallbackOddsUrl =
+  const fallbackUrl =
     getFallbackUrl(match);
 
-  match.fallbackOddsLabel =
+  const fallbackLabel =
     getFallbackLabel(match);
+
+  match.odds = {
+    ...createUnavailableOdds(
+      match,
+      status,
+      reason
+    ),
+    fallbackUrl,
+    fallbackLabel
+  };
+
+  match.oddsStatus =
+    'external-link';
+
+  match.oddsSource =
+    null;
+
+  match.bookmaker =
+    bookmaker;
+
+  match.fallbackOddsUrl =
+    fallbackUrl;
+
+  match.fallbackOddsLabel =
+    fallbackLabel;
 }
 
 function setAvailableOdds(
   match,
   parsedOdds,
   eventId,
-  status = 'available'
+  detailStatus = 'available'
 ) {
+  const fallbackUrl =
+    getFallbackUrl(match);
+
+  const fallbackLabel =
+    getFallbackLabel(match);
+
   match.odds = {
     ...parsedOdds,
     available: true,
-    status,
+    status: detailStatus,
     provider,
     bookmaker,
     bookmakerId,
     market:
       parsedOdds.market ||
       'Over 1,5 mål',
-    eventId,
-    fallbackUrl:
-      getFallbackUrl(match),
-    fallbackLabel:
-      getFallbackLabel(match),
+    eventId:
+      eventId ||
+      parsedOdds.eventId ||
+      null,
+    fallbackUrl,
+    fallbackLabel,
     checkedAt:
       parsedOdds.checkedAt ||
-      new Date().toISOString()
+      executionTime
   };
 
-  match.oddsStatus = 'available';
-  match.oddsSource = provider;
+  match.oddsStatus =
+    'available';
+
+  match.oddsSource =
+    provider;
+
+  match.bookmaker =
+    bookmaker;
 
   match.fallbackOddsUrl =
-    getFallbackUrl(match);
+    fallbackUrl;
 
   match.fallbackOddsLabel =
-    getFallbackLabel(match);
+    fallbackLabel;
 }
 
 function requestGroupKey(
@@ -405,16 +553,36 @@ function removeDuplicateMatches(
   const matchMap = new Map();
 
   for (const match of matches) {
-    const key = matchIdentity(match);
+    if (!match) {
+      continue;
+    }
+
+    const key =
+      matchIdentity(match);
 
     if (!matchMap.has(key)) {
-      matchMap.set(key, match);
+      matchMap.set(
+        key,
+        match
+      );
     }
   }
 
   return Array.from(
     matchMap.values()
   );
+}
+
+function addWarning(message) {
+  const normalized =
+    String(message || '').trim();
+
+  if (
+    normalized &&
+    !warnings.includes(normalized)
+  ) {
+    warnings.push(normalized);
+  }
 }
 
 /*
@@ -458,6 +626,8 @@ const requestGroups = new Map();
 
 for (const match of matches) {
   if (!isCandidate(match)) {
+    statistics.belowThreshold += 1;
+
     setFallbackStatus(
       match,
       'below-score-threshold',
@@ -494,7 +664,7 @@ for (const match of matches) {
       'Kampdatoen kunne ikke bestemmes.'
     );
 
-    warnings.push(
+    addWarning(
       `${match.home} - ${match.away}: ` +
       'kampdatoen kunne ikke bestemmes.'
     );
@@ -534,14 +704,13 @@ for (const match of matches) {
  */
 
 if (!configuration.enabled) {
-  warnings.push(
+  addWarning(
     'Odds-integrationen er deaktiveret i config/odds.json.'
   );
 
   for (const match of candidates) {
     if (
-      match.oddsStatus !==
-      'external-link'
+      getRundownSportId(match) !== null
     ) {
       setFallbackStatus(
         match,
@@ -551,15 +720,14 @@ if (!configuration.enabled) {
     }
   }
 } else if (!apiKey) {
-  warnings.push(
+  addWarning(
     'THERUNDOWN_API_KEY mangler. ' +
     'Analysen publiceres med links til Unibet i stedet.'
   );
 
   for (const match of candidates) {
     if (
-      match.oddsStatus !==
-      'external-link'
+      getRundownSportId(match) !== null
     ) {
       setFallbackStatus(
         match,
@@ -575,17 +743,24 @@ if (!configuration.enabled) {
    * ----------------------------------------------------------
    */
 
-  for (const group of requestGroups.values()) {
+  for (
+    const group of
+      requestGroups.values()
+  ) {
     let payload = null;
     let payloadSource = 'api';
 
+    /*
+     * Prøv først gyldig cache.
+     */
     try {
-      const cached = await readRundownCache(
-        cacheDirectory,
-        group.sportId,
-        group.date,
-        cacheHours
-      );
+      const cached =
+        await readRundownCache(
+          cacheDirectory,
+          group.sportId,
+          group.date,
+          cacheHours
+        );
 
       if (cached) {
         payload = cached;
@@ -593,23 +768,33 @@ if (!configuration.enabled) {
         statistics.cacheHits += 1;
       }
     } catch (error) {
-      warnings.push(
+      addWarning(
         `${group.sportId}/${group.date}: ` +
-        `TheRundown-cache kunne ikke læses: ${error.message}`
+        'TheRundown-cache kunne ikke læses: ' +
+        error.message
       );
     }
 
+    /*
+     * Hent API-data, hvis cache ikke kunne bruges.
+     */
     if (!payload) {
       try {
-        payload = await fetchRundownEvents({
-          apiKey,
-          sportId: group.sportId,
-          date: group.date,
-          affiliateIds: [bookmakerId],
-          marketIds,
-          mainLineOnly,
-          timeoutMs: requestTimeoutMs
-        });
+        payload =
+          await fetchRundownEvents({
+            apiKey,
+            sportId:
+              group.sportId,
+            date:
+              group.date,
+            affiliateIds: [
+              bookmakerId
+            ],
+            marketIds,
+            mainLineOnly,
+            timeoutMs:
+              requestTimeoutMs
+          });
 
         statistics.requests += 1;
 
@@ -621,21 +806,26 @@ if (!configuration.enabled) {
             payload
           );
         } catch (error) {
-          warnings.push(
+          addWarning(
             `${group.sportId}/${group.date}: ` +
-            `TheRundown-cache kunne ikke gemmes: ${error.message}`
+            'TheRundown-cache kunne ikke gemmes: ' +
+            error.message
           );
         }
       } catch (error) {
         statistics.apiErrors += 1;
 
-        warnings.push(
-          `TheRundown kunne ikke hente ` +
-          `sport ${group.sportId} den ${group.date}: ` +
+        addWarning(
+          'TheRundown kunne ikke hente ' +
+          `sport ${group.sportId} ` +
+          `den ${group.date}: ` +
           error.message
         );
 
-        for (const match of group.matches) {
+        for (
+          const match of
+            group.matches
+        ) {
           setFallbackStatus(
             match,
             'api-error',
@@ -656,7 +846,13 @@ if (!configuration.enabled) {
         : [];
 
     if (events.length === 0) {
-      for (const match of group.matches) {
+      statistics.noEvents +=
+        group.matches.length;
+
+      for (
+        const match of
+          group.matches
+      ) {
         setFallbackStatus(
           match,
           'no-events-returned',
@@ -667,7 +863,10 @@ if (!configuration.enabled) {
       continue;
     }
 
-    for (const match of group.matches) {
+    for (
+      const match of
+        group.matches
+    ) {
       let event = null;
 
       try {
@@ -677,9 +876,10 @@ if (!configuration.enabled) {
           kickoffToleranceHours
         );
       } catch (error) {
-        warnings.push(
+        addWarning(
           `${match.home} - ${match.away}: ` +
-          `event-matching fejlede: ${error.message}`
+          'event-matching fejlede: ' +
+          error.message
         );
       }
 
@@ -692,7 +892,7 @@ if (!configuration.enabled) {
           'Kampen kunne ikke matches med et TheRundown-event.'
         );
 
-        warnings.push(
+        addWarning(
           `${match.home} - ${match.away}: ` +
           'kunne ikke matches med et TheRundown-event.'
         );
@@ -744,7 +944,9 @@ if (!configuration.enabled) {
 
         statistics.available += 1;
 
-        if (payloadSource === 'cache') {
+        if (
+          payloadSource === 'cache'
+        ) {
           statistics.cached += 1;
         }
       } catch (error) {
@@ -761,9 +963,10 @@ if (!configuration.enabled) {
             eventId;
         }
 
-        warnings.push(
+        addWarning(
           `${match.home} - ${match.away}: ` +
-          `oddsdata kunne ikke fortolkes: ${error.message}`
+          'oddsdata kunne ikke fortolkes: ' +
+          error.message
         );
       }
     }
@@ -776,13 +979,17 @@ if (!configuration.enabled) {
  * ------------------------------------------------------------
  */
 
-dashboard.results = matches.filter(
-  match => Boolean(match.passed)
-);
+dashboard.results =
+  matches.filter(
+    match =>
+      Boolean(match.passed)
+  );
 
-dashboard.nearMisses = matches.filter(
-  match => !match.passed
-);
+dashboard.nearMisses =
+  matches.filter(
+    match =>
+      !match.passed
+  );
 
 /*
  * ------------------------------------------------------------
@@ -801,41 +1008,55 @@ const dates = Array.from(
   )
 ).sort();
 
-dashboard.matchesByDate = dates.map(
-  date => {
-    const dateMatches = matches.filter(
-      match => match.date === date
-    );
-
-    const approved = dateMatches
-      .filter(match =>
-        Boolean(match.passed)
-      )
-      .sort(
-        (matchA, matchB) =>
-          Number(matchB.score || 0) -
-          Number(matchA.score || 0)
+dashboard.matchesByDate =
+  dates.map(date => {
+    const dateMatches =
+      matches.filter(
+        match =>
+          match.date === date
       );
 
-    const nearMisses = dateMatches
-      .filter(match =>
-        !match.passed
-      )
-      .sort(
-        (matchA, matchB) =>
-          Number(matchB.score || 0) -
-          Number(matchA.score || 0)
-      );
+    const approved =
+      dateMatches
+        .filter(
+          match =>
+            Boolean(match.passed)
+        )
+        .sort(
+          (matchA, matchB) =>
+            Number(
+              matchB.score || 0
+            ) -
+            Number(
+              matchA.score || 0
+            )
+        );
+
+    const dateNearMisses =
+      dateMatches
+        .filter(
+          match =>
+            !match.passed
+        )
+        .sort(
+          (matchA, matchB) =>
+            Number(
+              matchB.score || 0
+            ) -
+            Number(
+              matchA.score || 0
+            )
+        );
 
     return {
       date,
       totalMatches:
         dateMatches.length,
       approved,
-      nearMisses
+      nearMisses:
+        dateNearMisses
     };
-  }
-);
+  });
 
 /*
  * ------------------------------------------------------------
@@ -852,11 +1073,16 @@ if (
     const league of
       dashboard.foundLeagues
   ) {
-    const leagueMatches = matches.filter(
-      match =>
-        String(match.leagueSlug || '') ===
-        String(league.slug || '')
-    );
+    const leagueMatches =
+      matches.filter(
+        match =>
+          String(
+            match.leagueSlug || ''
+          ) ===
+          String(
+            league.slug || ''
+          )
+      );
 
     const candidatesInLeague =
       leagueMatches.filter(
@@ -877,9 +1103,22 @@ if (
           'external-link'
       );
 
-    if (!league.odds) {
+    if (
+      !league.odds ||
+      typeof league.odds !==
+        'object'
+    ) {
       league.odds = {};
     }
+
+    league.odds.provider =
+      provider;
+
+    league.odds.bookmaker =
+      bookmaker;
+
+    league.odds.bookmakerId =
+      bookmakerId;
 
     league.odds.candidates =
       candidatesInLeague.length;
@@ -890,7 +1129,9 @@ if (
     league.odds.fallback =
       fallbackInLeague.length;
 
-    if (availableInLeague.length > 0) {
+    if (
+      availableInLeague.length > 0
+    ) {
       league.odds.status =
         availableInLeague.length ===
         candidatesInLeague.length
@@ -914,7 +1155,11 @@ if (
  * ------------------------------------------------------------
  */
 
-if (!dashboard.dataSources) {
+if (
+  !dashboard.dataSources ||
+  typeof dashboard.dataSources !==
+    'object'
+) {
   dashboard.dataSources = {};
 }
 
@@ -934,7 +1179,10 @@ dashboard.dataSources.odds = {
     statistics.cacheHits,
   error:
     statistics.apiErrors > 0
-      ? `${statistics.apiErrors} fejl under oddsberigelsen.`
+      ? (
+          `${statistics.apiErrors} fejl ` +
+          'under oddsberigelsen.'
+        )
       : null
 };
 
@@ -952,25 +1200,33 @@ dashboard.oddsConfiguration = {
   provider,
   bookmaker,
   bookmakerId,
-  market: 'Over 1,5 mål',
-  enrichmentPending: false,
+  market:
+    'Over 1,5 mål',
+  marketIds,
+  mainLineOnly,
+  enrichmentPending:
+    false,
   enrichedAt:
-    new Date().toISOString(),
+    executionTime,
   keyConfigured:
     Boolean(apiKey),
-  fallbackEnabled: true
+  fallbackEnabled:
+    true
 };
 
 dashboard.oddsSummary = {
   provider,
   bookmaker,
   bookmakerId,
-  market: 'Over 1,5 mål',
+  market:
+    'Over 1,5 mål',
   threshold,
   totalMatches:
     statistics.totalMatches,
   candidates:
     statistics.candidates,
+  belowThreshold:
+    statistics.belowThreshold,
   apiEligible:
     statistics.apiEligible,
   fallbackOnly:
@@ -981,6 +1237,8 @@ dashboard.oddsSummary = {
     statistics.cached,
   notMatched:
     statistics.notMatched,
+  noEvents:
+    statistics.noEvents,
   noMarket:
     statistics.noMarket,
   apiErrors:
@@ -990,14 +1248,21 @@ dashboard.oddsSummary = {
   cacheHits:
     statistics.cacheHits,
   updatedAt:
-    new Date().toISOString()
+    executionTime
 };
 
+/*
+ * updatedAt angiver tidspunktet for det færdige dashboardoutput.
+ * Værdien gemmes som UTC via ISO 8601.
+ */
 dashboard.updatedAt =
-  new Date().toISOString();
+  executionTime;
 
-dashboard.warnings = warnings;
-dashboard.errors = errors;
+dashboard.warnings =
+  warnings;
+
+dashboard.errors =
+  errors;
 
 /*
  * ------------------------------------------------------------
@@ -1020,10 +1285,18 @@ console.log(
     {
       provider,
       bookmaker,
-      market: 'Over 1,5 mål',
+      market:
+        'Over 1,5 mål',
+      marketIds,
       threshold,
+      keyConfigured:
+        Boolean(apiKey),
+      totalMatches:
+        statistics.totalMatches,
       candidates:
         statistics.candidates,
+      belowThreshold:
+        statistics.belowThreshold,
       apiEligible:
         statistics.apiEligible,
       available:
@@ -1032,6 +1305,8 @@ console.log(
         statistics.fallbackOnly,
       notMatched:
         statistics.notMatched,
+      noEvents:
+        statistics.noEvents,
       noMarket:
         statistics.noMarket,
       requests:
@@ -1040,6 +1315,8 @@ console.log(
         statistics.cacheHits,
       apiErrors:
         statistics.apiErrors,
+      updatedAt:
+        executionTime,
       warnings:
         warnings.length
     },
