@@ -2,10 +2,12 @@
   font-family: Inter, system-ui, sans-serif;
   color: #f2f7fc;
   background: #07111f;
+
   --green: #31d398;
   --red: #ff7480;
   --line: #21364d;
   --panel: #0e2033;
+
   --elite: #31d398;
   --strong: #58a6ff;
   --interesting: #ffc857;
@@ -19,7 +21,11 @@
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 85% 0, #17334f, transparent 36%),
+    radial-gradient(
+      circle at 85% 0,
+      #17334f,
+      transparent 36%
+    ),
     #07111f;
 }
 
@@ -28,6 +34,12 @@ main {
   width: min(1120px, calc(100% - 28px));
   margin: auto;
 }
+
+/*
+ * ------------------------------------------------------------
+ * BRAND OG HERO
+ * ------------------------------------------------------------
+ */
 
 .brand {
   padding-top: 28px;
@@ -42,8 +54,7 @@ main {
 }
 
 .hero,
-.toolbar,
-.panel {
+.toolbar {
   display: flex;
   gap: 18px;
   align-items: flex-end;
@@ -79,11 +90,17 @@ small {
   color: #8297ad;
 }
 
+/*
+ * ------------------------------------------------------------
+ * INPUTS OG KNAPPER
+ * ------------------------------------------------------------
+ */
+
 button,
 input,
 select {
   padding: 11px;
-  color: #fff;
+  color: #ffffff;
   background: #10243a;
   border: 1px solid var(--line);
   border-radius: 10px;
@@ -98,6 +115,19 @@ button:disabled {
   opacity: 0.65;
 }
 
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(49, 211, 152, 0.28);
+  outline-offset: 2px;
+}
+
+/*
+ * ------------------------------------------------------------
+ * KPI-KORT
+ * ------------------------------------------------------------
+ */
+
 .kpis {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -108,7 +138,12 @@ button:disabled {
 .panel,
 .match,
 .errors {
-  background: linear-gradient(145deg, #10243a, #0b192a);
+  background:
+    linear-gradient(
+      145deg,
+      #10243a,
+      #0b192a
+    );
   border: 1px solid var(--line);
   border-radius: 16px;
 }
@@ -123,9 +158,11 @@ button:disabled {
 }
 
 /*
- * Kompakt ligaoversigt.
- * Panelet har en smal overskriftskolonne og resten af bredden til ligadata.
+ * ------------------------------------------------------------
+ * LIGAOVERSIGT
+ * ------------------------------------------------------------
  */
+
 .panel {
   display: grid;
   grid-template-columns: 220px minmax(0, 1fr);
@@ -140,7 +177,6 @@ button:disabled {
   margin: 5px 0;
 }
 
-/* Vigtigt: #leagues skal have lov til at bruge hele den resterende bredde. */
 .panel #leagues {
   width: 100%;
   min-width: 0;
@@ -152,7 +188,6 @@ button:disabled {
   color: #ffc96b;
 }
 
-/* Tæller og ligaliste ligger side om side inde i #leagues. */
 .league-summary {
   display: grid;
   width: 100%;
@@ -192,12 +227,12 @@ button:disabled {
   text-transform: uppercase;
 }
 
-/* Tre faste kolonner på desktop. minmax(0, 1fr) forhindrer indholdet i at presse gridet. */
 .league-list {
   display: grid;
   width: 100%;
   min-width: 0;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
   gap: 8px;
   align-content: start;
 }
@@ -205,10 +240,10 @@ button:disabled {
 .league-item {
   display: flex;
   min-width: 0;
-  min-height: 58px;
+  min-height: 74px;
   flex-direction: column;
   justify-content: center;
-  padding: 8px 11px;
+  padding: 9px 11px;
   overflow: hidden;
   background: #0a1929;
   border: 1px solid var(--line);
@@ -240,6 +275,43 @@ button:disabled {
   white-space: nowrap;
 }
 
+.league-odds-status {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  margin-top: 7px;
+  padding: 4px 8px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.66rem;
+  font-weight: 750;
+  line-height: 1;
+}
+
+.league-odds-available {
+  color: var(--green);
+  background: rgba(49, 211, 152, 0.12);
+  border-color: rgba(49, 211, 152, 0.28);
+}
+
+.league-odds-api {
+  color: #8eb2d2;
+  background: rgba(142, 178, 210, 0.12);
+  border-color: rgba(142, 178, 210, 0.24);
+}
+
+.league-odds-fallback {
+  color: #f5c56b;
+  background: rgba(245, 197, 107, 0.12);
+  border-color: rgba(245, 197, 107, 0.24);
+}
+
+/*
+ * ------------------------------------------------------------
+ * TOOLBAR OG FILTRE
+ * ------------------------------------------------------------
+ */
+
 .toolbar {
   margin: 45px 0 16px;
 }
@@ -250,6 +322,12 @@ button:disabled {
   gap: 8px;
   justify-content: flex-end;
 }
+
+/*
+ * ------------------------------------------------------------
+ * SCORELEGENDE
+ * ------------------------------------------------------------
+ */
 
 .score-legend {
   display: flex;
@@ -322,6 +400,12 @@ button:disabled {
   border-left: 4px solid var(--low);
 }
 
+/*
+ * ------------------------------------------------------------
+ * KAMPKORT
+ * ------------------------------------------------------------
+ */
+
 .accordion {
   display: grid;
   gap: 11px;
@@ -333,7 +417,8 @@ button:disabled {
 
 summary {
   display: grid;
-  grid-template-columns: 40px 1fr auto 20px;
+  grid-template-columns:
+    40px minmax(0, 1fr) auto 20px;
   gap: 13px;
   align-items: center;
   padding: 18px;
@@ -414,7 +499,7 @@ summary p {
 }
 
 .chev {
-  transition: 0.2s;
+  transition: transform 200ms ease;
 }
 
 details[open] .chev {
@@ -426,6 +511,12 @@ details[open] .chev {
   background: #091725;
   border-top: 1px solid var(--line);
 }
+
+/*
+ * ------------------------------------------------------------
+ * SAMLET GRADUERING
+ * ------------------------------------------------------------
+ */
 
 .grade-detail {
   display: flex;
@@ -455,6 +546,170 @@ details[open] .chev {
   color: currentColor;
   font-size: 9px;
 }
+
+/*
+ * ------------------------------------------------------------
+ * UNIBET ODDS
+ * ------------------------------------------------------------
+ */
+
+.odds-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 12px 0;
+  padding: 16px 18px;
+  background: #10263a;
+  border: 1px solid #29475f;
+  border-radius: 12px;
+}
+
+.odds-panel-copy {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.odds-eyebrow {
+  color: var(--green);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+}
+
+.odds-panel h4 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.odds-panel p {
+  margin: 0;
+  color: #8eb2d2;
+  font-size: 0.86rem;
+}
+
+.odds-available {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(22, 83, 68, 0.45),
+      rgba(10, 35, 45, 0.35)
+    );
+  border-color: rgba(49, 211, 152, 0.72);
+}
+
+.odds-fallback {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(19, 48, 74, 0.92),
+      rgba(13, 35, 55, 0.92)
+    );
+  border-color: #3a5871;
+}
+
+.odds-error {
+  background: rgba(86, 31, 42, 0.2);
+  border-color: rgba(255, 116, 128, 0.7);
+}
+
+.odds-value-wrap {
+  display: flex;
+  min-width: 110px;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 18px;
+  border: 1px solid var(--green);
+  border-radius: 12px;
+}
+
+.odds-value {
+  color: var(--green);
+  font-size: 1.7rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.odds-value-wrap small {
+  margin-top: 7px;
+  color: var(--green);
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+.odds-fallback-text {
+  margin: 4px 0 0;
+  color: #8eb2d2;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.odds-text-link {
+  color: var(--green);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 150ms ease;
+}
+
+.odds-text-link:hover {
+  color: #7ff4d3;
+}
+
+.odds-text-link:focus-visible {
+  border-radius: 3px;
+  outline: 3px solid rgba(49, 211, 152, 0.35);
+  outline-offset: 3px;
+}
+
+/*
+ * Bevares som understøttelse, hvis odds-linket senere
+ * igen vises som en knap.
+ */
+
+.odds-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 10px 16px;
+  color: var(--green);
+  background: transparent;
+  border: 1px solid var(--green);
+  border-radius: 11px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    color 150ms ease,
+    background-color 150ms ease,
+    transform 150ms ease;
+}
+
+.odds-link:hover {
+  color: #092033;
+  background: var(--green);
+  transform: translateY(-1px);
+}
+
+.odds-link:focus-visible {
+  outline: 3px solid rgba(49, 211, 152, 0.35);
+  outline-offset: 3px;
+}
+
+/*
+ * ------------------------------------------------------------
+ * KRITERIER
+ * ------------------------------------------------------------
+ */
 
 .criteria {
   display: grid;
@@ -497,6 +752,12 @@ dd {
   font-size: 11px;
 }
 
+/*
+ * ------------------------------------------------------------
+ * DETALJER OG HISTORIK
+ * ------------------------------------------------------------
+ */
+
 .details-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -518,12 +779,18 @@ li {
 }
 
 li b {
-  color: #fff;
+  color: #ffffff;
 }
 
 li small {
   display: block;
 }
+
+/*
+ * ------------------------------------------------------------
+ * ADVARSLER OG TOMME VISNINGER
+ * ------------------------------------------------------------
+ */
 
 .errors {
   margin-top: 18px;
@@ -545,7 +812,12 @@ footer {
   text-align: center;
 }
 
-/* Små desktops og tablets: to ligakolonner. */
+/*
+ * ------------------------------------------------------------
+ * RESPONSIVT DESIGN
+ * ------------------------------------------------------------
+ */
+
 @media (max-width: 950px) {
   .kpis,
   .criteria {
@@ -553,16 +825,17 @@ footer {
   }
 
   .panel {
-    grid-template-columns: minmax(180px, 1fr) 105px minmax(0, 1.8fr);
+    grid-template-columns:
+      190px minmax(0, 1fr);
   }
 
   .league-list {
-    grid-template-columns: repeat(2, minmax(145px, 1fr));
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
   }
 }
 
-/* Mobil: sektionerne stables og ligaerne står i én kompakt kolonne. */
-@media (max-width: 650px) {
+@media (max-width: 700px) {
   .hero,
   .toolbar {
     align-items: stretch;
@@ -575,11 +848,11 @@ footer {
   }
 
   .panel #leagues {
-    display: contents;
+    width: 100%;
   }
 
   .league-summary {
-    display: contents;
+    grid-template-columns: 1fr;
   }
 
   .league-total {
@@ -620,7 +893,8 @@ footer {
   }
 
   summary {
-    grid-template-columns: 28px 1fr 20px;
+    grid-template-columns:
+      28px minmax(0, 1fr) 20px;
   }
 
   .score-block {
@@ -632,65 +906,49 @@ footer {
     align-items: flex-start;
     gap: 12px;
   }
-}
 
-
-/* Ligaoversigt: responsive overrides placeret sidst for sikker prioritet. */
-@media (max-width: 950px) {
-  .panel {
-    grid-template-columns: 190px minmax(0, 1fr);
+  .odds-panel {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
-  .league-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 700px) {
-  .panel {
-    grid-template-columns: 1fr;
-    align-items: stretch;
-  }
-
-  .panel #leagues {
+  .odds-value-wrap,
+  .odds-link {
     width: 100%;
   }
+}
 
-  .league-summary {
+@media (max-width: 480px) {
+  header,
+  main {
+    width: min(100% - 18px, 1120px);
+  }
+
+  .kpis {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .filters {
     grid-template-columns: 1fr;
   }
 
-  .league-total {
-    min-height: 72px;
-  }
-
-  .league-list {
+  .score-legend {
     grid-template-columns: 1fr;
   }
-}
 
-.odds-fallback-text {
-  margin: 4px 0 0;
-  color: #8eb2d2;
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
+  .grade-detail {
+    flex-direction: column;
+  }
 
-.odds-text-link {
-  color: #20dfaa;
-  font-weight: 700;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-  overflow-wrap: anywhere;
-}
+  summary {
+    padding: 14px 12px;
+  }
 
-.odds-text-link:hover {
-  color: #7ff4d3;
-}
+  .content {
+    padding: 12px;
+  }
 
-.odds-text-link:focus-visible {
-  border-radius: 3px;
-  outline: 3px solid rgba(32, 223, 170, 0.35);
-  outline-offset: 3px;
+  .odds-panel {
+    padding: 14px;
+  }
 }
