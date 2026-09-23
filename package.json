@@ -1,10 +1,14 @@
 {
   "name": "betscope-fbref-csv",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "build:data": "node src/run.js",
+    "analyse": "node src/run.js",
+    "enrich:odds": "node src/enrich-odds.js",
+    "validate:data": "node src/validate-results.js",
+    "build:data": "node src/run.js && node src/enrich-odds.js",
+    "build:data:validated": "node src/run.js && node src/enrich-odds.js && node src/validate-results.js",
     "test": "node --test"
   },
   "engines": {
