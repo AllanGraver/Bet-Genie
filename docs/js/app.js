@@ -1,11 +1,29 @@
 /* BetScope uge-dashboard med scoregraduering */
+
 const $ = selector => document.querySelector(selector);
-const number = value => Number.isFinite(Number(value)) ? Number(value) : 0;
-const fixed = (value, digits = 2) => number(value).toFixed(digits);
-const pct = value => `${Math.round(number(value) * 100)}%`;
-const esc = value => String(value ?? '').replace(/[&<>"']/g, character => ({
-  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-})[character]);
+
+const number = value =>
+  Number.isFinite(Number(value))
+    ? Number(value)
+    : 0;
+
+const fixed = (value, digits = 2) =>
+  number(value).toFixed(digits);
+
+const pct = value =>
+  `${Math.round(number(value) * 100)}%`;
+
+const esc = value =>
+  String(value ?? '').replace(
+    /[&<>"']/g,
+    character => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#039;'
+    })[character]
+  );
 
 let data = {
   results: [],
@@ -24,6 +42,12 @@ const criteriaTitles = [
   'BTTS-rate mindst 60%'
 ];
 
+/*
+ * ------------------------------------------------------------
+ * SCOREGRADUERING
+ * ------------------------------------------------------------
+ */
+
 function getScoreGrade(scoreValue) {
   const score = number(scoreValue);
 
@@ -32,7 +56,8 @@ function getScoreGrade(scoreValue) {
       key: 'elite',
       label: 'Elite',
       range: '90+',
-      description: 'Meget stærk statistisk profil'
+      description:
+        'Meget stærk statistisk profil'
     };
   }
 
@@ -41,7 +66,8 @@ function getScoreGrade(scoreValue) {
       key: 'strong',
       label: 'Stærk',
       range: '80-89',
-      description: 'Stærk statistisk profil'
+      description:
+        'Stærk statistisk profil'
     };
   }
 
@@ -50,7 +76,8 @@ function getScoreGrade(scoreValue) {
       key: 'interesting',
       label: 'Interessant',
       range: '70-79',
-      description: 'Interessant statistisk profil'
+      description:
+        'Interessant statistisk profil'
     };
   }
 
@@ -58,30 +85,73 @@ function getScoreGrade(scoreValue) {
     key: 'low',
     label: 'Under 70',
     range: '0-69',
-    description: 'Lavere samlet statistisk vurdering'
+    description:
+      'Lavere samlet statistisk vurdering'
   };
 }
 
-const leagueName = match => match.leagueName || match.league || 'Liga ukendt';
+/*
+ * ------------------------------------------------------------
+ * KAMPDATA
+ * ------------------------------------------------------------
+ */
+
+const leagueName = match =>
+  match.leagueName ||
+  match.league ||
+  'Liga ukendt';
 
 function kickoff(match) {
-  if (match.time) return match.time;
-  const date = match.kickoff ? new Date(match.kickoff) : null;
-  return date && !Number.isNaN(date.getTime())
-    ? date.toLocaleTimeString('da-DK', { hour: '2-digit', minute: '2-digit' })
-    : (match.kickoff || 'Tid ukendt');
+  if (match.time) {
+    return match.time;
+  }
+
+  const date = match.kickoff
+    ? new Date(match.kickoff)
+    : null;
+
+  return (
+    date &&
+    !Number.isNaN(date.getTime())
+  )
+    ? date.toLocaleTimeString(
+        'da-DK',
+        {
+          hour: '2-digit',
+          minute: '2-digit'
+        }
+      )
+    : (
+        match.kickoff ||
+        'Tid ukendt'
+      );
 }
 
 function passedCriterion(match, index) {
-  const criterion = Array.isArray(match.criteria) ? match.criteria[index] : false;
-  return criterion && typeof criterion === 'object'
+  const criterion =
+    Array.isArray(match.criteria)
+      ? match.criteria[index]
+      : false;
+
+  return (
+    criterion &&
+    typeof criterion === 'object'
+  )
     ? Boolean(criterion.passed)
     : Boolean(criterion);
 }
 
 function requirement(match, index) {
-  const criterion = Array.isArray(match.criteria) ? match.criteria[index] : null;
-  if (criterion && typeof criterion === 'object' && criterion.required) {
+  const criterion =
+    Array.isArray(match.criteria)
+      ? match.criteria[index]
+      : null;
+
+  if (
+    criterion &&
+    typeof criterion === 'object' &&
+    criterion.required
+  ) {
     return criterion.required;
   }
 
@@ -96,108 +166,571 @@ function requirement(match, index) {
 
 function actual(match, index) {
   const metrics = match.metrics || {};
+
   return [
     `${fixed(metrics.homeAvg)} / ${fixed(metrics.awayAvg)}`,
-    `${pct(metrics.h2hOver15)} · ${number(metrics.h2hCount)} H2H-kampe`,
-    `${number(metrics.hScored)}/5 · ${number(metrics.aScored)}/5`,
-    `${pct(metrics.homeOver15)} · ${pct(metrics.awayOver15)}`,
-    `${pct(metrics.homeBtts)} · ${pct(metrics.awayBtts)}`
+
+    `${pct(metrics.h2hOver15)} · ` +
+      `${number(metrics.h2hCount)} H2H-kampe`,
+
+    `${number(metrics.hScored)}/5 · ` +
+      `${number(metrics.aScored)}/5`,
+
+    `${pct(metrics.homeOver15)} · ` +
+      `${pct(metrics.awayOver15)}`,
+
+    `${pct(metrics.homeBtts)} · ` +
+      `${pct(metrics.awayBtts)}`
   ][index];
 }
 
+/*
+ * ------------------------------------------------------------
+ * HISTORIK
+ * ------------------------------------------------------------
+ */
+
 function historyRows(matches = []) {
-  if (!Array.isArray(matches) || !matches.length) {
-    return '<li class="history-empty">Ingen historiske kampe tilgængelige</li>';
+  if (
+    !Array.isArray(matches) ||
+    !matches.length
+  ) {
+    return `
+      <li class="history-empty">
+        Ingen historiske kampe tilgængelige
+      </li>
+    `;
   }
 
   return matches.map(match => `
     <li class="history-row">
-      <span>${esc(match.date || '')}</span>
-      <span>${esc(match.home || '')} <b>${match.homeScore ?? '-'}-${match.awayScore ?? '-'}</b> ${esc(match.away || '')}</span>
-      ${match.source ? `<small>${esc(match.source)}</small>` : ''}
+      <span>
+        ${esc(match.date || '')}
+      </span>
+
+      <span>
+        ${esc(match.home || '')}
+        <b>
+          ${match.homeScore ?? '-'}-${match.awayScore ?? '-'}
+        </b>
+        ${esc(match.away || '')}
+      </span>
+
+      ${
+        match.source
+          ? `<small>${esc(match.source)}</small>`
+          : ''
+      }
     </li>
   `).join('');
 }
 
-function gradeBadge(grade, includeRange = false) {
+/*
+ * ------------------------------------------------------------
+ * GRADUERINGSBADGE
+ * ------------------------------------------------------------
+ */
+
+function gradeBadge(
+  grade,
+  includeRange = false
+) {
   return `
     <span class="score-grade score-grade-${grade.key}">
       <i aria-hidden="true">●</i>
-      ${esc(grade.label)}${includeRange ? ` ${esc(grade.range)}` : ''}
+
+      ${esc(grade.label)}${
+        includeRange
+          ? ` ${esc(grade.range)}`
+          : ''
+      }
     </span>
   `;
 }
 
+/*
+ * ------------------------------------------------------------
+ * ODDS OG FALLBACK-LINK
+ * ------------------------------------------------------------
+ */
+
+function safeHttpsUrl(value) {
+  try {
+    const url = new URL(
+      String(value || '').trim()
+    );
+
+    if (url.protocol !== 'https:') {
+      return null;
+    }
+
+    return url.href;
+  } catch {
+    return null;
+  }
+}
+
+function oddsStatusText(status) {
+  const messages = {
+    'league-not-supported':
+      'Ligaen dækkes ikke af TheRundown.',
+
+    'api-key-missing':
+      'TheRundown API-nøglen er ikke konfigureret.',
+
+    'integration-disabled':
+      'Odds-integrationen er deaktiveret.',
+
+    'api-error':
+      'Odds kunne ikke opdateres.',
+
+    'no-events-returned':
+      'Der blev ikke fundet events for denne kampdato.',
+
+    'event-not-matched':
+      'Kampen kunne ikke matches med oddsleverandøren.',
+
+    'markets-missing':
+      'Kampen har ingen tilgængelige oddsmarkeder.',
+
+    'total-market-missing':
+      'Over/Under-markedet blev ikke fundet.',
+
+    'unibet-over-15-not-found':
+      'Unibet Over 1,5 blev ikke fundet.',
+
+    'odds-parse-error':
+      'Oddsdata kunne ikke fortolkes.',
+
+    'invalid-match-date':
+      'Kampdatoen kunne ikke bestemmes.',
+
+    'below-score-threshold':
+      'Odds blev ikke hentet, fordi kampens score er under grænsen.',
+
+    'below_score_threshold':
+      'Odds blev ikke hentet, fordi kampens score er under grænsen.',
+
+    'odds-source-unavailable':
+      'Oddskilden er midlertidigt utilgængelig.',
+
+    'odds_source_unavailable':
+      'Oddskilden er midlertidigt utilgængelig.',
+
+    'external-link':
+      'Kontrollér de aktuelle odds direkte hos Unibet.',
+
+    'pending':
+      'Oddsaflæsningen afventer opdatering.'
+  };
+
+  return (
+    messages[status] ||
+    'Kontrollér de aktuelle odds direkte hos Unibet.'
+  );
+}
+
+function renderOddsPanel(match) {
+  const odds = (
+    match?.odds &&
+    typeof match.odds === 'object'
+  )
+    ? match.odds
+    : {};
+
+  const oddsStatus = String(
+    match?.oddsStatus ||
+    odds.status ||
+    ''
+  ).trim();
+
+  const decimalOdds = Number(
+    odds.decimalOdds ??
+    odds.decimal
+  );
+
+  /*
+   * Odds fundet gennem TheRundown.
+   */
+  if (
+    oddsStatus === 'available' &&
+    odds.available === true &&
+    Number.isFinite(decimalOdds) &&
+    decimalOdds > 1
+  ) {
+    const formattedOdds = decimalOdds
+      .toFixed(2)
+      .replace('.', ',');
+
+    const checkedAt = odds.checkedAt
+      ? new Date(odds.checkedAt)
+      : null;
+
+    const checkedAtText = (
+      checkedAt &&
+      !Number.isNaN(checkedAt.getTime())
+    )
+      ? checkedAt.toLocaleString(
+          'da-DK',
+          {
+            dateStyle: 'short',
+            timeStyle: 'short'
+          }
+        )
+      : null;
+
+    return `
+      <section
+        class="odds-panel odds-available"
+        aria-label="Unibet odds"
+      >
+        <div class="odds-panel-copy">
+          <small class="odds-eyebrow">
+            UNIBET ODDS
+          </small>
+
+          <h4>
+            Over 1,5 mål
+          </h4>
+
+          <p>
+            Kilde: TheRundown
+            ${
+              checkedAtText
+                ? ` · Opdateret ${esc(checkedAtText)}`
+                : ''
+            }
+          </p>
+        </div>
+
+        <div class="odds-value-wrap">
+          <strong class="odds-value">
+            ${esc(formattedOdds)}
+          </strong>
+
+          <small>
+            DECIMALODDS
+          </small>
+        </div>
+      </section>
+    `;
+  }
+
+  /*
+   * Odds mangler, men der findes fallback-link.
+   */
+  const fallbackUrl = safeHttpsUrl(
+    match?.fallbackOddsUrl ||
+    match?.oddsConfiguration?.fallbackUrl ||
+    odds.fallbackUrl
+  );
+
+  const fallbackLabel = String(
+    match?.fallbackOddsLabel ||
+    match?.oddsConfiguration?.fallbackLabel ||
+    odds.fallbackLabel ||
+    'Find odds hos Unibet'
+  );
+
+  const detailStatus = String(
+    odds.status ||
+    oddsStatus ||
+    'external-link'
+  ).trim();
+
+  const reason = String(
+    odds.reason ||
+    oddsStatusText(detailStatus)
+  );
+
+  if (fallbackUrl) {
+    return `
+      <section
+        class="odds-panel odds-fallback"
+        aria-label="Unibet odds"
+      >
+        <div class="odds-panel-copy">
+          <small class="odds-eyebrow">
+            UNIBET ODDS
+          </small>
+
+          <h4>
+            Odds ikke tilgængelige via API
+          </h4>
+
+          <p>
+            ${esc(reason)}
+          </p>
+        </div>
+
+        ${esc(fallbackUrl)}
+          ${esc(fallbackLabel)}
+          <span aria-hidden="true">↗</span>
+        </a>
+      </section>
+    `;
+  }
+
+  /*
+   * Ingen odds og intet gyldigt fallback-link.
+   */
+  return `
+    <section
+      class="odds-panel odds-error"
+      aria-label="Oddsstatus"
+    >
+      <div class="odds-panel-copy">
+        <small class="odds-eyebrow">
+          UNIBET ODDS
+        </small>
+
+        <h4>
+          Oddslink mangler
+        </h4>
+
+        <p>
+          ${esc(reason)}
+        </p>
+      </div>
+    </section>
+  `;
+}
+
+/*
+ * ------------------------------------------------------------
+ * KAMPKORT
+ * ------------------------------------------------------------
+ */
+
 function matchCard(match, index) {
   const passed = Boolean(match.passed);
-  const grade = getScoreGrade(match.score);
+  const grade = getScoreGrade(
+    match.score
+  );
 
   return `
-    <details class="match grade-border-${grade.key} ${passed ? 'approved' : 'rejected'}">
+    <details
+      class="
+        match
+        grade-border-${grade.key}
+        ${passed ? 'approved' : 'rejected'}
+      "
+    >
       <summary>
-        <span class="rank">#${index + 1}</span>
+        <span class="rank">
+          #${index + 1}
+        </span>
+
         <div class="match-summary">
-          <small>${esc(leagueName(match))} · ${esc(match.date || '')} · ${esc(kickoff(match))}</small>
-          <h3>${esc(match.home)} <em>mod</em> ${esc(match.away)}</h3>
+          <small>
+            ${esc(leagueName(match))}
+            ·
+            ${esc(match.date || '')}
+            ·
+            ${esc(kickoff(match))}
+          </small>
+
+          <h3>
+            ${esc(match.home)}
+            <em>mod</em>
+            ${esc(match.away)}
+          </h3>
+
           <div class="match-status-row">
             <p class="${passed ? 'ok' : 'no'}">
-              ${passed ? '✓ BESTÅR ALLE 5' : '× BESTÅR IKKE ALLE 5'} · ${number(match.passedCount)}/5
+              ${
+                passed
+                  ? '✓ BESTÅR ALLE 5'
+                  : '× BESTÅR IKKE ALLE 5'
+              }
+              ·
+              ${number(match.passedCount)}/5
             </p>
+
             ${gradeBadge(grade)}
           </div>
         </div>
-        <div class="score-block score-block-${grade.key}">
-          <strong class="score">${fixed(match.score, 1)}<small>/100</small></strong>
-          <span>${esc(grade.label)}</span>
+
+        <div
+          class="score-block score-block-${grade.key}"
+        >
+          <strong class="score">
+            ${fixed(match.score, 1)}
+            <small>/100</small>
+          </strong>
+
+          <span>
+            ${esc(grade.label)}
+          </span>
         </div>
-        <b class="chev" aria-hidden="true">⌄</b>
+
+        <b
+          class="chev"
+          aria-hidden="true"
+        >
+          ⌄
+        </b>
       </summary>
 
       <div class="content">
-        <section class="grade-detail grade-detail-${grade.key}">
+        <section
+          class="grade-detail grade-detail-${grade.key}"
+        >
           <div>
-            <small>SAMLET GRADUERING</small>
-            <h4><span aria-hidden="true">●</span> ${esc(grade.label)} ${esc(grade.range)}</h4>
-            <p>${esc(grade.description)}</p>
+            <small>
+              SAMLET GRADUERING
+            </small>
+
+            <h4>
+              <span aria-hidden="true">
+                ●
+              </span>
+
+              ${esc(grade.label)}
+              ${esc(grade.range)}
+            </h4>
+
+            <p>
+              ${esc(grade.description)}
+            </p>
           </div>
-          <strong>${fixed(match.score, 1)}<small>/100</small></strong>
+
+          <strong>
+            ${fixed(match.score, 1)}
+            <small>/100</small>
+          </strong>
         </section>
 
+        ${renderOddsPanel(match)}
+
         <section class="criteria">
-          ${criteriaTitles.map((title, index) => {
-            const ok = passedCriterion(match, index);
-            return `
-              <article class="criterion-card ${ok ? 'ok' : 'no'}">
-                <h4>${ok ? '✓' : '×'} K${index + 1}</h4>
-                <b>${esc(title)}</b>
-                <dl>
-                  <dt>Faktisk</dt><dd>${esc(actual(match, index))}</dd>
-                  <dt>Krav</dt><dd>${esc(requirement(match, index))}</dd>
-                </dl>
-              </article>
-            `;
-          }).join('')}
+          ${criteriaTitles.map(
+            (title, criterionIndex) => {
+              const ok = passedCriterion(
+                match,
+                criterionIndex
+              );
+
+              return `
+                <article
+                  class="
+                    criterion-card
+                    ${ok ? 'ok' : 'no'}
+                  "
+                >
+                  <h4>
+                    ${ok ? '✓' : '×'}
+                    K${criterionIndex + 1}
+                  </h4>
+
+                  <b>
+                    ${esc(title)}
+                  </b>
+
+                  <dl>
+                    <dt>
+                      Faktisk
+                    </dt>
+
+                    <dd>
+                      ${esc(
+                        actual(
+                          match,
+                          criterionIndex
+                        )
+                      )}
+                    </dd>
+
+                    <dt>
+                      Krav
+                    </dt>
+
+                    <dd>
+                      ${esc(
+                        requirement(
+                          match,
+                          criterionIndex
+                        )
+                      )}
+                    </dd>
+                  </dl>
+                </article>
+              `;
+            }
+          ).join('')}
         </section>
 
         <section class="details-grid">
           <div class="detail-panel">
-            <h4>${esc(match.home)} · seneste 5</h4>
-            <ul>${historyRows(match.homeForm)}</ul>
+            <h4>
+              ${esc(match.home)}
+              · seneste 5
+            </h4>
+
+            <ul>
+              ${historyRows(match.homeForm)}
+            </ul>
           </div>
+
           <div class="detail-panel">
-            <h4>${esc(match.away)} · seneste 5</h4>
-            <ul>${historyRows(match.awayForm)}</ul>
+            <h4>
+              ${esc(match.away)}
+              · seneste 5
+            </h4>
+
+            <ul>
+              ${historyRows(match.awayForm)}
+            </ul>
           </div>
+
           <div class="detail-panel">
-            <h4>Indbyrdes kampe</h4>
-            <ul>${historyRows(match.h2h)}</ul>
+            <h4>
+              Indbyrdes kampe
+            </h4>
+
+            <ul>
+              ${historyRows(match.h2h)}
+            </ul>
           </div>
+
           <div class="detail-panel">
-            <h4>Datakvalitet</h4>
-            <p><b>${match.dataQuality === 'complete' ? 'Komplet' : 'Begrænset'}</b></p>
-            <p>Historik: ${esc((match.sources?.history || []).join(', ') || 'Ukendt')}</p>
-            <p>H2H: ${esc(match.sources?.h2h || 'Ukendt')}</p>
-            <p>Gradueringen er baseret på succesindekset. Godkendelse kræver fortsat 5/5 kriterier.</p>
+            <h4>
+              Datakvalitet
+            </h4>
+
+            <p>
+              <b>
+                ${
+                  match.dataQuality === 'complete'
+                    ? 'Komplet'
+                    : 'Begrænset'
+                }
+              </b>
+            </p>
+
+            <p>
+              Historik:
+              ${esc(
+                (
+                  match.sources?.history ||
+                  []
+                ).join(', ') ||
+                'Ukendt'
+              )}
+            </p>
+
+            <p>
+              H2H:
+              ${esc(
+                match.sources?.h2h ||
+                'Ukendt'
+              )}
+            </p>
+
+            <p>
+              Gradueringen er baseret på succesindekset.
+              Godkendelse kræver fortsat 5/5 kriterier.
+            </p>
           </div>
         </section>
       </div>
@@ -205,34 +738,112 @@ function matchCard(match, index) {
   `;
 }
 
+/*
+ * ------------------------------------------------------------
+ * LIGAOVERSIGT
+ * ------------------------------------------------------------
+ */
+
 function uniqueLeagues() {
   const map = new Map();
 
-  for (const item of data.foundLeagues || []) {
-    const key = String(item.slug || item.name || item.displayName || '')
+  for (
+    const item of
+      data.foundLeagues || []
+  ) {
+    const key = String(
+      item.slug ||
+      item.name ||
+      item.displayName ||
+      ''
+    )
       .trim()
       .toLowerCase();
 
-    if (!key) continue;
+    if (!key) {
+      continue;
+    }
 
     if (!map.has(key)) {
-      map.set(key, {
-        slug: key,
-        name: item.name || item.displayName || item.slug || 'Ukendt liga',
-        periodMatches: 0,
-        csvRows: 0
-      });
+      map.set(
+        key,
+        {
+          slug: key,
+          name:
+            item.name ||
+            item.displayName ||
+            item.slug ||
+            'Ukendt liga',
+          periodMatches: 0,
+          csvRows: 0,
+          odds: item.odds || null
+        }
+      );
     }
 
     const league = map.get(key);
+
     league.periodMatches = Math.max(
       league.periodMatches,
-      number(item.periodMatches ?? item.today)
+      number(
+        item.periodMatches ??
+        item.today
+      )
     );
-    league.csvRows += number(item.csvRows);
+
+    league.csvRows += number(
+      item.csvRows
+    );
+
+    if (item.odds) {
+      league.odds = item.odds;
+    }
   }
 
-  return [...map.values()].sort((a, b) => a.name.localeCompare(b.name, 'da'));
+  return [
+    ...map.values()
+  ].sort(
+    (leagueA, leagueB) =>
+      leagueA.name.localeCompare(
+        leagueB.name,
+        'da'
+      )
+  );
+}
+
+function leagueOddsStatus(league) {
+  const odds = league.odds;
+
+  if (!odds) {
+    return '';
+  }
+
+  if (
+    number(odds.available) > 0 ||
+    odds.status === 'available'
+  ) {
+    return `
+      <span class="league-odds-status league-odds-available">
+        Unibet-odds tilgængelige
+      </span>
+    `;
+  }
+
+  if (
+    odds.rundownSupported === true
+  ) {
+    return `
+      <span class="league-odds-status league-odds-api">
+        TheRundown aktiveret
+      </span>
+    `;
+  }
+
+  return `
+    <span class="league-odds-status league-odds-fallback">
+      Unibet-link
+    </span>
+  `;
 }
 
 function renderLeagues() {
@@ -242,121 +853,358 @@ function renderLeagues() {
     ? `
       <div class="league-summary">
         <div class="league-total">
-          <b>${leagues.length}</b>
-          <span>${leagues.length === 1 ? 'liga fundet' : 'ligaer fundet'}</span>
+          <b>
+            ${leagues.length}
+          </b>
+
+          <span>
+            ${
+              leagues.length === 1
+                ? 'liga fundet'
+                : 'ligaer fundet'
+            }
+          </span>
         </div>
+
         <div class="league-list">
           ${leagues.map(league => `
             <div class="league-item">
-              <span class="league-name">${esc(league.name)}</span>
-              <span class="league-today">${league.periodMatches} ${league.periodMatches === 1 ? 'kamp' : 'kampe'} i perioden</span>
-              <small>${league.csvRows} historiske kamprækker</small>
+              <span class="league-name">
+                ${esc(league.name)}
+              </span>
+
+              <span class="league-today">
+                ${league.periodMatches}
+                ${
+                  league.periodMatches === 1
+                    ? 'kamp'
+                    : 'kampe'
+                }
+                i perioden
+              </span>
+
+              <small>
+                ${league.csvRows}
+                historiske kamprækker
+              </small>
+
+              ${leagueOddsStatus(league)}
             </div>
           `).join('')}
         </div>
       </div>
     `
-    : '<div class="empty">Ingen genkendte CSV-ligaer.</div>';
+    : `
+      <div class="empty">
+        Ingen genkendte CSV-ligaer.
+      </div>
+    `;
 
-  const unknown = Array.isArray(data.unknownCsvFiles) ? data.unknownCsvFiles.length : 0;
+  const unknown = Array.isArray(
+    data.unknownCsvFiles
+  )
+    ? data.unknownCsvFiles.length
+    : 0;
+
   $('#unknown').textContent = unknown
-    ? `${unknown} CSV-${unknown === 1 ? 'fil kunne' : 'filer kunne'} ikke forbindes med en kendt liga.`
+    ? (
+        `${unknown} CSV-` +
+        `${
+          unknown === 1
+            ? 'fil kunne'
+            : 'filer kunne'
+        } ikke forbindes med en kendt liga.`
+      )
     : '';
 }
 
+/*
+ * ------------------------------------------------------------
+ * FILTRE
+ * ------------------------------------------------------------
+ */
+
 function populateDateFilter() {
   const filter = $('#date-filter');
-  if (!filter) return;
 
-  const dates = [...new Set(
-    [...data.results, ...data.nearMisses]
-      .map(match => match.date)
-      .filter(Boolean)
-  )].sort();
+  if (!filter) {
+    return;
+  }
 
-  filter.innerHTML = '<option value="all">Hele ugen</option>' + dates.map(date => `
+  const dates = [
+    ...new Set(
+      [
+        ...data.results,
+        ...data.nearMisses
+      ]
+        .map(match => match.date)
+        .filter(Boolean)
+    )
+  ].sort();
+
+  filter.innerHTML = `
+    <option value="all">
+      Hele ugen
+    </option>
+  ` + dates.map(date => `
     <option value="${esc(date)}">
-      ${new Date(`${date}T12:00:00`).toLocaleDateString('da-DK', {
-        weekday: 'long', day: 'numeric', month: 'long'
-      })}
+      ${
+        new Date(
+          `${date}T12:00:00`
+        ).toLocaleDateString(
+          'da-DK',
+          {
+            weekday: 'long',
+            day: 'numeric',
+            month: 'long'
+          }
+        )
+      }
     </option>
   `).join('');
 }
 
 function populateGradeFilter() {
   const filter = $('#grade-filter');
-  if (!filter) return;
+
+  if (!filter) {
+    return;
+  }
 
   filter.innerHTML = `
-    <option value="all">Alle gradueringer</option>
-    <option value="elite">Elite 90+</option>
-    <option value="strong">Stærk 80-89</option>
-    <option value="interesting">Interessant 70-79</option>
-    <option value="low">Under 70</option>
+    <option value="all">
+      Alle gradueringer
+    </option>
+
+    <option value="elite">
+      Elite 90+
+    </option>
+
+    <option value="strong">
+      Stærk 80-89
+    </option>
+
+    <option value="interesting">
+      Interessant 70-79
+    </option>
+
+    <option value="low">
+      Under 70
+    </option>
   `;
 }
 
+/*
+ * ------------------------------------------------------------
+ * RENDER KAMPE
+ * ------------------------------------------------------------
+ */
+
 function renderMatches() {
-  const query = ($('#search')?.value || '').trim().toLowerCase();
-  const status = $('#filter')?.value || 'approved';
-  const selectedDate = $('#date-filter')?.value || 'all';
-  const selectedGrade = $('#grade-filter')?.value || 'all';
+  const query = (
+    $('#search')?.value ||
+    ''
+  )
+    .trim()
+    .toLowerCase();
 
-  let matches = status === 'approved'
+  const status =
+    $('#filter')?.value ||
+    'approved';
+
+  const selectedDate =
+    $('#date-filter')?.value ||
+    'all';
+
+  const selectedGrade =
+    $('#grade-filter')?.value ||
+    'all';
+
+  let matches = (
+    status === 'approved'
+  )
     ? data.results
-    : status === 'rejected'
+    : (
+        status === 'rejected'
+      )
       ? data.nearMisses
-      : [...data.results, ...data.nearMisses];
+      : [
+          ...data.results,
+          ...data.nearMisses
+        ];
 
-  matches = [...matches]
-    .filter(match => `${match.home} ${match.away} ${leagueName(match)}`.toLowerCase().includes(query))
-    .filter(match => selectedDate === 'all' || match.date === selectedDate)
-    .filter(match => selectedGrade === 'all' || getScoreGrade(match.score).key === selectedGrade)
-    .sort((a, b) => number(b.score) - number(a.score));
+  matches = [
+    ...matches
+  ]
+    .filter(match =>
+      (
+        `${match.home} ` +
+        `${match.away} ` +
+        `${leagueName(match)}`
+      )
+        .toLowerCase()
+        .includes(query)
+    )
+    .filter(match =>
+      selectedDate === 'all' ||
+      match.date === selectedDate
+    )
+    .filter(match =>
+      selectedGrade === 'all' ||
+      getScoreGrade(match.score).key ===
+        selectedGrade
+    )
+    .sort(
+      (matchA, matchB) =>
+        number(matchB.score) -
+        number(matchA.score)
+    );
 
   $('#list').innerHTML = matches.length
-    ? matches.map(matchCard).join('')
-    : '<div class="empty">Ingen kampe i denne visning.</div>';
+    ? matches
+        .map(matchCard)
+        .join('')
+    : `
+      <div class="empty">
+        Ingen kampe i denne visning.
+      </div>
+    `;
 }
 
+/*
+ * ------------------------------------------------------------
+ * ADVARSLER
+ * ------------------------------------------------------------
+ */
+
 function renderMessages() {
-  const messages = [...(data.warnings || []), ...(data.errors || [])];
+  const messages = [
+    ...(data.warnings || []),
+    ...(data.errors || [])
+  ];
+
   $('#errors').innerHTML = messages.length
-    ? `<h3>Dataadvarsler</h3>${messages.map(message => `<p>${esc(message)}</p>`).join('')}`
+    ? `
+      <h3>
+        Dataadvarsler
+      </h3>
+
+      ${messages.map(message => `
+        <p>
+          ${esc(message)}
+        </p>
+      `).join('')}
+    `
     : '';
 }
 
+/*
+ * ------------------------------------------------------------
+ * INDLÆS DATA
+ * ------------------------------------------------------------
+ */
+
 async function load() {
   const button = $('#refresh');
+
   if (button) {
     button.disabled = true;
-    button.textContent = '↻ Henter data...';
+    button.textContent =
+      '↻ Henter data...';
   }
 
   try {
-    const response = await fetch(`data/results.json?v=${Date.now()}`, { cache: 'no-store' });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const response = await fetch(
+      `data/results.json?v=${Date.now()}`,
+      {
+        cache: 'no-store'
+      }
+    );
 
-    const payload = await response.json();
+    if (!response.ok) {
+      throw new Error(
+        `HTTP ${response.status}`
+      );
+    }
+
+    const payload =
+      await response.json();
+
     data = {
-      results: Array.isArray(payload.results) ? payload.results : [],
-      nearMisses: Array.isArray(payload.nearMisses) ? payload.nearMisses : [],
-      foundLeagues: Array.isArray(payload.foundLeagues) ? payload.foundLeagues : [],
-      unknownCsvFiles: Array.isArray(payload.unknownCsvFiles) ? payload.unknownCsvFiles : [],
-      warnings: Array.isArray(payload.warnings) ? payload.warnings : [],
-      errors: Array.isArray(payload.errors) ? payload.errors : []
+      results:
+        Array.isArray(payload.results)
+          ? payload.results
+          : [],
+
+      nearMisses:
+        Array.isArray(payload.nearMisses)
+          ? payload.nearMisses
+          : [],
+
+      foundLeagues:
+        Array.isArray(payload.foundLeagues)
+          ? payload.foundLeagues
+          : [],
+
+      unknownCsvFiles:
+        Array.isArray(payload.unknownCsvFiles)
+          ? payload.unknownCsvFiles
+          : [],
+
+      warnings:
+        Array.isArray(payload.warnings)
+          ? payload.warnings
+          : [],
+
+      errors:
+        Array.isArray(payload.errors)
+          ? payload.errors
+          : []
     };
 
-    $('#total').textContent = number(payload.totalMatches);
-    $('#approved').textContent = data.results.length;
-    $('#rejected').textContent = data.nearMisses.length;
-    $('#requests').textContent = number(payload.requestUsage?.used);
+    $('#total').textContent =
+      number(payload.totalMatches);
 
-    const from = payload.period?.from || payload.date || '-';
-    const to = payload.period?.to || payload.date || '-';
-    $('#meta').textContent = `Kampe fra ${from} til ${to} · Opdateret ${
-      payload.updatedAt ? new Date(payload.updatedAt).toLocaleString('da-DK') : 'ikke endnu'
-    }`;
+    $('#approved').textContent =
+      data.results.length;
+
+    $('#rejected').textContent =
+      data.nearMisses.length;
+
+    $('#requests').textContent =
+      number(
+        payload.requestUsage?.used
+      );
+
+    const from =
+      payload.period?.from ||
+      payload.date ||
+      '-';
+
+    const to =
+      payload.period?.to ||
+      payload.date ||
+      '-';
+
+    const updatedAt =
+      payload.updatedAt
+        ? new Date(payload.updatedAt)
+        : null;
+
+    const updatedAtText = (
+      updatedAt &&
+      !Number.isNaN(
+        updatedAt.getTime()
+      )
+    )
+      ? updatedAt.toLocaleString(
+          'da-DK'
+        )
+      : 'ikke endnu';
+
+    $('#meta').textContent =
+      `Kampe fra ${from} til ${to}` +
+      ` · Opdateret ${updatedAtText}`;
 
     renderLeagues();
     populateDateFilter();
@@ -364,19 +1212,51 @@ async function load() {
     renderMatches();
     renderMessages();
   } catch (error) {
-    $('#meta').textContent = `Data kunne ikke hentes: ${error.message}`;
-    $('#list').innerHTML = '<div class="empty">Kontrollér docs/data/results.json.</div>';
+    $('#meta').textContent =
+      `Data kunne ikke hentes: ${error.message}`;
+
+    $('#list').innerHTML = `
+      <div class="empty">
+        Kontrollér docs/data/results.json.
+      </div>
+    `;
   } finally {
     if (button) {
       button.disabled = false;
-      button.textContent = '↻ Genindlæs dashboard';
+      button.textContent =
+        '↻ Genindlæs dashboard';
     }
   }
 }
 
-if ($('#refresh')) $('#refresh').onclick = load;
-if ($('#search')) $('#search').oninput = renderMatches;
-if ($('#filter')) $('#filter').onchange = renderMatches;
-if ($('#date-filter')) $('#date-filter').onchange = renderMatches;
-if ($('#grade-filter')) $('#grade-filter').onchange = renderMatches;
+/*
+ * ------------------------------------------------------------
+ * EVENTS
+ * ------------------------------------------------------------
+ */
+
+if ($('#refresh')) {
+  $('#refresh').onclick = load;
+}
+
+if ($('#search')) {
+  $('#search').oninput =
+    renderMatches;
+}
+
+if ($('#filter')) {
+  $('#filter').onchange =
+    renderMatches;
+}
+
+if ($('#date-filter')) {
+  $('#date-filter').onchange =
+    renderMatches;
+}
+
+if ($('#grade-filter')) {
+  $('#grade-filter').onchange =
+    renderMatches;
+}
+
 load();
