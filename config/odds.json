@@ -1,8 +1,17 @@
 {
   "enabled": true,
+  "provider": "TheRundown",
+  "bookmaker": "Unibet",
+  "bookmakerId": 21,
   "minimumScore": 80,
-  "market": "Over 1,5 mål",
   "cacheHours": 6,
   "kickoffToleranceHours": 12,
-  "bookmakers": ["Unibet"]
+  "requestTimeoutMs": 15000,
+  "market": "over-1.5",
+  "marketIds": [
+    1,
+    3,
+    563
+  ],
+  "mainLineOnly": false
 }
