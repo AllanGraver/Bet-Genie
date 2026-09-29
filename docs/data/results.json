@@ -1,12 +1,12 @@
 {
-  "date": "2026-09-28",
+  "date": "2026-09-29",
   "analysisDateSource": "environment",
   "period": {
-    "from": "2026-09-28",
-    "to": "2026-10-04",
+    "from": "2026-09-29",
+    "to": "2026-10-05",
     "days": 7
   },
-  "updatedAt": "2026-09-28T14:02:09.064Z",
+  "updatedAt": "2026-09-29T12:58:13.577Z",
   "oddsConfiguration": {
     "provider": "TheRundown",
     "bookmaker": "Unibet",
@@ -19,7 +19,7 @@
       3
     ],
     "mainLineOnly": false,
-    "enrichedAt": "2026-09-28T14:02:09.064Z",
+    "enrichedAt": "2026-09-29T12:58:13.577Z",
     "keyConfigured": false
   },
   "totalMatches": 0,
@@ -312,6 +312,6 @@
     "apiErrors": 0,
     "requests": 0,
     "cacheHits": 0,
-    "updatedAt": "2026-09-28T14:02:09.064Z"
+    "updatedAt": "2026-09-29T12:58:13.577Z"
   }
 }
