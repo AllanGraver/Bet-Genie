@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-27",
+  "date": "2026-10-28",
   "analysisDateSource": "environment",
   "period": {
-    "from": "2026-10-27",
-    "to": "2026-11-02",
+    "from": "2026-10-28",
+    "to": "2026-11-03",
     "days": 7
   },
-  "updatedAt": "2026-10-27T12:17:57.148Z",
+  "updatedAt": "2026-10-28T13:01:19.960Z",
   "oddsConfiguration": {
     "provider": "TheRundown",
     "bookmaker": "Unibet",
@@ -19,10 +19,10 @@
       3
     ],
     "mainLineOnly": false,
-    "enrichedAt": "2026-10-27T12:17:57.148Z",
+    "enrichedAt": "2026-10-28T13:01:19.960Z",
     "keyConfigured": false
   },
-  "totalMatches": 96,
+  "totalMatches": 93,
   "foundLeagues": [
     {
       "slug": "superliga",
@@ -247,7 +247,7 @@
       },
       "csvRows": 1140,
       "csvFiles": 3,
-      "periodMatches": 20
+      "periodMatches": 17
     }
   ],
   "uniqueLeagueCount": 9,
@@ -561,7 +561,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     }
   ],
@@ -830,7 +830,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -1127,7 +1127,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -1423,7 +1423,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -1720,7 +1720,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -2031,7 +2031,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -2298,7 +2298,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -2594,7 +2594,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -2891,7 +2891,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -3188,7 +3188,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -3484,7 +3484,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -3795,7 +3795,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -4106,7 +4106,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football/denmark/superligaen",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -4402,7 +4402,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -4698,7 +4698,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -4979,7 +4979,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -5275,7 +5275,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -5526,7 +5526,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football/denmark/superligaen",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -5823,7 +5823,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -6119,7 +6119,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -6386,7 +6386,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -6682,7 +6682,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -6948,7 +6948,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -7259,7 +7259,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -7555,7 +7555,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -7926,7 +7926,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football/denmark/superligaen",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -8237,7 +8237,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -8504,7 +8504,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -8755,318 +8755,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
-      }
-    },
-    {
-      "fixtureId": null,
-      "leagueSlug": "allsvenskan",
-      "leagueName": "Allsvenskan",
-      "apiLeagueId": 113,
-      "season": 2026,
-      "date": "2026-10-27",
-      "time": "19:00",
-      "home": "AIK Stockholm",
-      "away": "Elfsborg",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "scheduled",
-      "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv",
-      "historyReady": true,
-      "preCriteria": [
-        true,
-        false,
-        true,
-        false
-      ],
-      "preScore": 60,
-      "metrics": {
-        "homeAvg": 1.6,
-        "awayAvg": 1.4,
-        "hScored": 3,
-        "aScored": 5,
-        "homeOver15": 0.8,
-        "awayOver15": 0.8,
-        "homeBtts": 0.6,
-        "awayBtts": 0.4,
-        "recentBtts": 0.5,
-        "h2hOver15": 1,
-        "h2hCount": 5
-      },
-      "homeForm": [
-        {
-          "fixtureId": null,
-          "leagueSlug": "allsvenskan",
-          "leagueName": "Allsvenskan",
-          "apiLeagueId": 113,
-          "season": 2026,
-          "date": "2026-09-07",
-          "time": "19:00",
-          "home": "Malmö",
-          "away": "AIK Stockholm",
-          "homeScore": 0,
-          "awayScore": 0,
-          "status": "finished",
-          "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "allsvenskan",
-          "leagueName": "Allsvenskan",
-          "apiLeagueId": 113,
-          "season": 2026,
-          "date": "2026-08-30",
-          "time": "14:00",
-          "home": "AIK Stockholm",
-          "away": "Hammarby",
-          "homeScore": 3,
-          "awayScore": 2,
-          "status": "finished",
-          "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "allsvenskan",
-          "leagueName": "Allsvenskan",
-          "apiLeagueId": 113,
-          "season": 2026,
-          "date": "2026-08-16",
-          "time": "14:00",
-          "home": "Djurgården",
-          "away": "AIK Stockholm",
-          "homeScore": 1,
-          "awayScore": 3,
-          "status": "finished",
-          "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "allsvenskan",
-          "leagueName": "Allsvenskan",
-          "apiLeagueId": 113,
-          "season": 2026,
-          "date": "2026-08-08",
-          "time": "16:00 (15:00)",
-          "home": "Örgryte",
-          "away": "AIK Stockholm",
-          "homeScore": 3,
-          "awayScore": 4,
-          "status": "finished",
-          "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "allsvenskan",
-          "leagueName": "Allsvenskan",
-          "apiLeagueId": 113,
-          "season": 2026,
-          "date": "2026-08-02",
-          "time": "16:30",
-          "home": "AIK Stockholm",
-          "away": "Örgryte",
-          "homeScore": 0,
-          "awayScore": 3,
-          "status": "finished",
-          "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
-        }
-      ],
-      "awayForm": [
-        {
-          "fixtureId": null,
-          "leagueSlug": "allsvenskan",
-          "leagueName": "Allsvenskan",
-          "apiLeagueId": 113,
-          "season": 2026,
-          "date": "2026-09-06",
-          "time": "16:30",
-          "home": "Brommapojkarna",
-          "away": "Elfsborg",
-          "homeScore": 2,
-          "awayScore": 1,
-          "status": "finished",
-          "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "allsvenskan",
-          "leagueName": "Allsvenskan",
-          "apiLeagueId": 113,
-          "season": 2026,
-          "date": "2026-08-29",
-          "time": "15:00",
-          "home": "Elfsborg",
-          "away": "Degerfors",
-          "homeScore": 2,
-          "awayScore": 0,
-          "status": "finished",
-          "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "allsvenskan",
-          "leagueName": "Allsvenskan",
-          "apiLeagueId": 113,
-          "season": 2026,
-          "date": "2026-08-23",
-          "time": "15:00 (14:00)",
-          "home": "Göteborg",
-          "away": "Elfsborg",
-          "homeScore": 1,
-          "awayScore": 1,
-          "status": "finished",
-          "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "allsvenskan",
-          "leagueName": "Allsvenskan",
-          "apiLeagueId": 113,
-          "season": 2026,
-          "date": "2026-08-14",
-          "time": "19:00",
-          "home": "Elfsborg",
-          "away": "Västerås",
-          "homeScore": 3,
-          "awayScore": 0,
-          "status": "finished",
-          "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "allsvenskan",
-          "leagueName": "Allsvenskan",
-          "apiLeagueId": 113,
-          "season": 2026,
-          "date": "2026-08-08",
-          "time": "17:30",
-          "home": "Mjällby",
-          "away": "Elfsborg",
-          "homeScore": 0,
-          "awayScore": 1,
-          "status": "finished",
-          "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
-        }
-      ],
-      "score": 67.8,
-      "passed": false,
-      "passedCount": 3,
-      "criteria": [
-        true,
-        true,
-        false,
-        true,
-        false
-      ],
-      "h2h": [
-        {
-          "fixtureId": null,
-          "leagueSlug": "allsvenskan",
-          "leagueName": "Allsvenskan",
-          "apiLeagueId": 113,
-          "season": 2026,
-          "date": "2026-05-03",
-          "time": "16:30",
-          "home": "Elfsborg",
-          "away": "AIK Stockholm",
-          "homeScore": 1,
-          "awayScore": 1,
-          "status": "finished",
-          "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "allsvenskan",
-          "leagueName": "Allsvenskan",
-          "apiLeagueId": 113,
-          "season": 2026,
-          "date": "2025-11-02",
-          "time": "14:00",
-          "home": "Elfsborg",
-          "away": "AIK Stockholm",
-          "homeScore": 0,
-          "awayScore": 3,
-          "status": "finished",
-          "source": "CSV:2025 Allsvenskan Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "allsvenskan",
-          "leagueName": "Allsvenskan",
-          "apiLeagueId": 113,
-          "season": 2026,
-          "date": "2025-04-27",
-          "time": "16:00",
-          "home": "AIK Stockholm",
-          "away": "Elfsborg",
-          "homeScore": 2,
-          "awayScore": 0,
-          "status": "finished",
-          "source": "CSV:2025 Allsvenskan Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "allsvenskan",
-          "leagueName": "Allsvenskan",
-          "apiLeagueId": 113,
-          "season": 2026,
-          "date": "2024-10-27",
-          "time": "14:00",
-          "home": "AIK Stockholm",
-          "away": "Elfsborg",
-          "homeScore": 2,
-          "awayScore": 1,
-          "status": "finished",
-          "source": "CSV:2024 Allsvenskan Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "allsvenskan",
-          "leagueName": "Allsvenskan",
-          "apiLeagueId": 113,
-          "season": 2026,
-          "date": "2024-05-15",
-          "time": "19:00",
-          "home": "Elfsborg",
-          "away": "AIK Stockholm",
-          "homeScore": 6,
-          "awayScore": 1,
-          "status": "finished",
-          "source": "CSV:2024 Allsvenskan Scores & Fixtures.csv"
-        }
-      ],
-      "dataQuality": "complete",
-      "sources": {
-        "history": [
-          "CSV:2026 Allsvenskan Scores & Fixtures.csv"
-        ],
-        "h2h": "CSV"
-      },
-      "oddsConfiguration": {
-        "source": "external-link",
-        "provider": "TheRundown",
-        "bookmaker": "Unibet",
-        "bookmakerId": 21,
-        "rundownSupported": false,
-        "rundownSportId": null,
-        "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
-        "fallbackLabel": "Find odds hos Unibet"
-      },
-      "oddsStatus": "external-link",
-      "oddsSource": null,
-      "bookmaker": "Unibet",
-      "fallbackOddsUrl": "https://www.unibet.dk/betting/sports/filter/football",
-      "fallbackOddsLabel": "Find odds hos Unibet",
-      "odds": {
-        "available": false,
-        "status": "below-score-threshold",
-        "reason": "Kampens score er under grænsen på 80.",
-        "provider": "TheRundown",
-        "bookmaker": "Unibet",
-        "bookmakerId": 21,
-        "market": "Over 1,5 mål",
-        "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
-        "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -9377,7 +9066,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -9643,7 +9332,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -9909,7 +9598,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -10205,7 +9894,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -10501,7 +10190,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -10767,7 +10456,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -11034,7 +10723,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -11405,303 +11094,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football/denmark/superligaen",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
-      }
-    },
-    {
-      "fixtureId": null,
-      "leagueSlug": "serie-a",
-      "leagueName": "Serie A",
-      "apiLeagueId": 135,
-      "season": 2026,
-      "date": "2026-10-27",
-      "time": "20:45",
-      "home": "Torino",
-      "away": "Como",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "scheduled",
-      "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv",
-      "historyReady": true,
-      "preCriteria": [
-        true,
-        true,
-        true,
-        true
-      ],
-      "preScore": 70,
-      "metrics": {
-        "homeAvg": 1.2,
-        "awayAvg": 1.7,
-        "hScored": 4,
-        "aScored": 4,
-        "homeOver15": 1,
-        "awayOver15": 1,
-        "homeBtts": 0.8,
-        "awayBtts": 0.8,
-        "recentBtts": 0.8,
-        "h2hOver15": 0.5,
-        "h2hCount": 4
-      },
-      "homeForm": [
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-09-19",
-          "time": "15:00",
-          "home": "Bologna",
-          "away": "Torino",
-          "homeScore": 1,
-          "awayScore": 1,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-09-14",
-          "time": "18:30",
-          "home": "Torino",
-          "away": "Roma",
-          "homeScore": 0,
-          "awayScore": 2,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-09-05",
-          "time": "15:00",
-          "home": "Fiorentina",
-          "away": "Torino",
-          "homeScore": 1,
-          "awayScore": 2,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-08-29",
-          "time": "18:30",
-          "home": "Sassuolo",
-          "away": "Torino",
-          "homeScore": 2,
-          "awayScore": 1,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-08-23",
-          "time": "20:45",
-          "home": "Torino",
-          "away": "Milan",
-          "homeScore": 1,
-          "awayScore": 2,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        }
-      ],
-      "awayForm": [
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-09-20",
-          "time": "15:00",
-          "home": "Frosinone",
-          "away": "Como",
-          "homeScore": 2,
-          "awayScore": 0,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-09-14",
-          "time": "18:30",
-          "home": "Como",
-          "away": "Parma",
-          "homeScore": 2,
-          "awayScore": 1,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-09-04",
-          "time": "20:45",
-          "home": "Genoa",
-          "away": "Como",
-          "homeScore": 1,
-          "awayScore": 4,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-08-30",
-          "time": "18:30",
-          "home": "Napoli",
-          "away": "Como",
-          "homeScore": 1,
-          "awayScore": 2,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-08-22",
-          "time": "18:30",
-          "home": "Udinese",
-          "away": "Como",
-          "homeScore": 1,
-          "awayScore": 1,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        }
-      ],
-      "score": 65.5,
-      "passed": false,
-      "passedCount": 4,
-      "criteria": [
-        true,
-        false,
-        true,
-        true,
-        true
-      ],
-      "h2h": [
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-01-24",
-          "time": "15:00",
-          "home": "Como",
-          "away": "Torino",
-          "homeScore": 6,
-          "awayScore": 0,
-          "status": "finished",
-          "source": "CSV:2025-2026 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2025-11-24",
-          "time": "18:30",
-          "home": "Torino",
-          "away": "Como",
-          "homeScore": 1,
-          "awayScore": 5,
-          "status": "finished",
-          "source": "CSV:2025-2026 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2025-04-13",
-          "time": "18:00",
-          "home": "Como",
-          "away": "Torino",
-          "homeScore": 1,
-          "awayScore": 0,
-          "status": "finished",
-          "source": "CSV:2024-2025 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2024-10-25",
-          "time": "20:45",
-          "home": "Torino",
-          "away": "Como",
-          "homeScore": 1,
-          "awayScore": 0,
-          "status": "finished",
-          "source": "CSV:2024-2025 Serie A Scores & Fixtures.csv"
-        }
-      ],
-      "dataQuality": "limited",
-      "sources": {
-        "history": [
-          "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        ],
-        "h2h": "CSV"
-      },
-      "oddsConfiguration": {
-        "source": "therundown",
-        "provider": "TheRundown",
-        "bookmaker": "Unibet",
-        "bookmakerId": 21,
-        "rundownSupported": true,
-        "rundownSportId": 15,
-        "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
-        "fallbackLabel": "Find odds hos Unibet"
-      },
-      "oddsStatus": "external-link",
-      "oddsSource": null,
-      "bookmaker": "Unibet",
-      "fallbackOddsUrl": "https://www.unibet.dk/betting/sports/filter/football",
-      "fallbackOddsLabel": "Find odds hos Unibet",
-      "odds": {
-        "available": false,
-        "status": "below-score-threshold",
-        "reason": "Kampens score er under grænsen på 80.",
-        "provider": "TheRundown",
-        "bookmaker": "Unibet",
-        "bookmakerId": 21,
-        "market": "Over 1,5 mål",
-        "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
-        "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -11997,273 +11390,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
-      }
-    },
-    {
-      "fixtureId": null,
-      "leagueSlug": "serie-a",
-      "leagueName": "Serie A",
-      "apiLeagueId": 135,
-      "season": 2026,
-      "date": "2026-10-27",
-      "time": "18:30",
-      "home": "Sassuolo",
-      "away": "Lazio",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "scheduled",
-      "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv",
-      "historyReady": true,
-      "preCriteria": [
-        true,
-        true,
-        false,
-        false
-      ],
-      "preScore": 68,
-      "metrics": {
-        "homeAvg": 1.4,
-        "awayAvg": 1.5,
-        "hScored": 5,
-        "aScored": 5,
-        "homeOver15": 1,
-        "awayOver15": 0.6,
-        "homeBtts": 1,
-        "awayBtts": 0.4,
-        "recentBtts": 0.7,
-        "h2hOver15": 0.5,
-        "h2hCount": 2
-      },
-      "homeForm": [
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-09-18",
-          "time": "20:45",
-          "home": "Monza",
-          "away": "Sassuolo",
-          "homeScore": 2,
-          "awayScore": 1,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-09-13",
-          "time": "20:45",
-          "home": "Sassuolo",
-          "away": "Juventus",
-          "homeScore": 3,
-          "awayScore": 2,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-09-06",
-          "time": "18:00",
-          "home": "Bologna",
-          "away": "Sassuolo",
-          "homeScore": 2,
-          "awayScore": 2,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-08-29",
-          "time": "18:30",
-          "home": "Sassuolo",
-          "away": "Torino",
-          "homeScore": 2,
-          "awayScore": 1,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-08-23",
-          "time": "20:45",
-          "home": "Atalanta",
-          "away": "Sassuolo",
-          "homeScore": 2,
-          "awayScore": 1,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        }
-      ],
-      "awayForm": [
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-09-19",
-          "time": "20:45",
-          "home": "Venezia",
-          "away": "Lazio",
-          "homeScore": 0,
-          "awayScore": 2,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-09-12",
-          "time": "18:00",
-          "home": "Lazio",
-          "away": "Milan",
-          "homeScore": 2,
-          "awayScore": 2,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-09-07",
-          "time": "20:45",
-          "home": "Udinese",
-          "away": "Lazio",
-          "homeScore": 1,
-          "awayScore": 2,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-08-30",
-          "time": "20:45",
-          "home": "Lazio",
-          "away": "Genoa",
-          "homeScore": 1,
-          "awayScore": 0,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-08-24",
-          "time": "18:30",
-          "home": "Bologna",
-          "away": "Lazio",
-          "homeScore": 0,
-          "awayScore": 1,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        }
-      ],
-      "score": 64,
-      "passed": false,
-      "passedCount": 2,
-      "criteria": [
-        true,
-        false,
-        true,
-        false,
-        false
-      ],
-      "h2h": [
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-03-09",
-          "time": "20:45",
-          "home": "Lazio",
-          "away": "Sassuolo",
-          "homeScore": 2,
-          "awayScore": 1,
-          "status": "finished",
-          "source": "CSV:2025-2026 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2025-09-14",
-          "time": "18:00",
-          "home": "Sassuolo",
-          "away": "Lazio",
-          "homeScore": 1,
-          "awayScore": 0,
-          "status": "finished",
-          "source": "CSV:2025-2026 Serie A Scores & Fixtures.csv"
-        }
-      ],
-      "dataQuality": "limited",
-      "sources": {
-        "history": [
-          "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        ],
-        "h2h": "CSV"
-      },
-      "oddsConfiguration": {
-        "source": "therundown",
-        "provider": "TheRundown",
-        "bookmaker": "Unibet",
-        "bookmakerId": 21,
-        "rundownSupported": true,
-        "rundownSportId": 15,
-        "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
-        "fallbackLabel": "Find odds hos Unibet"
-      },
-      "oddsStatus": "external-link",
-      "oddsSource": null,
-      "bookmaker": "Unibet",
-      "fallbackOddsUrl": "https://www.unibet.dk/betting/sports/filter/football",
-      "fallbackOddsLabel": "Find odds hos Unibet",
-      "odds": {
-        "available": false,
-        "status": "below-score-threshold",
-        "reason": "Kampens score er under grænsen på 80.",
-        "provider": "TheRundown",
-        "bookmaker": "Unibet",
-        "bookmakerId": 21,
-        "market": "Over 1,5 mål",
-        "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
-        "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -12498,7 +11625,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -12809,7 +11936,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -13075,7 +12202,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -13326,7 +12453,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -13592,7 +12719,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -13888,7 +13015,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -14184,7 +13311,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -14450,7 +13577,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -14746,7 +13873,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -15042,7 +14169,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -15277,7 +14404,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -15543,7 +14670,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -15824,7 +14951,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -16135,7 +15262,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -16446,7 +15573,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -16697,7 +15824,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -16978,7 +16105,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -17274,7 +16401,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -17570,7 +16697,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -17866,7 +16993,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -18103,303 +17230,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
-      }
-    },
-    {
-      "fixtureId": null,
-      "leagueSlug": "serie-a",
-      "leagueName": "Serie A",
-      "apiLeagueId": 135,
-      "season": 2026,
-      "date": "2026-10-27",
-      "time": "20:45",
-      "home": "Roma",
-      "away": "Cagliari",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "scheduled",
-      "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv",
-      "historyReady": true,
-      "preCriteria": [
-        true,
-        true,
-        false,
-        false
-      ],
-      "preScore": 62.5,
-      "metrics": {
-        "homeAvg": 2.7,
-        "awayAvg": 1.2,
-        "hScored": 5,
-        "aScored": 4,
-        "homeOver15": 1,
-        "awayOver15": 0.2,
-        "homeBtts": 0.4,
-        "awayBtts": 0.2,
-        "recentBtts": 0.30000000000000004,
-        "h2hOver15": 0.25,
-        "h2hCount": 4
-      },
-      "homeForm": [
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-09-19",
-          "time": "18:00",
-          "home": "Roma",
-          "away": "Inter",
-          "homeScore": 2,
-          "awayScore": 2,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-09-14",
-          "time": "18:30",
-          "home": "Torino",
-          "away": "Roma",
-          "homeScore": 0,
-          "awayScore": 2,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-09-05",
-          "time": "20:45",
-          "home": "Roma",
-          "away": "Atalanta",
-          "homeScore": 2,
-          "awayScore": 1,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-08-31",
-          "time": "18:30",
-          "home": "Lecce",
-          "away": "Roma",
-          "homeScore": 0,
-          "awayScore": 4,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-08-24",
-          "time": "20:45",
-          "home": "Roma",
-          "away": "Fiorentina",
-          "homeScore": 4,
-          "awayScore": 0,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        }
-      ],
-      "awayForm": [
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-09-19",
-          "time": "15:00",
-          "home": "Udinese",
-          "away": "Cagliari",
-          "homeScore": 0,
-          "awayScore": 1,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-09-12",
-          "time": "20:45",
-          "home": "Atalanta",
-          "away": "Cagliari",
-          "homeScore": 1,
-          "awayScore": 2,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-09-07",
-          "time": "18:30",
-          "home": "Cagliari",
-          "away": "Lecce",
-          "homeScore": 1,
-          "awayScore": 0,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-08-30",
-          "time": "20:45",
-          "home": "Cagliari",
-          "away": "Inter",
-          "homeScore": 0,
-          "awayScore": 1,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-08-22",
-          "time": "20:45",
-          "home": "Parma",
-          "away": "Cagliari",
-          "homeScore": 0,
-          "awayScore": 1,
-          "status": "finished",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        }
-      ],
-      "score": 55.3,
-      "passed": false,
-      "passedCount": 2,
-      "criteria": [
-        true,
-        false,
-        true,
-        false,
-        false
-      ],
-      "h2h": [
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-02-09",
-          "time": "20:45",
-          "home": "Roma",
-          "away": "Cagliari",
-          "homeScore": 2,
-          "awayScore": 0,
-          "status": "finished",
-          "source": "CSV:2025-2026 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2025-12-07",
-          "time": "15:00",
-          "home": "Cagliari",
-          "away": "Roma",
-          "homeScore": 1,
-          "awayScore": 0,
-          "status": "finished",
-          "source": "CSV:2025-2026 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2025-03-16",
-          "time": "16:00",
-          "home": "Roma",
-          "away": "Cagliari",
-          "homeScore": 1,
-          "awayScore": 0,
-          "status": "finished",
-          "source": "CSV:2024-2025 Serie A Scores & Fixtures.csv"
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2024-08-18",
-          "time": "20:45",
-          "home": "Cagliari",
-          "away": "Roma",
-          "homeScore": 0,
-          "awayScore": 0,
-          "status": "finished",
-          "source": "CSV:2024-2025 Serie A Scores & Fixtures.csv"
-        }
-      ],
-      "dataQuality": "limited",
-      "sources": {
-        "history": [
-          "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-        ],
-        "h2h": "CSV"
-      },
-      "oddsConfiguration": {
-        "source": "therundown",
-        "provider": "TheRundown",
-        "bookmaker": "Unibet",
-        "bookmakerId": 21,
-        "rundownSupported": true,
-        "rundownSportId": 15,
-        "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
-        "fallbackLabel": "Find odds hos Unibet"
-      },
-      "oddsStatus": "external-link",
-      "oddsSource": null,
-      "bookmaker": "Unibet",
-      "fallbackOddsUrl": "https://www.unibet.dk/betting/sports/filter/football",
-      "fallbackOddsLabel": "Find odds hos Unibet",
-      "odds": {
-        "available": false,
-        "status": "below-score-threshold",
-        "reason": "Kampens score er under grænsen på 80.",
-        "provider": "TheRundown",
-        "bookmaker": "Unibet",
-        "bookmakerId": 21,
-        "market": "Over 1,5 mål",
-        "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
-        "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -18680,7 +17511,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football/denmark/superligaen",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -18976,7 +17807,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -19272,7 +18103,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -19538,7 +18369,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -19849,7 +18680,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -20145,7 +18976,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -20456,7 +19287,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football/denmark/superligaen",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -20691,7 +19522,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -20987,7 +19818,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -21283,7 +20114,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -21549,7 +20380,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -21845,7 +20676,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -22156,7 +20987,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -22391,7 +21222,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -22642,7 +21473,318 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
+      }
+    },
+    {
+      "fixtureId": null,
+      "leagueSlug": "allsvenskan",
+      "leagueName": "Allsvenskan",
+      "apiLeagueId": 113,
+      "season": 2026,
+      "date": "2026-11-03",
+      "time": "19:00",
+      "home": "Sirius",
+      "away": "Halmstad",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv",
+      "historyReady": true,
+      "preCriteria": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "preScore": 38.5,
+      "metrics": {
+        "homeAvg": 2.1,
+        "awayAvg": 0.4,
+        "hScored": 3,
+        "aScored": 2,
+        "homeOver15": 0.6,
+        "awayOver15": 0.6,
+        "homeBtts": 0.4,
+        "awayBtts": 0.2,
+        "recentBtts": 0.30000000000000004,
+        "h2hOver15": 0.8,
+        "h2hCount": 5
+      },
+      "homeForm": [
+        {
+          "fixtureId": null,
+          "leagueSlug": "allsvenskan",
+          "leagueName": "Allsvenskan",
+          "apiLeagueId": 113,
+          "season": 2026,
+          "date": "2026-09-05",
+          "time": "17:30",
+          "home": "Västerås",
+          "away": "Sirius",
+          "homeScore": 0,
+          "awayScore": 1,
+          "status": "finished",
+          "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
+        },
+        {
+          "fixtureId": null,
+          "leagueSlug": "allsvenskan",
+          "leagueName": "Allsvenskan",
+          "apiLeagueId": 113,
+          "season": 2026,
+          "date": "2026-08-31",
+          "time": "19:00",
+          "home": "Sirius",
+          "away": "Malmö",
+          "homeScore": 0,
+          "awayScore": 1,
+          "status": "finished",
+          "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
+        },
+        {
+          "fixtureId": null,
+          "leagueSlug": "allsvenskan",
+          "leagueName": "Allsvenskan",
+          "apiLeagueId": 113,
+          "season": 2026,
+          "date": "2026-08-21",
+          "time": "19:00",
+          "home": "Sirius",
+          "away": "BK Häcken",
+          "homeScore": 0,
+          "awayScore": 3,
+          "status": "finished",
+          "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
+        },
+        {
+          "fixtureId": null,
+          "leagueSlug": "allsvenskan",
+          "leagueName": "Allsvenskan",
+          "apiLeagueId": 113,
+          "season": 2026,
+          "date": "2026-08-15",
+          "time": "15:00",
+          "home": "Mjällby",
+          "away": "Sirius",
+          "homeScore": 4,
+          "awayScore": 3,
+          "status": "finished",
+          "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
+        },
+        {
+          "fixtureId": null,
+          "leagueSlug": "allsvenskan",
+          "leagueName": "Allsvenskan",
+          "apiLeagueId": 113,
+          "season": 2026,
+          "date": "2026-08-10",
+          "time": "19:00",
+          "home": "Sirius",
+          "away": "Brommapojkarna",
+          "homeScore": 2,
+          "awayScore": 2,
+          "status": "finished",
+          "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
+        }
+      ],
+      "awayForm": [
+        {
+          "fixtureId": null,
+          "leagueSlug": "allsvenskan",
+          "leagueName": "Allsvenskan",
+          "apiLeagueId": 113,
+          "season": 2026,
+          "date": "2026-09-05",
+          "time": "15:00",
+          "home": "Degerfors",
+          "away": "Halmstad",
+          "homeScore": 2,
+          "awayScore": 0,
+          "status": "finished",
+          "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
+        },
+        {
+          "fixtureId": null,
+          "leagueSlug": "allsvenskan",
+          "leagueName": "Allsvenskan",
+          "apiLeagueId": 113,
+          "season": 2026,
+          "date": "2026-08-29",
+          "time": "17:30",
+          "home": "Halmstad",
+          "away": "Kalmar",
+          "homeScore": 1,
+          "awayScore": 0,
+          "status": "finished",
+          "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
+        },
+        {
+          "fixtureId": null,
+          "leagueSlug": "allsvenskan",
+          "leagueName": "Allsvenskan",
+          "apiLeagueId": 113,
+          "season": 2026,
+          "date": "2026-08-22",
+          "time": "16:00 (15:00)",
+          "home": "Örgryte",
+          "away": "Halmstad",
+          "homeScore": 1,
+          "awayScore": 1,
+          "status": "finished",
+          "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
+        },
+        {
+          "fixtureId": null,
+          "leagueSlug": "allsvenskan",
+          "leagueName": "Allsvenskan",
+          "apiLeagueId": 113,
+          "season": 2026,
+          "date": "2026-08-17",
+          "time": "19:00",
+          "home": "BK Häcken",
+          "away": "Halmstad",
+          "homeScore": 1,
+          "awayScore": 0,
+          "status": "finished",
+          "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
+        },
+        {
+          "fixtureId": null,
+          "leagueSlug": "allsvenskan",
+          "leagueName": "Allsvenskan",
+          "apiLeagueId": 113,
+          "season": 2026,
+          "date": "2026-08-09",
+          "time": "16:30",
+          "home": "Halmstad",
+          "away": "GAIS",
+          "homeScore": 0,
+          "awayScore": 2,
+          "status": "finished",
+          "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
+        }
+      ],
+      "score": 46.7,
+      "passed": false,
+      "passedCount": 0,
+      "criteria": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "h2h": [
+        {
+          "fixtureId": null,
+          "leagueSlug": "allsvenskan",
+          "leagueName": "Allsvenskan",
+          "apiLeagueId": 113,
+          "season": 2026,
+          "date": "2026-08-03",
+          "time": "19:00",
+          "home": "Halmstad",
+          "away": "Sirius",
+          "homeScore": 0,
+          "awayScore": 2,
+          "status": "finished",
+          "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
+        },
+        {
+          "fixtureId": null,
+          "leagueSlug": "allsvenskan",
+          "leagueName": "Allsvenskan",
+          "apiLeagueId": 113,
+          "season": 2026,
+          "date": "2025-08-09",
+          "time": "17:30",
+          "home": "Halmstad",
+          "away": "Sirius",
+          "homeScore": 0,
+          "awayScore": 1,
+          "status": "finished",
+          "source": "CSV:2025 Allsvenskan Scores & Fixtures.csv"
+        },
+        {
+          "fixtureId": null,
+          "leagueSlug": "allsvenskan",
+          "leagueName": "Allsvenskan",
+          "apiLeagueId": 113,
+          "season": 2026,
+          "date": "2025-04-27",
+          "time": "16:30",
+          "home": "Sirius",
+          "away": "Halmstad",
+          "homeScore": 1,
+          "awayScore": 1,
+          "status": "finished",
+          "source": "CSV:2025 Allsvenskan Scores & Fixtures.csv"
+        },
+        {
+          "fixtureId": null,
+          "leagueSlug": "allsvenskan",
+          "leagueName": "Allsvenskan",
+          "apiLeagueId": 113,
+          "season": 2026,
+          "date": "2024-10-19",
+          "time": "17:30",
+          "home": "Halmstad",
+          "away": "Sirius",
+          "homeScore": 3,
+          "awayScore": 1,
+          "status": "finished",
+          "source": "CSV:2024 Allsvenskan Scores & Fixtures.csv"
+        },
+        {
+          "fixtureId": null,
+          "leagueSlug": "allsvenskan",
+          "leagueName": "Allsvenskan",
+          "apiLeagueId": 113,
+          "season": 2026,
+          "date": "2024-04-01",
+          "time": "14:00",
+          "home": "Sirius",
+          "away": "Halmstad",
+          "homeScore": 3,
+          "awayScore": 0,
+          "status": "finished",
+          "source": "CSV:2024 Allsvenskan Scores & Fixtures.csv"
+        }
+      ],
+      "dataQuality": "complete",
+      "sources": {
+        "history": [
+          "CSV:2026 Allsvenskan Scores & Fixtures.csv"
+        ],
+        "h2h": "CSV"
+      },
+      "oddsConfiguration": {
+        "source": "external-link",
+        "provider": "TheRundown",
+        "bookmaker": "Unibet",
+        "bookmakerId": 21,
+        "rundownSupported": false,
+        "rundownSportId": null,
+        "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
+        "fallbackLabel": "Find odds hos Unibet"
+      },
+      "oddsStatus": "external-link",
+      "oddsSource": null,
+      "bookmaker": "Unibet",
+      "fallbackOddsUrl": "https://www.unibet.dk/betting/sports/filter/football",
+      "fallbackOddsLabel": "Find odds hos Unibet",
+      "odds": {
+        "available": false,
+        "status": "below-score-threshold",
+        "reason": "Kampens score er under grænsen på 80.",
+        "provider": "TheRundown",
+        "bookmaker": "Unibet",
+        "bookmakerId": 21,
+        "market": "Over 1,5 mål",
+        "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
+        "fallbackLabel": "Find odds hos Unibet",
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -22877,7 +22019,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -23158,7 +22300,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -23424,7 +22566,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -23675,7 +22817,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -23971,7 +23113,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -24206,7 +23348,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -24441,7 +23583,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -24737,7 +23879,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -25018,7 +24160,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -25329,7 +24471,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -25625,7 +24767,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -25860,7 +25002,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -26095,7 +25237,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -26391,7 +25533,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -26612,7 +25754,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -26847,7 +25989,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -27083,7 +26225,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     },
     {
@@ -27318,1187 +26460,11 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-10-27T12:17:57.148Z"
+        "checkedAt": "2026-10-28T13:01:19.960Z"
       }
     }
   ],
   "matchesByDate": [
-    {
-      "date": "2026-10-27",
-      "totalMatches": 4,
-      "approved": [],
-      "nearMisses": [
-        {
-          "fixtureId": null,
-          "leagueSlug": "allsvenskan",
-          "leagueName": "Allsvenskan",
-          "apiLeagueId": 113,
-          "season": 2026,
-          "date": "2026-10-27",
-          "time": "19:00",
-          "home": "AIK Stockholm",
-          "away": "Elfsborg",
-          "homeScore": null,
-          "awayScore": null,
-          "status": "scheduled",
-          "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv",
-          "historyReady": true,
-          "preCriteria": [
-            true,
-            false,
-            true,
-            false
-          ],
-          "preScore": 60,
-          "metrics": {
-            "homeAvg": 1.6,
-            "awayAvg": 1.4,
-            "hScored": 3,
-            "aScored": 5,
-            "homeOver15": 0.8,
-            "awayOver15": 0.8,
-            "homeBtts": 0.6,
-            "awayBtts": 0.4,
-            "recentBtts": 0.5,
-            "h2hOver15": 1,
-            "h2hCount": 5
-          },
-          "homeForm": [
-            {
-              "fixtureId": null,
-              "leagueSlug": "allsvenskan",
-              "leagueName": "Allsvenskan",
-              "apiLeagueId": 113,
-              "season": 2026,
-              "date": "2026-09-07",
-              "time": "19:00",
-              "home": "Malmö",
-              "away": "AIK Stockholm",
-              "homeScore": 0,
-              "awayScore": 0,
-              "status": "finished",
-              "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "allsvenskan",
-              "leagueName": "Allsvenskan",
-              "apiLeagueId": 113,
-              "season": 2026,
-              "date": "2026-08-30",
-              "time": "14:00",
-              "home": "AIK Stockholm",
-              "away": "Hammarby",
-              "homeScore": 3,
-              "awayScore": 2,
-              "status": "finished",
-              "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "allsvenskan",
-              "leagueName": "Allsvenskan",
-              "apiLeagueId": 113,
-              "season": 2026,
-              "date": "2026-08-16",
-              "time": "14:00",
-              "home": "Djurgården",
-              "away": "AIK Stockholm",
-              "homeScore": 1,
-              "awayScore": 3,
-              "status": "finished",
-              "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "allsvenskan",
-              "leagueName": "Allsvenskan",
-              "apiLeagueId": 113,
-              "season": 2026,
-              "date": "2026-08-08",
-              "time": "16:00 (15:00)",
-              "home": "Örgryte",
-              "away": "AIK Stockholm",
-              "homeScore": 3,
-              "awayScore": 4,
-              "status": "finished",
-              "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "allsvenskan",
-              "leagueName": "Allsvenskan",
-              "apiLeagueId": 113,
-              "season": 2026,
-              "date": "2026-08-02",
-              "time": "16:30",
-              "home": "AIK Stockholm",
-              "away": "Örgryte",
-              "homeScore": 0,
-              "awayScore": 3,
-              "status": "finished",
-              "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
-            }
-          ],
-          "awayForm": [
-            {
-              "fixtureId": null,
-              "leagueSlug": "allsvenskan",
-              "leagueName": "Allsvenskan",
-              "apiLeagueId": 113,
-              "season": 2026,
-              "date": "2026-09-06",
-              "time": "16:30",
-              "home": "Brommapojkarna",
-              "away": "Elfsborg",
-              "homeScore": 2,
-              "awayScore": 1,
-              "status": "finished",
-              "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "allsvenskan",
-              "leagueName": "Allsvenskan",
-              "apiLeagueId": 113,
-              "season": 2026,
-              "date": "2026-08-29",
-              "time": "15:00",
-              "home": "Elfsborg",
-              "away": "Degerfors",
-              "homeScore": 2,
-              "awayScore": 0,
-              "status": "finished",
-              "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "allsvenskan",
-              "leagueName": "Allsvenskan",
-              "apiLeagueId": 113,
-              "season": 2026,
-              "date": "2026-08-23",
-              "time": "15:00 (14:00)",
-              "home": "Göteborg",
-              "away": "Elfsborg",
-              "homeScore": 1,
-              "awayScore": 1,
-              "status": "finished",
-              "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "allsvenskan",
-              "leagueName": "Allsvenskan",
-              "apiLeagueId": 113,
-              "season": 2026,
-              "date": "2026-08-14",
-              "time": "19:00",
-              "home": "Elfsborg",
-              "away": "Västerås",
-              "homeScore": 3,
-              "awayScore": 0,
-              "status": "finished",
-              "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "allsvenskan",
-              "leagueName": "Allsvenskan",
-              "apiLeagueId": 113,
-              "season": 2026,
-              "date": "2026-08-08",
-              "time": "17:30",
-              "home": "Mjällby",
-              "away": "Elfsborg",
-              "homeScore": 0,
-              "awayScore": 1,
-              "status": "finished",
-              "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
-            }
-          ],
-          "score": 67.8,
-          "passed": false,
-          "passedCount": 3,
-          "criteria": [
-            true,
-            true,
-            false,
-            true,
-            false
-          ],
-          "h2h": [
-            {
-              "fixtureId": null,
-              "leagueSlug": "allsvenskan",
-              "leagueName": "Allsvenskan",
-              "apiLeagueId": 113,
-              "season": 2026,
-              "date": "2026-05-03",
-              "time": "16:30",
-              "home": "Elfsborg",
-              "away": "AIK Stockholm",
-              "homeScore": 1,
-              "awayScore": 1,
-              "status": "finished",
-              "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "allsvenskan",
-              "leagueName": "Allsvenskan",
-              "apiLeagueId": 113,
-              "season": 2026,
-              "date": "2025-11-02",
-              "time": "14:00",
-              "home": "Elfsborg",
-              "away": "AIK Stockholm",
-              "homeScore": 0,
-              "awayScore": 3,
-              "status": "finished",
-              "source": "CSV:2025 Allsvenskan Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "allsvenskan",
-              "leagueName": "Allsvenskan",
-              "apiLeagueId": 113,
-              "season": 2026,
-              "date": "2025-04-27",
-              "time": "16:00",
-              "home": "AIK Stockholm",
-              "away": "Elfsborg",
-              "homeScore": 2,
-              "awayScore": 0,
-              "status": "finished",
-              "source": "CSV:2025 Allsvenskan Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "allsvenskan",
-              "leagueName": "Allsvenskan",
-              "apiLeagueId": 113,
-              "season": 2026,
-              "date": "2024-10-27",
-              "time": "14:00",
-              "home": "AIK Stockholm",
-              "away": "Elfsborg",
-              "homeScore": 2,
-              "awayScore": 1,
-              "status": "finished",
-              "source": "CSV:2024 Allsvenskan Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "allsvenskan",
-              "leagueName": "Allsvenskan",
-              "apiLeagueId": 113,
-              "season": 2026,
-              "date": "2024-05-15",
-              "time": "19:00",
-              "home": "Elfsborg",
-              "away": "AIK Stockholm",
-              "homeScore": 6,
-              "awayScore": 1,
-              "status": "finished",
-              "source": "CSV:2024 Allsvenskan Scores & Fixtures.csv"
-            }
-          ],
-          "dataQuality": "complete",
-          "sources": {
-            "history": [
-              "CSV:2026 Allsvenskan Scores & Fixtures.csv"
-            ],
-            "h2h": "CSV"
-          },
-          "oddsConfiguration": {
-            "source": "external-link",
-            "provider": "TheRundown",
-            "bookmaker": "Unibet",
-            "bookmakerId": 21,
-            "rundownSupported": false,
-            "rundownSportId": null,
-            "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
-            "fallbackLabel": "Find odds hos Unibet"
-          },
-          "oddsStatus": "external-link",
-          "oddsSource": null,
-          "bookmaker": "Unibet",
-          "fallbackOddsUrl": "https://www.unibet.dk/betting/sports/filter/football",
-          "fallbackOddsLabel": "Find odds hos Unibet",
-          "odds": {
-            "available": false,
-            "status": "below-score-threshold",
-            "reason": "Kampens score er under grænsen på 80.",
-            "provider": "TheRundown",
-            "bookmaker": "Unibet",
-            "bookmakerId": 21,
-            "market": "Over 1,5 mål",
-            "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
-            "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
-          }
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-10-27",
-          "time": "20:45",
-          "home": "Torino",
-          "away": "Como",
-          "homeScore": null,
-          "awayScore": null,
-          "status": "scheduled",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv",
-          "historyReady": true,
-          "preCriteria": [
-            true,
-            true,
-            true,
-            true
-          ],
-          "preScore": 70,
-          "metrics": {
-            "homeAvg": 1.2,
-            "awayAvg": 1.7,
-            "hScored": 4,
-            "aScored": 4,
-            "homeOver15": 1,
-            "awayOver15": 1,
-            "homeBtts": 0.8,
-            "awayBtts": 0.8,
-            "recentBtts": 0.8,
-            "h2hOver15": 0.5,
-            "h2hCount": 4
-          },
-          "homeForm": [
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-09-19",
-              "time": "15:00",
-              "home": "Bologna",
-              "away": "Torino",
-              "homeScore": 1,
-              "awayScore": 1,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-09-14",
-              "time": "18:30",
-              "home": "Torino",
-              "away": "Roma",
-              "homeScore": 0,
-              "awayScore": 2,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-09-05",
-              "time": "15:00",
-              "home": "Fiorentina",
-              "away": "Torino",
-              "homeScore": 1,
-              "awayScore": 2,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-08-29",
-              "time": "18:30",
-              "home": "Sassuolo",
-              "away": "Torino",
-              "homeScore": 2,
-              "awayScore": 1,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-08-23",
-              "time": "20:45",
-              "home": "Torino",
-              "away": "Milan",
-              "homeScore": 1,
-              "awayScore": 2,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            }
-          ],
-          "awayForm": [
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-09-20",
-              "time": "15:00",
-              "home": "Frosinone",
-              "away": "Como",
-              "homeScore": 2,
-              "awayScore": 0,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-09-14",
-              "time": "18:30",
-              "home": "Como",
-              "away": "Parma",
-              "homeScore": 2,
-              "awayScore": 1,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-09-04",
-              "time": "20:45",
-              "home": "Genoa",
-              "away": "Como",
-              "homeScore": 1,
-              "awayScore": 4,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-08-30",
-              "time": "18:30",
-              "home": "Napoli",
-              "away": "Como",
-              "homeScore": 1,
-              "awayScore": 2,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-08-22",
-              "time": "18:30",
-              "home": "Udinese",
-              "away": "Como",
-              "homeScore": 1,
-              "awayScore": 1,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            }
-          ],
-          "score": 65.5,
-          "passed": false,
-          "passedCount": 4,
-          "criteria": [
-            true,
-            false,
-            true,
-            true,
-            true
-          ],
-          "h2h": [
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-01-24",
-              "time": "15:00",
-              "home": "Como",
-              "away": "Torino",
-              "homeScore": 6,
-              "awayScore": 0,
-              "status": "finished",
-              "source": "CSV:2025-2026 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2025-11-24",
-              "time": "18:30",
-              "home": "Torino",
-              "away": "Como",
-              "homeScore": 1,
-              "awayScore": 5,
-              "status": "finished",
-              "source": "CSV:2025-2026 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2025-04-13",
-              "time": "18:00",
-              "home": "Como",
-              "away": "Torino",
-              "homeScore": 1,
-              "awayScore": 0,
-              "status": "finished",
-              "source": "CSV:2024-2025 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2024-10-25",
-              "time": "20:45",
-              "home": "Torino",
-              "away": "Como",
-              "homeScore": 1,
-              "awayScore": 0,
-              "status": "finished",
-              "source": "CSV:2024-2025 Serie A Scores & Fixtures.csv"
-            }
-          ],
-          "dataQuality": "limited",
-          "sources": {
-            "history": [
-              "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            ],
-            "h2h": "CSV"
-          },
-          "oddsConfiguration": {
-            "source": "therundown",
-            "provider": "TheRundown",
-            "bookmaker": "Unibet",
-            "bookmakerId": 21,
-            "rundownSupported": true,
-            "rundownSportId": 15,
-            "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
-            "fallbackLabel": "Find odds hos Unibet"
-          },
-          "oddsStatus": "external-link",
-          "oddsSource": null,
-          "bookmaker": "Unibet",
-          "fallbackOddsUrl": "https://www.unibet.dk/betting/sports/filter/football",
-          "fallbackOddsLabel": "Find odds hos Unibet",
-          "odds": {
-            "available": false,
-            "status": "below-score-threshold",
-            "reason": "Kampens score er under grænsen på 80.",
-            "provider": "TheRundown",
-            "bookmaker": "Unibet",
-            "bookmakerId": 21,
-            "market": "Over 1,5 mål",
-            "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
-            "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
-          }
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-10-27",
-          "time": "18:30",
-          "home": "Sassuolo",
-          "away": "Lazio",
-          "homeScore": null,
-          "awayScore": null,
-          "status": "scheduled",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv",
-          "historyReady": true,
-          "preCriteria": [
-            true,
-            true,
-            false,
-            false
-          ],
-          "preScore": 68,
-          "metrics": {
-            "homeAvg": 1.4,
-            "awayAvg": 1.5,
-            "hScored": 5,
-            "aScored": 5,
-            "homeOver15": 1,
-            "awayOver15": 0.6,
-            "homeBtts": 1,
-            "awayBtts": 0.4,
-            "recentBtts": 0.7,
-            "h2hOver15": 0.5,
-            "h2hCount": 2
-          },
-          "homeForm": [
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-09-18",
-              "time": "20:45",
-              "home": "Monza",
-              "away": "Sassuolo",
-              "homeScore": 2,
-              "awayScore": 1,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-09-13",
-              "time": "20:45",
-              "home": "Sassuolo",
-              "away": "Juventus",
-              "homeScore": 3,
-              "awayScore": 2,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-09-06",
-              "time": "18:00",
-              "home": "Bologna",
-              "away": "Sassuolo",
-              "homeScore": 2,
-              "awayScore": 2,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-08-29",
-              "time": "18:30",
-              "home": "Sassuolo",
-              "away": "Torino",
-              "homeScore": 2,
-              "awayScore": 1,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-08-23",
-              "time": "20:45",
-              "home": "Atalanta",
-              "away": "Sassuolo",
-              "homeScore": 2,
-              "awayScore": 1,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            }
-          ],
-          "awayForm": [
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-09-19",
-              "time": "20:45",
-              "home": "Venezia",
-              "away": "Lazio",
-              "homeScore": 0,
-              "awayScore": 2,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-09-12",
-              "time": "18:00",
-              "home": "Lazio",
-              "away": "Milan",
-              "homeScore": 2,
-              "awayScore": 2,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-09-07",
-              "time": "20:45",
-              "home": "Udinese",
-              "away": "Lazio",
-              "homeScore": 1,
-              "awayScore": 2,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-08-30",
-              "time": "20:45",
-              "home": "Lazio",
-              "away": "Genoa",
-              "homeScore": 1,
-              "awayScore": 0,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-08-24",
-              "time": "18:30",
-              "home": "Bologna",
-              "away": "Lazio",
-              "homeScore": 0,
-              "awayScore": 1,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            }
-          ],
-          "score": 64,
-          "passed": false,
-          "passedCount": 2,
-          "criteria": [
-            true,
-            false,
-            true,
-            false,
-            false
-          ],
-          "h2h": [
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-03-09",
-              "time": "20:45",
-              "home": "Lazio",
-              "away": "Sassuolo",
-              "homeScore": 2,
-              "awayScore": 1,
-              "status": "finished",
-              "source": "CSV:2025-2026 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2025-09-14",
-              "time": "18:00",
-              "home": "Sassuolo",
-              "away": "Lazio",
-              "homeScore": 1,
-              "awayScore": 0,
-              "status": "finished",
-              "source": "CSV:2025-2026 Serie A Scores & Fixtures.csv"
-            }
-          ],
-          "dataQuality": "limited",
-          "sources": {
-            "history": [
-              "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            ],
-            "h2h": "CSV"
-          },
-          "oddsConfiguration": {
-            "source": "therundown",
-            "provider": "TheRundown",
-            "bookmaker": "Unibet",
-            "bookmakerId": 21,
-            "rundownSupported": true,
-            "rundownSportId": 15,
-            "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
-            "fallbackLabel": "Find odds hos Unibet"
-          },
-          "oddsStatus": "external-link",
-          "oddsSource": null,
-          "bookmaker": "Unibet",
-          "fallbackOddsUrl": "https://www.unibet.dk/betting/sports/filter/football",
-          "fallbackOddsLabel": "Find odds hos Unibet",
-          "odds": {
-            "available": false,
-            "status": "below-score-threshold",
-            "reason": "Kampens score er under grænsen på 80.",
-            "provider": "TheRundown",
-            "bookmaker": "Unibet",
-            "bookmakerId": 21,
-            "market": "Over 1,5 mål",
-            "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
-            "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
-          }
-        },
-        {
-          "fixtureId": null,
-          "leagueSlug": "serie-a",
-          "leagueName": "Serie A",
-          "apiLeagueId": 135,
-          "season": 2026,
-          "date": "2026-10-27",
-          "time": "20:45",
-          "home": "Roma",
-          "away": "Cagliari",
-          "homeScore": null,
-          "awayScore": null,
-          "status": "scheduled",
-          "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv",
-          "historyReady": true,
-          "preCriteria": [
-            true,
-            true,
-            false,
-            false
-          ],
-          "preScore": 62.5,
-          "metrics": {
-            "homeAvg": 2.7,
-            "awayAvg": 1.2,
-            "hScored": 5,
-            "aScored": 4,
-            "homeOver15": 1,
-            "awayOver15": 0.2,
-            "homeBtts": 0.4,
-            "awayBtts": 0.2,
-            "recentBtts": 0.30000000000000004,
-            "h2hOver15": 0.25,
-            "h2hCount": 4
-          },
-          "homeForm": [
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-09-19",
-              "time": "18:00",
-              "home": "Roma",
-              "away": "Inter",
-              "homeScore": 2,
-              "awayScore": 2,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-09-14",
-              "time": "18:30",
-              "home": "Torino",
-              "away": "Roma",
-              "homeScore": 0,
-              "awayScore": 2,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-09-05",
-              "time": "20:45",
-              "home": "Roma",
-              "away": "Atalanta",
-              "homeScore": 2,
-              "awayScore": 1,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-08-31",
-              "time": "18:30",
-              "home": "Lecce",
-              "away": "Roma",
-              "homeScore": 0,
-              "awayScore": 4,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-08-24",
-              "time": "20:45",
-              "home": "Roma",
-              "away": "Fiorentina",
-              "homeScore": 4,
-              "awayScore": 0,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            }
-          ],
-          "awayForm": [
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-09-19",
-              "time": "15:00",
-              "home": "Udinese",
-              "away": "Cagliari",
-              "homeScore": 0,
-              "awayScore": 1,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-09-12",
-              "time": "20:45",
-              "home": "Atalanta",
-              "away": "Cagliari",
-              "homeScore": 1,
-              "awayScore": 2,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-09-07",
-              "time": "18:30",
-              "home": "Cagliari",
-              "away": "Lecce",
-              "homeScore": 1,
-              "awayScore": 0,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-08-30",
-              "time": "20:45",
-              "home": "Cagliari",
-              "away": "Inter",
-              "homeScore": 0,
-              "awayScore": 1,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-08-22",
-              "time": "20:45",
-              "home": "Parma",
-              "away": "Cagliari",
-              "homeScore": 0,
-              "awayScore": 1,
-              "status": "finished",
-              "source": "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            }
-          ],
-          "score": 55.3,
-          "passed": false,
-          "passedCount": 2,
-          "criteria": [
-            true,
-            false,
-            true,
-            false,
-            false
-          ],
-          "h2h": [
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2026-02-09",
-              "time": "20:45",
-              "home": "Roma",
-              "away": "Cagliari",
-              "homeScore": 2,
-              "awayScore": 0,
-              "status": "finished",
-              "source": "CSV:2025-2026 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2025-12-07",
-              "time": "15:00",
-              "home": "Cagliari",
-              "away": "Roma",
-              "homeScore": 1,
-              "awayScore": 0,
-              "status": "finished",
-              "source": "CSV:2025-2026 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2025-03-16",
-              "time": "16:00",
-              "home": "Roma",
-              "away": "Cagliari",
-              "homeScore": 1,
-              "awayScore": 0,
-              "status": "finished",
-              "source": "CSV:2024-2025 Serie A Scores & Fixtures.csv"
-            },
-            {
-              "fixtureId": null,
-              "leagueSlug": "serie-a",
-              "leagueName": "Serie A",
-              "apiLeagueId": 135,
-              "season": 2026,
-              "date": "2024-08-18",
-              "time": "20:45",
-              "home": "Cagliari",
-              "away": "Roma",
-              "homeScore": 0,
-              "awayScore": 0,
-              "status": "finished",
-              "source": "CSV:2024-2025 Serie A Scores & Fixtures.csv"
-            }
-          ],
-          "dataQuality": "limited",
-          "sources": {
-            "history": [
-              "CSV:2026-2027 Serie A Scores & Fixtures.csv"
-            ],
-            "h2h": "CSV"
-          },
-          "oddsConfiguration": {
-            "source": "therundown",
-            "provider": "TheRundown",
-            "bookmaker": "Unibet",
-            "bookmakerId": 21,
-            "rundownSupported": true,
-            "rundownSportId": 15,
-            "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
-            "fallbackLabel": "Find odds hos Unibet"
-          },
-          "oddsStatus": "external-link",
-          "oddsSource": null,
-          "bookmaker": "Unibet",
-          "fallbackOddsUrl": "https://www.unibet.dk/betting/sports/filter/football",
-          "fallbackOddsLabel": "Find odds hos Unibet",
-          "odds": {
-            "available": false,
-            "status": "below-score-threshold",
-            "reason": "Kampens score er under grænsen på 80.",
-            "provider": "TheRundown",
-            "bookmaker": "Unibet",
-            "bookmakerId": 21,
-            "market": "Over 1,5 mål",
-            "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
-            "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
-          }
-        }
-      ]
-    },
     {
       "date": "2026-10-28",
       "totalMatches": 9,
@@ -28812,7 +26778,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -29078,7 +27044,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -29389,7 +27355,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -29685,7 +27651,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -29951,7 +27917,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -30247,7 +28213,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -30543,7 +28509,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -30794,7 +28760,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -31105,7 +29071,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         }
       ]
@@ -31423,7 +29389,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -31674,7 +29640,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -31970,7 +29936,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -32205,7 +30171,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -32486,7 +30452,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         }
       ]
@@ -32804,7 +30770,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -33041,7 +31007,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -33322,7 +31288,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football/denmark/superligaen",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         }
       ]
@@ -33596,7 +31562,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -33893,7 +31859,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -34189,7 +32155,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -34486,7 +32452,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -34782,7 +32748,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -35079,7 +33045,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -35376,7 +33342,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -35672,7 +33638,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -35968,7 +33934,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -36265,7 +34231,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -36561,7 +34527,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -36827,7 +34793,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -37138,7 +35104,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -37404,7 +35370,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -37700,7 +35666,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -37996,7 +35962,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -38292,7 +36258,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -38558,7 +36524,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -38854,7 +36820,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -39089,7 +37055,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -39385,7 +37351,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -39681,7 +37647,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -39947,7 +37913,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -40182,7 +38148,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -40448,7 +38414,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -40699,7 +38665,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -40995,7 +38961,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -41291,7 +39257,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -41526,7 +39492,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -41761,7 +39727,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -41982,7 +39948,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -42218,7 +40184,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -42453,7 +40419,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         }
       ]
@@ -42770,7 +40736,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         }
       ],
@@ -43039,7 +41005,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -43335,7 +41301,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -43616,7 +41582,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -43912,7 +41878,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -44163,7 +42129,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football/denmark/superligaen",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -44430,7 +42396,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -44726,7 +42692,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -45022,7 +42988,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -45393,7 +43359,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football/denmark/superligaen",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -45660,7 +43626,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -45911,7 +43877,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -46222,7 +44188,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -46518,7 +44484,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -46784,7 +44750,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -47051,7 +45017,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -47422,7 +45388,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football/denmark/superligaen",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -47657,7 +45623,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -47923,7 +45889,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -48189,7 +46155,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -48470,7 +46436,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -48781,7 +46747,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -49092,7 +47058,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -49343,7 +47309,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -49624,7 +47590,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -49920,7 +47886,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -50231,7 +48197,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -50542,7 +48508,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football/denmark/superligaen",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -50777,7 +48743,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -51073,7 +49039,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -51369,7 +49335,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -51604,7 +49570,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -51839,7 +49805,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -52135,7 +50101,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -52431,7 +50397,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -52666,7 +50632,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         }
       ]
@@ -52984,7 +50950,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football/denmark/superligaen",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -53250,7 +51216,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -53546,7 +51512,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -53842,7 +51808,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -54153,7 +52119,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         },
         {
@@ -54434,7 +52400,325 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-10-27T12:17:57.148Z"
+            "checkedAt": "2026-10-28T13:01:19.960Z"
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-11-03",
+      "totalMatches": 1,
+      "approved": [],
+      "nearMisses": [
+        {
+          "fixtureId": null,
+          "leagueSlug": "allsvenskan",
+          "leagueName": "Allsvenskan",
+          "apiLeagueId": 113,
+          "season": 2026,
+          "date": "2026-11-03",
+          "time": "19:00",
+          "home": "Sirius",
+          "away": "Halmstad",
+          "homeScore": null,
+          "awayScore": null,
+          "status": "scheduled",
+          "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv",
+          "historyReady": true,
+          "preCriteria": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "preScore": 38.5,
+          "metrics": {
+            "homeAvg": 2.1,
+            "awayAvg": 0.4,
+            "hScored": 3,
+            "aScored": 2,
+            "homeOver15": 0.6,
+            "awayOver15": 0.6,
+            "homeBtts": 0.4,
+            "awayBtts": 0.2,
+            "recentBtts": 0.30000000000000004,
+            "h2hOver15": 0.8,
+            "h2hCount": 5
+          },
+          "homeForm": [
+            {
+              "fixtureId": null,
+              "leagueSlug": "allsvenskan",
+              "leagueName": "Allsvenskan",
+              "apiLeagueId": 113,
+              "season": 2026,
+              "date": "2026-09-05",
+              "time": "17:30",
+              "home": "Västerås",
+              "away": "Sirius",
+              "homeScore": 0,
+              "awayScore": 1,
+              "status": "finished",
+              "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
+            },
+            {
+              "fixtureId": null,
+              "leagueSlug": "allsvenskan",
+              "leagueName": "Allsvenskan",
+              "apiLeagueId": 113,
+              "season": 2026,
+              "date": "2026-08-31",
+              "time": "19:00",
+              "home": "Sirius",
+              "away": "Malmö",
+              "homeScore": 0,
+              "awayScore": 1,
+              "status": "finished",
+              "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
+            },
+            {
+              "fixtureId": null,
+              "leagueSlug": "allsvenskan",
+              "leagueName": "Allsvenskan",
+              "apiLeagueId": 113,
+              "season": 2026,
+              "date": "2026-08-21",
+              "time": "19:00",
+              "home": "Sirius",
+              "away": "BK Häcken",
+              "homeScore": 0,
+              "awayScore": 3,
+              "status": "finished",
+              "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
+            },
+            {
+              "fixtureId": null,
+              "leagueSlug": "allsvenskan",
+              "leagueName": "Allsvenskan",
+              "apiLeagueId": 113,
+              "season": 2026,
+              "date": "2026-08-15",
+              "time": "15:00",
+              "home": "Mjällby",
+              "away": "Sirius",
+              "homeScore": 4,
+              "awayScore": 3,
+              "status": "finished",
+              "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
+            },
+            {
+              "fixtureId": null,
+              "leagueSlug": "allsvenskan",
+              "leagueName": "Allsvenskan",
+              "apiLeagueId": 113,
+              "season": 2026,
+              "date": "2026-08-10",
+              "time": "19:00",
+              "home": "Sirius",
+              "away": "Brommapojkarna",
+              "homeScore": 2,
+              "awayScore": 2,
+              "status": "finished",
+              "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
+            }
+          ],
+          "awayForm": [
+            {
+              "fixtureId": null,
+              "leagueSlug": "allsvenskan",
+              "leagueName": "Allsvenskan",
+              "apiLeagueId": 113,
+              "season": 2026,
+              "date": "2026-09-05",
+              "time": "15:00",
+              "home": "Degerfors",
+              "away": "Halmstad",
+              "homeScore": 2,
+              "awayScore": 0,
+              "status": "finished",
+              "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
+            },
+            {
+              "fixtureId": null,
+              "leagueSlug": "allsvenskan",
+              "leagueName": "Allsvenskan",
+              "apiLeagueId": 113,
+              "season": 2026,
+              "date": "2026-08-29",
+              "time": "17:30",
+              "home": "Halmstad",
+              "away": "Kalmar",
+              "homeScore": 1,
+              "awayScore": 0,
+              "status": "finished",
+              "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
+            },
+            {
+              "fixtureId": null,
+              "leagueSlug": "allsvenskan",
+              "leagueName": "Allsvenskan",
+              "apiLeagueId": 113,
+              "season": 2026,
+              "date": "2026-08-22",
+              "time": "16:00 (15:00)",
+              "home": "Örgryte",
+              "away": "Halmstad",
+              "homeScore": 1,
+              "awayScore": 1,
+              "status": "finished",
+              "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
+            },
+            {
+              "fixtureId": null,
+              "leagueSlug": "allsvenskan",
+              "leagueName": "Allsvenskan",
+              "apiLeagueId": 113,
+              "season": 2026,
+              "date": "2026-08-17",
+              "time": "19:00",
+              "home": "BK Häcken",
+              "away": "Halmstad",
+              "homeScore": 1,
+              "awayScore": 0,
+              "status": "finished",
+              "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
+            },
+            {
+              "fixtureId": null,
+              "leagueSlug": "allsvenskan",
+              "leagueName": "Allsvenskan",
+              "apiLeagueId": 113,
+              "season": 2026,
+              "date": "2026-08-09",
+              "time": "16:30",
+              "home": "Halmstad",
+              "away": "GAIS",
+              "homeScore": 0,
+              "awayScore": 2,
+              "status": "finished",
+              "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
+            }
+          ],
+          "score": 46.7,
+          "passed": false,
+          "passedCount": 0,
+          "criteria": [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "h2h": [
+            {
+              "fixtureId": null,
+              "leagueSlug": "allsvenskan",
+              "leagueName": "Allsvenskan",
+              "apiLeagueId": 113,
+              "season": 2026,
+              "date": "2026-08-03",
+              "time": "19:00",
+              "home": "Halmstad",
+              "away": "Sirius",
+              "homeScore": 0,
+              "awayScore": 2,
+              "status": "finished",
+              "source": "CSV:2026 Allsvenskan Scores & Fixtures.csv"
+            },
+            {
+              "fixtureId": null,
+              "leagueSlug": "allsvenskan",
+              "leagueName": "Allsvenskan",
+              "apiLeagueId": 113,
+              "season": 2026,
+              "date": "2025-08-09",
+              "time": "17:30",
+              "home": "Halmstad",
+              "away": "Sirius",
+              "homeScore": 0,
+              "awayScore": 1,
+              "status": "finished",
+              "source": "CSV:2025 Allsvenskan Scores & Fixtures.csv"
+            },
+            {
+              "fixtureId": null,
+              "leagueSlug": "allsvenskan",
+              "leagueName": "Allsvenskan",
+              "apiLeagueId": 113,
+              "season": 2026,
+              "date": "2025-04-27",
+              "time": "16:30",
+              "home": "Sirius",
+              "away": "Halmstad",
+              "homeScore": 1,
+              "awayScore": 1,
+              "status": "finished",
+              "source": "CSV:2025 Allsvenskan Scores & Fixtures.csv"
+            },
+            {
+              "fixtureId": null,
+              "leagueSlug": "allsvenskan",
+              "leagueName": "Allsvenskan",
+              "apiLeagueId": 113,
+              "season": 2026,
+              "date": "2024-10-19",
+              "time": "17:30",
+              "home": "Halmstad",
+              "away": "Sirius",
+              "homeScore": 3,
+              "awayScore": 1,
+              "status": "finished",
+              "source": "CSV:2024 Allsvenskan Scores & Fixtures.csv"
+            },
+            {
+              "fixtureId": null,
+              "leagueSlug": "allsvenskan",
+              "leagueName": "Allsvenskan",
+              "apiLeagueId": 113,
+              "season": 2026,
+              "date": "2024-04-01",
+              "time": "14:00",
+              "home": "Sirius",
+              "away": "Halmstad",
+              "homeScore": 3,
+              "awayScore": 0,
+              "status": "finished",
+              "source": "CSV:2024 Allsvenskan Scores & Fixtures.csv"
+            }
+          ],
+          "dataQuality": "complete",
+          "sources": {
+            "history": [
+              "CSV:2026 Allsvenskan Scores & Fixtures.csv"
+            ],
+            "h2h": "CSV"
+          },
+          "oddsConfiguration": {
+            "source": "external-link",
+            "provider": "TheRundown",
+            "bookmaker": "Unibet",
+            "bookmakerId": 21,
+            "rundownSupported": false,
+            "rundownSportId": null,
+            "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
+            "fallbackLabel": "Find odds hos Unibet"
+          },
+          "oddsStatus": "external-link",
+          "oddsSource": null,
+          "bookmaker": "Unibet",
+          "fallbackOddsUrl": "https://www.unibet.dk/betting/sports/filter/football",
+          "fallbackOddsLabel": "Find odds hos Unibet",
+          "odds": {
+            "available": false,
+            "status": "below-score-threshold",
+            "reason": "Kampens score er under grænsen på 80.",
+            "provider": "TheRundown",
+            "bookmaker": "Unibet",
+            "bookmakerId": 21,
+            "market": "Over 1,5 mål",
+            "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
+            "fallbackLabel": "Find odds hos Unibet",
+            "checkedAt": "2026-10-28T13:01:19.960Z"
           }
         }
       ]
@@ -54484,9 +52768,9 @@
     "bookmakerId": 21,
     "market": "Over 1,5 mål",
     "threshold": 80,
-    "totalMatches": 96,
+    "totalMatches": 93,
     "candidates": 9,
-    "belowThreshold": 87,
+    "belowThreshold": 84,
     "apiEligible": 3,
     "fallbackOnly": 6,
     "available": 0,
@@ -54497,6 +52781,6 @@
     "apiErrors": 0,
     "requests": 0,
     "cacheHits": 0,
-    "updatedAt": "2026-10-27T12:17:57.148Z"
+    "updatedAt": "2026-10-28T13:01:19.960Z"
   }
 }
