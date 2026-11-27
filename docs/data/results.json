@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "analysisDateSource": "environment",
   "period": {
-    "from": "2026-11-26",
-    "to": "2026-12-02",
+    "from": "2026-11-27",
+    "to": "2026-12-03",
     "days": 7
   },
-  "updatedAt": "2026-11-26T16:58:27.350Z",
+  "updatedAt": "2026-11-27T16:44:14.024Z",
   "oddsConfiguration": {
     "provider": "TheRundown",
     "bookmaker": "Unibet",
@@ -19,7 +19,7 @@
       3
     ],
     "mainLineOnly": false,
-    "enrichedAt": "2026-11-26T16:58:27.350Z",
+    "enrichedAt": "2026-11-27T16:44:14.024Z",
     "keyConfigured": false
   },
   "totalMatches": 89,
@@ -562,7 +562,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     }
   ],
@@ -860,7 +860,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -1171,7 +1171,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -1438,7 +1438,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -1704,7 +1704,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -2001,7 +2001,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -2327,7 +2327,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football/denmark/superligaen",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -2594,7 +2594,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -2890,7 +2890,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -3187,7 +3187,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -3453,7 +3453,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -3749,7 +3749,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -4030,7 +4030,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -4326,7 +4326,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -4593,7 +4593,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -4904,7 +4904,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -5201,7 +5201,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -5498,7 +5498,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -5794,7 +5794,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -6090,7 +6090,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -6387,7 +6387,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -6683,7 +6683,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -6979,7 +6979,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -7275,7 +7275,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -7571,7 +7571,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -7806,7 +7806,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -8102,7 +8102,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -8398,7 +8398,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -8694,7 +8694,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -9005,7 +9005,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football/denmark/superligaen",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -9256,7 +9256,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -9553,7 +9553,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -9819,7 +9819,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -10115,7 +10115,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -10412,7 +10412,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -10708,7 +10708,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -11019,7 +11019,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -11375,7 +11375,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -11671,7 +11671,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -11967,7 +11967,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -12278,7 +12278,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -12589,7 +12589,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -12885,7 +12885,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -13151,7 +13151,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -13447,7 +13447,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -13788,7 +13788,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football/denmark/superligaen",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -14054,7 +14054,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football/denmark/superligaen",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -14291,7 +14291,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -14542,7 +14542,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -14823,7 +14823,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -15134,7 +15134,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -15385,7 +15385,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -15681,7 +15681,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -15916,7 +15916,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -16197,7 +16197,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -16493,7 +16493,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -16789,7 +16789,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -17085,7 +17085,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -17351,7 +17351,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -17647,7 +17647,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -17958,7 +17958,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football/denmark/superligaen",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -18224,7 +18224,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -18490,7 +18490,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -18801,7 +18801,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -19036,7 +19036,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -19332,7 +19332,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -19567,7 +19567,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -19802,7 +19802,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football/denmark/superligaen",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -20113,7 +20113,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -20379,7 +20379,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -20675,7 +20675,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -20971,7 +20971,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -21267,7 +21267,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -21593,7 +21593,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -21828,7 +21828,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -22063,7 +22063,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -22298,7 +22298,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -22609,7 +22609,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -22905,7 +22905,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -23171,7 +23171,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -23406,7 +23406,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -23672,7 +23672,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -23953,7 +23953,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -24249,7 +24249,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -24484,7 +24484,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -24719,7 +24719,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -24954,7 +24954,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -25189,7 +25189,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     },
     {
@@ -25410,7 +25410,7 @@
         "market": "Over 1,5 mål",
         "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
         "fallbackLabel": "Find odds hos Unibet",
-        "checkedAt": "2026-11-26T16:58:27.350Z"
+        "checkedAt": "2026-11-27T16:44:14.024Z"
       }
     }
   ],
@@ -25684,7 +25684,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -25981,7 +25981,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -26277,7 +26277,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         }
       ]
@@ -26580,7 +26580,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -26891,7 +26891,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -27158,7 +27158,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -27455,7 +27455,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -27722,7 +27722,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -28033,7 +28033,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -28329,7 +28329,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -28625,7 +28625,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -28921,7 +28921,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -29218,7 +29218,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -29574,7 +29574,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -29811,7 +29811,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -30077,7 +30077,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -30343,7 +30343,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -30578,7 +30578,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -30844,7 +30844,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -31140,7 +31140,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -31466,7 +31466,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -31701,7 +31701,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -31936,7 +31936,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -32171,7 +32171,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -32392,7 +32392,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         }
       ]
@@ -32710,7 +32710,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         }
       ],
@@ -32978,7 +32978,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -33275,7 +33275,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -33601,7 +33601,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football/denmark/superligaen",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -33897,7 +33897,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -34163,7 +34163,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -34459,7 +34459,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -34740,7 +34740,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -35037,7 +35037,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -35334,7 +35334,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -35631,7 +35631,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -35927,7 +35927,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -36223,7 +36223,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -36519,7 +36519,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -36754,7 +36754,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -37050,7 +37050,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -37361,7 +37361,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football/denmark/superligaen",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -37612,7 +37612,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -37878,7 +37878,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -38174,7 +38174,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -38470,7 +38470,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -38781,7 +38781,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -39077,7 +39077,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -39373,7 +39373,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -39684,7 +39684,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -39995,7 +39995,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -40291,7 +40291,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -40632,7 +40632,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football/denmark/superligaen",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -40898,7 +40898,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football/denmark/superligaen",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -41149,7 +41149,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -41460,7 +41460,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -41711,7 +41711,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -41946,7 +41946,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -42227,7 +42227,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -42523,7 +42523,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -42819,7 +42819,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -43115,7 +43115,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -43411,7 +43411,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -43722,7 +43722,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football/denmark/superligaen",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -44033,7 +44033,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -44268,7 +44268,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -44564,7 +44564,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -44799,7 +44799,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football/denmark/superligaen",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -45110,7 +45110,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -45406,7 +45406,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -45641,7 +45641,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -45952,7 +45952,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -46218,7 +46218,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -46453,7 +46453,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -46719,7 +46719,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -47000,7 +47000,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -47296,7 +47296,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -47531,7 +47531,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         }
       ]
@@ -47819,7 +47819,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         }
       ]
@@ -48122,7 +48122,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -48418,7 +48418,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -48714,7 +48714,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -48980,7 +48980,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -49276,7 +49276,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -49542,7 +49542,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -49838,7 +49838,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -50134,7 +50134,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -50369,7 +50369,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         },
         {
@@ -50604,7 +50604,7 @@
             "market": "Over 1,5 mål",
             "fallbackUrl": "https://www.unibet.dk/betting/sports/filter/football",
             "fallbackLabel": "Find odds hos Unibet",
-            "checkedAt": "2026-11-26T16:58:27.350Z"
+            "checkedAt": "2026-11-27T16:44:14.024Z"
           }
         }
       ]
@@ -50667,6 +50667,6 @@
     "apiErrors": 0,
     "requests": 0,
     "cacheHits": 0,
-    "updatedAt": "2026-11-26T16:58:27.350Z"
+    "updatedAt": "2026-11-27T16:44:14.024Z"
   }
 }
